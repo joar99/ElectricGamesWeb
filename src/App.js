@@ -6,6 +6,9 @@ import Error from "./Components/Error";
 import Game from "./Components/Game/Game"
 import Games from "./Components/Game/Games"
 import AddGame from "./Components/Game/AddGame";
+import Developer from "./Components/Developer/Developer";
+import Developers from "./Components/Developer/Developers";
+import AddDev from "./Components/Developer/AddDev";
 
 function App() {
 
@@ -23,11 +26,12 @@ function App() {
         <Route path="games/:id" element={<Game/>}/>
         <Route path="games/addgame" element={<AddGame/>}/>
 
-        {/*ROUTES FOR CHARACTERS*/}
-        {/*<Route path="/characters" element={<></>}/>
-        <Route path="characters/:id" element={<></>}/>
-
         {/*ROUTES FOR DEVELOPERS*/}
+        <Route path="/developers" element={<Developers/>}/>
+        <Route path="developers/:id" element={<Developer/>}/>
+        <Route path="developers/adddeveloper" element={<AddDev/>}/>
+
+        {/*ROUTES FOR CHARACTERS*/}
         {/*<Route path="/developers" element={<></>}/>
         <Route path="/developers/:id" element={<></>}/>
 

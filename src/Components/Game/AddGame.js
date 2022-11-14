@@ -82,7 +82,7 @@ export default function AddGame() {
     )
 }
 
-const AddedGame = (gameTitle) => {
+/*const AddedGame = (gameTitle) => {
 
     const gameControllerUrl = "https://localhost:7127/api/Games"
 
@@ -101,4 +101,4 @@ const AddedGame = (gameTitle) => {
         </>
     )
 
-}
+}*/
