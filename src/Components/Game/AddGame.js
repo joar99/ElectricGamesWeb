@@ -2,6 +2,8 @@ import React from "react";
 import {useState} from "react";
 import axios from "axios";
 import GameCard from "./GameCard";
+import "../../Css/Default.css";
+
 
 export default function AddGame() {
     const [isAdded, setIsAdded] = useState(false);
