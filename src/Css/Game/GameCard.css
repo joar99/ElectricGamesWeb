@@ -12,6 +12,7 @@
     flex-direction: column;
     width: 336px;
     height: 520px;
+    background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
     margin-left: 14px;
     
@@ -31,7 +32,6 @@
     color: rgb(255, 255, 255);
     font-family: 'karla';
     margin: 0px;
-    padding: 0px;
 }
 
 .title {
@@ -40,9 +40,31 @@
     text-transform: uppercase;
     font-size: 20px;
     color: rgba(255, 255, 255, 1);
-    text-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.7);
+    /*text-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.7);*/
     padding-top: 0px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
+}
+#id{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    /*text-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.7);*/
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.read-more{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    /*text-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.7);*/
+    padding-top: 0px;
+    padding-bottom: 10px;
+    text-decoration: none;
 }
 
 /*meadia queries for tablet */
