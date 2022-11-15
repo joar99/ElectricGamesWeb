@@ -5,12 +5,12 @@ import "../Css/Nav.css";
 function Nav() {
   return (
     
-    <nav class="nav-bar">
-      <button class="drop-down-button">
-        <i class="fas fa-bars"></i>
+    <nav className="nav-bar">
+      <button className="drop-down-button">
+        <i className="fas fa-bars"></i>
       </button>
-      <button class="close-drop-down-button">
-        <i class="fa-solid fa-x"></i>
+      <button className="close-drop-down-button">
+        <i className="fa-solid fa-x"></i>
       </button>
       <ul id="drop-down-content" class="drop-down-content">
         <Link to="/games">
@@ -24,8 +24,8 @@ function Nav() {
         </Link>
         <Link to="/quiz"><li>Game Quiz</li></Link>
       </ul>
-      <button class="search-button">
-        <i class="fa-solid fa-magnifying-glass fa-beat"></i>
+      <button className="search-button">
+        <i className="fa-solid fa-magnifying-glass fa-beat"></i>
       </button>
     </nav>
   );
