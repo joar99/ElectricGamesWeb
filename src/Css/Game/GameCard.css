@@ -13,6 +13,7 @@
     width: 336px;
     height: 520px;
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
+    margin-left: 14px;
     
 }
 
@@ -23,13 +24,14 @@
 
 .information-box {
     text-transform: uppercase;
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: rgba(97, 124, 176, 0.3);
     color: rgb(255, 255, 255);
     font-family: 'karla';
     margin: 0px;
-    padding: 40px;
+    padding: 0px;
 }
 
 .title {
