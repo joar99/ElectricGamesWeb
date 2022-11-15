@@ -15,8 +15,8 @@ export default function GameCard(props) {
                     <section className="information-box">
                         <h1 className="title">{props.title}</h1>
                         <p id="id">{props.id}</p>
+                        <button className="read-more">{props.readMore}</button> Read More
                     </section>
-
             <p>{props.releaseDate}</p>
             <Link to={`/games/${props.id}`}>Edit Game</Link>
             
