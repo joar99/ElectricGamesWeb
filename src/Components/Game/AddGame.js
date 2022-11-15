@@ -67,19 +67,19 @@ export default function AddGame() {
 
     return (
         <>
-        <p>Enter Game Title</p>
-        <input className="game-title-input" type="text" onChange={handleChangeTitle}></input>
-        <p>Enter Game Release Date</p>
-        <input className="game-release-input" type="text" onChange={handleChangeReleaseDate}></input>
-        <p>Enter Game Platform</p>
-        <input className="game-platform-input" type="text" onChange={handleChangePlatform}></input>
-        <p>Enter Game Developer</p>
-        <input className="game-developer-input" type="text" onChange={handleChangeDeveloper}></input>
-        <p>Enter Game Age Rating</p>
-        <input className="game-age-input" type="text" onChange={handleChangeRating}></input>
-        <p>Select Image</p>
-        <input type="file" onChange={saveFile}></input>
-        <button onClick={postGame}>Create Game</button>
+            <p>Enter Game Title</p>
+            <input className="game-title-input" type="text" onChange={handleChangeTitle}></input>
+            <p>Enter Game Release Date</p>
+            <input className="game-release-input" type="text" onChange={handleChangeReleaseDate}></input>
+            <p>Enter Game Platform</p>
+            <input className="game-platform-input" type="text" onChange={handleChangePlatform}></input>
+            <p>Enter Game Developer</p>
+            <input className="game-developer-input" type="text" onChange={handleChangeDeveloper}></input>
+            <p>Enter Game Age Rating</p>
+            <input className="game-age-input" type="text" onChange={handleChangeRating}></input>
+            <p>Select Image</p>
+            <input type="file" onChange={saveFile}></input>
+            <button onClick={postGame}>Create Game</button>
         </>
     )
 }
