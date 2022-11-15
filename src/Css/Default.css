@@ -1,0 +1,12 @@
+body {
+    background-image: url(../images/adobe.jpeg);
+    font-size: 1rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-right: 0.4375rem;
+    margin-left: 0.4375rem;
+    position: relative;
+    background-repeat: no-repeat;
+    font-family: lato;
+}
