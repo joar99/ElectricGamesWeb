@@ -1,0 +1,121 @@
+.nav-bar {
+    background: linear-gradient(to right,
+            rgba(62, 108, 197, 0.6) 0%,
+            rgba(62, 108, 197, 0.4) 0%,
+            rgba(138, 173, 240, 0.1) 60%);
+    height: 66px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.close-drop-down-button {
+    display: none;
+}
+
+.drop-down-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.drop-down-button {
+    background-color: rgba(47, 39, 136, 0);
+    border: 0;
+    font-size: 1.7rem;
+}
+
+.fa-bars {
+    color: rgba(255, 255, 255, 1);
+}
+
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(97, 124, 176, 0.5);
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.1s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.drop-down-content a {
+    color: rgba(255, 255, 255, 1);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-down-content a:hover {
+    background-color: rgba(33, 45, 67, 0.7);
+}
+
+.drop-down:hover .dropDownContent {
+    display: block;
+}
+
+/*show all players mobile*/
+#title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    font-size: 25px;
+    text-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(136, 156, 208, 0.8); /*blur radius?*/
+    padding-top: 0rem;
+    padding-bottom: 50px;
+
+}
+
+/*meadia queries for tablet */
+@media screen and (min-width: 768px) {
+
+    .drop-down-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        justify-content: space-between;
+        row-gap: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: lato;
+        font-size: 20px;
+
+
+
+    }
+
+    a:link {
+        color: #ffffff;
+    }
+
+    a:hover {
+        color: rgba(97, 124, 176, 0.5);
+
+    }
+
+}
