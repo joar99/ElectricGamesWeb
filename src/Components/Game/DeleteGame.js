@@ -4,7 +4,7 @@ export default function DeleteGame({onDeleteGame, idToDelete}) {
     
     const [id, setId] = useState("");
 
-    useEffect(() => {
+    useEffect(() => {   
         setId(idToDelete)
     })
     

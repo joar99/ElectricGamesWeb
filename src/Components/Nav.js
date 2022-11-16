@@ -5,29 +5,19 @@ import "../Css/Nav.css";
 function Nav() {
   return (
     
-    <nav className="nav-bar">
-      <button className="drop-down-button">
-        <i className="fas fa-bars"></i>
-      </button>
-      <button className="close-drop-down-button">
-        <i className="fa-solid fa-x"></i>
-      </button>
-      <ul id="drop-down-content" class="drop-down-content">
-        <Link to="/games">
-          <li>Games</li>
-        </Link>
-        <Link to="/characters">
-          <li>Characters</li>
-        </Link>
-        <Link to="/developers">
-          <li>Developers</li>
-        </Link>
-        <Link to="/quiz"><li>Game Quiz</li></Link>
-      </ul>
-      <button className="search-button">
-        <i className="fa-solid fa-magnifying-glass fa-beat"></i>
-      </button>
+    <nav class="navbar">
+
+    <button type="button" class="navbar-burger">
+      <span class="material-icons">HamMeny</span>
+    </button>
+    <h1 class="navbar-title">LOGO</h1>
+    <nav class="navbar-menu">
+      <button type="button"><Link to="/games">Games</Link></button>
+      <button type="button" class="active"><Link to="/characters"></Link>Characters</button>
+      <button type="button"><Link to="/developers">Developers</Link></button>
+      <button type="button"><Link to ="/quiz"></Link>Game Quiz</button>
     </nav>
+  </nav>
   );
 }
 

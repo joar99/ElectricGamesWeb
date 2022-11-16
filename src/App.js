@@ -13,7 +13,7 @@ import AddDev from "./Components/Developer/AddDev";
 function App() {
 
   return (
-    <div className="App">
+
 
 <Router>
     <div className="App">
@@ -41,7 +41,7 @@ function App() {
     </div>
 </Router>
       
-    </div>
+  
   );
 }
 
