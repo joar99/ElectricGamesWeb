@@ -2,18 +2,6 @@
     box-sizing: border-box;
   }
   
-  body {
-    background: rgba(62, 108, 197, 0.3)
-  }
-  
-  button {
-    border: 0;
-    padding: 0;
-    font-family: inherit;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
   
   .navbar {
     position: fixed;
@@ -25,7 +13,10 @@
     justify-content: center;
     width: 100%;
     height: 64px;
-    background: #19191c;
+    background: linear-gradient(to right,
+    rgba(62, 108, 197, 0.6) 0%,
+    rgba(62, 108, 197, 0.4) 0%,
+    rgba(138, 173, 240, 0.1) 60%);
     color: #f9f9f9;
     box-sizing: border-box;
   }
@@ -70,18 +61,23 @@
     width: 64px;
     height: 64px;
     padding: 0;
+    background: none;
+    
   }
   
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
+  }
   @media only screen and (min-width: 600px) {
     .navbar-burger {
       display: none;
     }
   }
   
-  .navbar-title {
+  .logo {
     margin: 0;
-    font-size: 16px;
-    font-family: 'Karla', sans-serif;
+    width: 50px;
   }
   
   .navbar-menu {
@@ -133,6 +129,9 @@
   a:link, a:visited {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
 
   }
 
