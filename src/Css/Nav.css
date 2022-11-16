@@ -1,121 +1,138 @@
-.nav-bar {
-    background: linear-gradient(to right,
-            rgba(62, 108, 197, 0.6) 0%,
-            rgba(62, 108, 197, 0.4) 0%,
-            rgba(138, 173, 240, 0.1) 60%);
-    height: 66px;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 10px;
-    margin-left: 0px;
-}
-
-.close-drop-down-button {
-    display: none;
-}
-
-.drop-down-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 24px;
-}
-
-.drop-down-button {
-    background-color: rgba(47, 39, 136, 0);
-    border: 0;
-    font-size: 1.7rem;
-}
-
-.fa-bars {
-    color: rgba(255, 255, 255, 1);
-}
-
-.drop-down-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(97, 124, 176, 0.5);
-    font-family: "Lato", sans-serif;
-    text-transform: uppercase;
-    min-width: 100px;
-    overflow: auto;
-    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  .navbar {
+    position: fixed;
     z-index: 1;
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 0.1s;
-}
-
-@keyframes fadeInOpacity {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.drop-down-content a {
-    color: rgba(255, 255, 255, 1);
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    display: block;
-}
-
-.drop-down-content a:hover {
-    background-color: rgba(33, 45, 67, 0.7);
-}
-
-.drop-down:hover .dropDownContent {
-    display: block;
-}
-
-/*show all players mobile*/
-#title {
+    top: 0;
+    left: 0;
     display: flex;
+    align-items: center;
     justify-content: center;
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    color: rgba(255, 255, 255, 1);
-    font-size: 25px;
-    text-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(136, 156, 208, 0.8); /*blur radius?*/
-    padding-top: 0rem;
-    padding-bottom: 50px;
-
-}
-
-/*meadia queries for tablet */
-@media screen and (min-width: 768px) {
-
-    .drop-down-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        justify-content: space-between;
-        row-gap: 10px;
-        margin-right: 10px;
-        text-decoration: none;
-        color: #ffffff;
-        font-family: lato;
-        font-size: 20px;
-
-
-
+    width: 100%;
+    height: 64px;
+    background: linear-gradient(to right,
+    rgba(62, 108, 197, 0.6) 0%,
+    rgba(62, 108, 197, 0.4) 0%,
+    rgba(138, 173, 240, 0.1) 60%);
+    color: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .navbar {
+      justify-content: space-between;
+      padding: 0 0 0 16px;
     }
-
-    a:link {
-        color: #ffffff;
+  }
+  
+  .navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .navbar-overlay {
+      display: none;
     }
-
-    a:hover {
-        color: rgba(97, 124, 176, 0.5);
-
+  }
+  
+  .navbar-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    background: none;
+    
+  }
+  
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
+  }
+  @media only screen and (min-width: 600px) {
+    .navbar-burger {
+      display: none;
     }
+  }
+  
+  .logo {
+    margin: 0;
+    width: 50px;
+  }
+  
+  .navbar-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 270px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000000;
+    visibility: hidden;
+    transition: translate 0.3s;
+    font-family: 'Karla', sans-serif;
+   
+  }
+  
+  body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .navbar-menu {
+      position: static;
+      translate: 0 0;
+      width: auto;
+      background: transparent;
+      flex-direction: row;
+      visibility: visible;
+    }
+  }
+  
+  .navbar-menu > button {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+  }
+  
+  .navbar-menu > button.active {
+    color: inherit;
+  }
 
-}
+  a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+
+  }
+
+  
