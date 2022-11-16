@@ -10,13 +10,13 @@ function Nav() {
     <button type="button" class="navbar-burger">
       <span class="material-icons">HamMeny</span>
     </button>
-    
-    <h1 class="navbar-title">LOGO</h1>
+
+    <h1 class="navbar-title"> </h1>
     <nav class="navbar-menu">
       <button type="button"><Link to="/games">Games</Link></button>
-      <button type="button" class="active"><Link to="/characters"></Link>Characters</button>
+      <button type="button" class="active"><Link to="/characters">Characters</Link></button>
       <button type="button"><Link to="/developers">Developers</Link></button>
-      <button type="button"><Link to ="/quiz"></Link>Game Quiz</button>
+      <button type="button"><Link to ="/quiz">Game Quiz</Link></button>
     </nav>
   </nav>
   );
