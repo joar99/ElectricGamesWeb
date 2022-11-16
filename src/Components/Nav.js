@@ -10,6 +10,7 @@ function Nav() {
     <button type="button" class="navbar-burger">
       <span class="material-icons">HamMeny</span>
     </button>
+    
     <h1 class="navbar-title">LOGO</h1>
     <nav class="navbar-menu">
       <button type="button"><Link to="/games">Games</Link></button>
