@@ -6,6 +6,7 @@ import SearchGame from "./SearchGame";
 import GameCard from "./GameCard";
 import DeleteGame from "./DeleteGame";
 import useFetch from "../../Hooks/useFetch";
+import "../../Css/Game/Games.css";
 
 
 
@@ -65,7 +66,7 @@ export default function Games() {
             <Link to={`/games/addgame`}>Add New Game</Link>
             <SearchGame onSearchByTitle={onSearchByTitle}></SearchGame>
         </div>
-        <h1>Games</h1>
+        <h1 className="main-title">Games</h1>
         {games.map(game =>{
                 return(
                     <>

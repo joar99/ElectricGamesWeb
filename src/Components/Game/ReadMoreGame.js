@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../../Css/Game/GameCard.css";
 
-
-export default function GameCard(props) {
+export default function ReadMoreGame(props) {
 
     return (
         <>
