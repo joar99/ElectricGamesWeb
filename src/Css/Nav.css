@@ -2,15 +2,6 @@
     box-sizing: border-box;
   }
   
-
-  button {
-    border: 0;
-    padding: 0;
-    font-family: inherit;
-    background: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
   
   .navbar {
     position: fixed;
@@ -70,18 +61,23 @@
     width: 64px;
     height: 64px;
     padding: 0;
+    background: none;
+    
   }
   
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
+  }
   @media only screen and (min-width: 600px) {
     .navbar-burger {
       display: none;
     }
   }
   
-  .navbar-title {
+  .logo {
     margin: 0;
-    font-size: 16px;
-    font-family: 'Karla', sans-serif;
+    width: 50px;
   }
   
   .navbar-menu {
@@ -134,6 +130,8 @@
     color: white;
     text-decoration: none;
     font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
 
   }
 
