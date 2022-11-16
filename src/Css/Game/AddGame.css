@@ -1,0 +1,14 @@
+.img-fluid {
+    max-width: 100;
+    height: auto;
+}
+
+.form-input{
+    background-color: rgba(97, 124, 176, 0.3);
+    color: rgba(255, 255, 255, 1);
+}
+
+.game-input{
+    color: white;
+}
+
