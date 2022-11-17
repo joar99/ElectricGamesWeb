@@ -1,38 +1,21 @@
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
-/*const useFetch = (dataURL) => {
-    const [data, setData] = useState([])
+const useFetch = (path) => {
 
-    useEffect(() => {
-        const fetchData = async (url) => {
-            await axios.get(url)
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
-        }
-        fetchData(dataURL)
-    }, [dataURL])
+    const [arr, setArr] = useState([]);
 
-    return data
-}
+    const getData = useCallback(() => {
 
-export default useFetch;*/
+        axios.get(path)
+        .then(res => setArr(res.data))
+        .catch(err => console.log(err))
 
-/*export default function useFetch(path) {
-
-        
-    const [array, setArray] = useState([]);
-
-            useEffect(() => {
-        axios.get(`${path}`)
-            .then(res => {
-                setArray(res.data)
-            })
-            .catch(err => {
-                console.log(err)
-            })
     },[])
 
-    return array
 
-}*/
+    return {arr, getData}
+
+}
+
+export default useFetch;

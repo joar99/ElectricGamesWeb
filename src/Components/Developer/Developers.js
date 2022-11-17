@@ -21,12 +21,6 @@ export default function Developers() {
         .catch(error=>console.log(error))
     },[deleteDevFlag])
 
-    const onDeleteDev = async (id) => {
-        await axios.delete(`${devControllerUrl}/${id}`)
-        .then((response => {setDeleteDevFlag(prev=>!prev)}))
-        .catch(error => console.log(error))
-    }
-
     const onSearchByName = (searchName) => {
         axios.get(`${devControllerUrl}/${searchName}`)
         .then(response=>setDevelopers(response.data))
@@ -46,8 +40,7 @@ export default function Developers() {
         {developers.map(dev =>{
                 return(
                     <>
-                    <DevCard {...dev}/>
-                    <DeleteDev onDeleteDev={onDeleteDev} idToDelete={dev.id} />
+                    <DevCard developer={dev} setDeleteDevFlag={setDeleteDevFlag}/>
                     </>
                 )
             })}
