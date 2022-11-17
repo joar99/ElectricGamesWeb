@@ -17,39 +17,11 @@ export default function Characters() {
     
     const characterControllerUrl = "https://localhost:7127/api/Characters";
 
-    
-
-    /*const data = useFetch(gameControllerUrl)
-
-    useEffect(() => {
-        setGames(data)
-    },[gameControllerUrl])
-
-    console.log(games)
-
-    /*const {gamesArr} = useFetch(gameControllerUrl);
-
-    useEffect(() => {
-        gamesArr()
-    },[deleteGameFlag])
-
-    
-
-        /*useEffect(() => {
-            useFetch(gameControllerUrl)
-        },[deleteGameFlag])*/
-
     useEffect(() => {
         axios.get(characterControllerUrl)
         .then(response=>setCharacters(response.data))
         .catch(error=>console.log(error))
     },[deleteCharacterFlag])
-
-    const onDeleteCharacter = async (id) => {
-        await axios.delete(`${characterControllerUrl}/${id}`)
-        .then((response => {setDeleteCharacterFlag(prev=>!prev)}))
-        .catch(error => console.log(error))
-    }
 
     const onSearchByName = (searchName) => {
         axios.get(`${characterControllerUrl}/${searchName}`)

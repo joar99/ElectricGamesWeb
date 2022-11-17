@@ -5,7 +5,6 @@ import axios from "axios";
 import SearchGame from "./SearchGame";
 import GameCard from "./GameCard";
 import DeleteGame from "./DeleteGame";
-import useFetch from "../../Hooks/useFetch";
 import "../../Css/Game/Games.css";
 
 
@@ -17,39 +16,19 @@ export default function Games() {
     
     const gameControllerUrl = "https://localhost:7127/api/Games";
 
-    
-
-    /*const data = useFetch(gameControllerUrl)
+    /*const {arr, getData} = useFetch(gameControllerUrl);
 
     useEffect(() => {
-        setGames(data)
-    },[gameControllerUrl])
-
-    console.log(games)
-
-    /*const {gamesArr} = useFetch(gameControllerUrl);
-
-    useEffect(() => {
-        gamesArr()
-    },[deleteGameFlag])
+        getData()
+    },[getData, deleteGameFlag])*/
 
     
-
-        /*useEffect(() => {
-            useFetch(gameControllerUrl)
-        },[deleteGameFlag])*/
 
     useEffect(() => {
         axios.get(gameControllerUrl)
         .then(response=>setGames(response.data))
         .catch(error=>console.log(error))
     },[deleteGameFlag])
-
-    const onDeleteGame = async (id) => {
-        await axios.delete(`${gameControllerUrl}/${id}`)
-        .then((response => {setDeleteGameFlag(prev=>!prev)}))
-        .catch(error => console.log(error))
-    }
 
     const onSearchByTitle = (searchTitle) => {
         axios.get(`${gameControllerUrl}/${searchTitle}`)
@@ -71,8 +50,7 @@ export default function Games() {
         {games.map(game =>{
                 return(
                     <>
-                    <GameCard {...game}/>
-                    <DeleteGame onDeleteGame={onDeleteGame} idToDelete={game.id} />
+                    <GameCard game={game} setDeleteGameFlag={setDeleteGameFlag}/>
                     </>
                 )
             })}

@@ -25,7 +25,7 @@ export default function CharacterCard({character, setDeleteCharacterFlag}) {
                         <p id="id">{character.id}</p>
                     </section>
             <p>{character.game}</p>
-            <Link to={`/games/${character.id}`}>Edit Game</Link>
+            <Link to={`/games/${character.id}`}>Edit Character</Link>
             <DeleteChar onDeleteCharacter={onDeleteCharacter} idToDelete={character.id}></DeleteChar>
             </section>
         </section>
