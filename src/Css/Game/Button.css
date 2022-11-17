@@ -1,18 +1,17 @@
-#delete-game-btn{
+/*#delete-game-btn{
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(97, 124, 176, 0.8);
     border-radius: 5px;
-    border: 0px;
-    padding-top: 3px;
-    padding-right: 5px;
-    padding-bottom: 3px;
-    padding-left: 5px;
+    border: none;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
-    font-family: karla, bold;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    font-size: 16px;
-    margin-left: 10px;
+    font-family: 'Lato',sans-serif;
+    font-weight: bold;
 }
+
+#delete-game-btn a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+
+  }*/

@@ -126,10 +126,10 @@
     color: inherit;
   }
 
-  a:link, a:visited {
+  .navbar-menu a:link, a:visited {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 18px; 
     padding: 8px;
     cursor: pointer;
 
