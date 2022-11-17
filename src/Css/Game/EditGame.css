@@ -1,0 +1,42 @@
+.form-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: rgba(97, 124, 176, 0.3);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 14px;
+}
+
+.form-input {
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'karla';
+    overflow: hidden;
+    grid-row:2/ span 2;
+    grid-column: 1/span 1;
+   
+
+
+    transform: translateY(-10rem);
+    margin-left: 14px;
+    overflow: hidden;
+
+}
+
+.game-input {
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'karla';
+    grid-row: 2/ span 2;
+    grid-column: 1/span 1;
+    text-transform: uppercase;
+    display: flex;
+    font-family: 'karla';
+    transform: translateY(-10rem);
+    margin-left: 14px;
+    overflow: hidden;
+}
