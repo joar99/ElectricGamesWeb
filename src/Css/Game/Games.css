@@ -9,10 +9,32 @@
     padding-bottom: 50px;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: rgba(52, 55, 56, 0.6);
+    padding: 20px;
+}
 
 @media screen and (min-width: 768px) {
 .main-title{
     justify-content: start;
     padding-left:14px;
 }
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgba(52, 55, 56, 0.6);
+    padding: 20px;
+}
+
+}
+@media screen and (min-width: 1200px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: rgba(52, 55, 56, 0.6);
+        padding: 20px;
+    }
 }
