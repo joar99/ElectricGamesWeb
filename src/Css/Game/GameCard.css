@@ -1,7 +1,9 @@
 .card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
     background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
-    border-radius: 5px; /*funker ikke*/
+    border-radius: 5px;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 10px;
@@ -11,10 +13,12 @@
 .card-image {
     background-position: center;
     background-size: cover;
-   height: auto;
+    height: auto;
+    grid-row: 1/span 2;
+    grid-column: 1/ span 1;
 }
 
-.card-image img{
+.card-image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -27,6 +31,8 @@
     font-family: 'karla';
     margin: 0px;
     overflow: hidden;
+    grid-row:2/ span 2;
+    grid-column: 1/span 1;
 }
 
 .card-overlay h1 {
@@ -54,7 +60,7 @@
     font-family: 'karla';
     transform: translateY(-10rem);
     margin-left: 14px;
-
+    overflow: hidden;
 }
 
 .edit-link {
@@ -73,25 +79,8 @@
     border-radius: 5px;
     box-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.8);
     width: 100px;
-
 }
 
-.fake-delete-button {
-    margin-top: 4px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(97, 124, 176, 0.6);
-    padding-top: 0px;
-    padding-right: 5px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    border-radius: 5px;
-    box-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.8);
-    width: 100px;
-}
 
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
@@ -105,4 +94,5 @@
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
+    
 }

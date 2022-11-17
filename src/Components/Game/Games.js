@@ -6,6 +6,7 @@ import SearchGame from "./SearchGame";
 import GameCard from "./GameCard";
 import DeleteGame from "./DeleteGame";
 import "../../Css/Game/Games.css";
+import "../../Css/Default.css";
 
 
 
@@ -15,13 +16,6 @@ export default function Games() {
     const [games, setGames] = useState([]);
     
     const gameControllerUrl = "https://localhost:7127/api/Games";
-
-    /*const {arr, getData} = useFetch(gameControllerUrl);
-
-    useEffect(() => {
-        getData()
-    },[getData, deleteGameFlag])*/
-
     
 
     useEffect(() => {

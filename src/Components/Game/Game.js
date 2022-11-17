@@ -1,6 +1,8 @@
 import React, { useState, Component, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "../../Css/Game/EditGame.css";
+import "../../Css/Default.css";
 
 
 
@@ -103,8 +105,7 @@ export default function Game() {
 
     return (
         <>
-            <section className="background-container">
-                <div className="form-container">
+                <section className="form-container">
                     <form className="form-input">
                         <div>
                             <label type="text" name="game-title">Enter Game Title</label>
@@ -118,30 +119,56 @@ export default function Game() {
                         </div>
                         <div>
                             <label type="text" name="release-date">Enter Game Release Date</label>
-                            <input className="game-input" type="text" value={releaseDate} name="releaseDate" onChange={e => setReleaseDate(e.target.value)} />
+                            <input 
+                                className="game-input"
+                                type="text" value={releaseDate}
+                                name="releaseDate"
+                                onChange={e => setReleaseDate(e.target.value)}
+                            />
                         </div>
-                        <label type="text" name="release-date">Enter Game Platforme</label>
-                        <input className="game-input" type="text" value={platform} name="platform" onChange={e => setPlatform(e.target.value)} />
+                        <label type="text" name="release-date">Enter Game Platform</label>
+                        <input 
+                                className="game-input"
+                                type="text"
+                                value={platform}
+                                name="platform"
+                                onChange={e => setPlatform(e.target.value)} 
+                            />
                         <div>
-                            <label type="text" name="release-date">Enter Game Release Date</label>
-                            <input className="game-input" type="text" value={releaseDate} name="release" onChange={e => setReleaseDate(e.target.value)} />
+                            <label type="text"name="release-date">Enter Game Release Date</label>
+                            <input 
+                                className="game-input"
+                                type="text" value={releaseDate}
+                                name="release" onChange={e => setReleaseDate(e.target.value)}
+                            />
                         </div>
                         <div>
                             <label type="text" name="developer">Enter Game Developer</label>
-                            <input className="game-input" type="text" value={developer} name="developer" onChange={e => setDeveloper(e.target.value)} />
+                            <input 
+                                className="game-input" 
+                                type="text" value={developer}
+                                name="developer" onChange={e => setDeveloper(e.target.value)}
+                            />
                         </div>
                         <div>
                             <label type="text" name="rating">Enter Game Age Rating</label>
-                            <input className="game-input" type="text" value={rating} name="rating" onChange={e => setRating(e.target.value)} />
+                            <input 
+                            className="game-input"
+                            type="text" value={rating}
+                            name="rating" onChange={e => setRating(e.target.value)}
+                         />
                         </div>
                         <div>
                             <label type="text" name="select-image">Select Image</label>
-                            <input className="select-button" type="file" onChange={saveFile}></input>
+                            <input 
+                                className="select-button"
+                                type="file" onChange={saveFile}>
+                            
+                            </input>
                         </div>
                         <button className="edit-game" onClick={handleClick}>Edit Game</button>
                     </form>
-                </div>
-            </section>
+                </section>
         </>
     )
 
