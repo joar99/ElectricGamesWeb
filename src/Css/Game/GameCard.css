@@ -6,7 +6,6 @@
 }
 
 .card {
-    grid-column: 1/ span 12;
     background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
     border-radius: 5px; /*funker ikke*/
