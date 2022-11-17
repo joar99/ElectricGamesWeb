@@ -42,11 +42,11 @@ export default function Games() {
 
         <>
         <div>
-            <p>HEISANN HEISANN HEISANN</p>
             <Link to={`/games/addgame`}>Add New Game</Link>
             <SearchGame onSearchByTitle={onSearchByTitle}></SearchGame>
         </div>
         <h1 className="main-title">Games</h1>
+        <section className="card-container">
         {games.map(game =>{
                 return(
                     <>
@@ -54,9 +54,9 @@ export default function Games() {
                     </>
                 )
             })}
-        </>
+        </section>
 
-        
+        </>
     )
 
 }
