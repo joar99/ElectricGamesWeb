@@ -1,6 +1,6 @@
 .card {
     display: grid;
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
     border-radius: 5px;
@@ -26,7 +26,8 @@
 }
 
 .card-overlay {
-    background-color: rgba(97, 124, 176, 0.3);
+    background: linear-gradient(180deg, rgba(97, 124, 176, 0.0), rgba(97, 124, 176, 0.7));
+    border-radius: 5px;
     backdrop-filter: blur(10px);
     color: rgb(255, 255, 255);
     font-family: 'karla', sans-serif;
@@ -80,7 +81,7 @@
 .edit-game-link, button#delete-game-btn{
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(97, 124, 176, 0.8);
+    background-color: rgba(34, 55, 68, 0.5);
     border-radius: 5px;
     border: none;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
@@ -108,11 +109,13 @@
 @media screen and (min-width: 768px) {
     .card-container {
         grid-template-columns: repeat(1, 2fr);
-        background-color: rgba(52, 55, 56, 0.6);
-        padding: 20px;
     }
 
 }
 
 /*media queries for desktop*/
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(1, 3fr);
+    }
+}
