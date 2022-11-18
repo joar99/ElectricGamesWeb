@@ -36,7 +36,7 @@ export default function Games() {
 
         <>
         <div>
-            <Link to={`/games/addgame`}>Add New Game</Link>
+            <Link className="add-game-button" to={`/games/addgame`}>Add New Game</Link>
             <SearchGame onSearchByTitle={onSearchByTitle}></SearchGame>
         </div>
         <h1 className="main-title">Games</h1>

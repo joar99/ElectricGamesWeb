@@ -11,3 +11,12 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: rgba(52, 55, 56, 0.6);
+    padding: 20px;
+    row-gap: 30px;
+    column-gap: 15px;
+}
+
