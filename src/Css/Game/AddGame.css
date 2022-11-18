@@ -34,6 +34,8 @@
 
 .form-input div {
    margin-bottom: 25px;
+   display: flex;
+   flex-direction: column;
 }
 
 .add-game-label {
@@ -53,7 +55,7 @@
 .add-game-button {
    text-transform: uppercase;
    color: rgba(255, 255, 255, 1);
-   background-color: rgba(97, 124, 176, 0.8);
+   background-color: rgba(97, 124, 176, 0.3);
    border-radius: 5px;
    border: none;
    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
@@ -68,6 +70,7 @@
 
    .add-game-input {
       width: 410px;
+   
    }
 }
 
