@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import GameCard from "./GameCard";
-import "../../Css/Default.css";
+import "../../Css/Background.css";
 import "../../Css/Game/AddGame.css";
 
 

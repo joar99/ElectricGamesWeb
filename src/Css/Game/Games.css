@@ -21,6 +21,9 @@
     column-gap: 15px;
 }
 
+.add-game-button{
+    display: flex;
+}
 
 @media screen and (min-width: 768px) {
 .main-title{

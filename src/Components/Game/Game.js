@@ -2,7 +2,7 @@ import React, { useState, Component, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Game/EditGame.css";
-import "../../Css/Default.css";
+import "../../Css/Background.css";
 
 
 
