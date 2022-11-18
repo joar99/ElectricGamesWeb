@@ -64,6 +64,15 @@
 
  /*media queries for ipad*/
 @media screen and (min-width: 768px) {
+   .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: rgba(52, 55, 56, 0.6);
+      padding: 20px;
+      row-gap: 30px;
+      column-gap: 15px;
+  }
+  
     .add-game-input{
         width: 410px;
     }
@@ -71,6 +80,15 @@
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
+   .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background-color: rgba(52, 55, 56, 0.6);
+      padding: 20px;
+      row-gap: 30px;
+      column-gap: 15px;
+  }
+  
     .add-game-input{
         width: 580px;
     }
