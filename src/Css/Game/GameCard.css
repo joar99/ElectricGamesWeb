@@ -1,6 +1,7 @@
+
 .card {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
     border-radius: 5px;
@@ -26,7 +27,7 @@
 }
 
 .card-overlay {
-    background: linear-gradient(180deg, rgba(97, 124, 176, 0.0), rgba(97, 124, 176, 0.7));
+    background: linear-gradient(180deg, rgba(97, 124, 176, 0.0), rgba(97, 124, 176, 0.3));
     border-radius: 5px;
     backdrop-filter: blur(10px);
     color: rgb(255, 255, 255);
@@ -84,7 +85,7 @@
     background-color: rgba(34, 55, 68, 0.5);
     border-radius: 5px;
     border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
+    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
     font-family: 'Lato',sans-serif;
     font-weight: bold;
     margin-right: 15px;
@@ -110,12 +111,21 @@
     .card-container {
         grid-template-columns: repeat(1, 2fr);
     }
+    .card{ 
+        display: grid;
+        grid-template-rows: repeat(1, 2fr);
 
+    }
 }
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
     .card-container {
         grid-template-columns: repeat(1, 3fr);
+        
+    }
+    .card{
+        display: grid;
+        grid-template-rows: repeat(1, 3fr);
     }
 }

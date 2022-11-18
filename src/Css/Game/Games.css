@@ -11,9 +11,6 @@
     margin-left: 15px;
  
 }
-.add-game-button{
-    margin-top: 300px;
-}
 
 .card-container {
     display: grid;
@@ -24,10 +21,11 @@
     column-gap: 15px;
 }
 
+
 @media screen and (min-width: 768px) {
 .main-title{
     justify-content: start;
-    padding-left:14px;
+    margin-left:15px;
 }
 
 .card-container {
