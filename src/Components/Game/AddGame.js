@@ -93,7 +93,7 @@ export default function AddGame() {
                         <input className="add-game-input" type="text" onChange={handleChangeRating}></input>
                         <div>
                             <label className="add-game-label" type="text" name="select-image">Select Image</label>
-                            <input type="file" onChange={saveFile}></input>
+                            <input className="save-file" type="file" onChange={saveFile}></input>
                             <button className="add-game-button" onClick={postGame}>Create Game</button>
                         </div>
                     </form>
