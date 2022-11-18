@@ -111,11 +111,6 @@
     .card-container {
         grid-template-columns: repeat(1, 2fr);
     }
-    .card{ 
-        display: grid;
-        grid-template-rows: repeat(1, 2fr);
-
-    }
 }
 
 /*media queries for desktop*/
@@ -123,9 +118,5 @@
     .card-container {
         grid-template-columns: repeat(1, 3fr);
         
-    }
-    .card{
-        display: grid;
-        grid-template-rows: repeat(1, 3fr);
     }
 }

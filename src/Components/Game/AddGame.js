@@ -68,10 +68,10 @@ export default function AddGame() {
 
     return (
         <>
-        <h1 className="main-title">Games</h1>
-        <section className="card-container">
+            <h1 className="main-title">Games</h1>
+            <section className="container">
 
-                <div className="form-container">
+                <div className="form">
                     <form className="form-input">
                         <div>
                             <label className="add-game-label" type="text" name="game-title">Enter title</label>
@@ -92,13 +92,13 @@ export default function AddGame() {
                         <label className="add-game-label" type="text" name="game-rating">Enter age rating</label>
                         <input className="add-game-input" type="text" onChange={handleChangeRating}></input>
                         <div>
-                        <label className="add-game-label" type="text" name="select-image">Select Image</label>
+                            <label className="add-game-label" type="text" name="select-image">Select Image</label>
                             <input type="file" onChange={saveFile}></input>
                             <button className="add-game-button" onClick={postGame}>Create Game</button>
                         </div>
                     </form>
                 </div>
-                </section>
+            </section>
         </>
     )
 }
