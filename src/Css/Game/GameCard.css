@@ -1,14 +1,10 @@
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    background-color: rgba(52, 55, 56, 0.6);
-    padding: 20px;
-}
 
 .card {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
     background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
-    border-radius: 5px; /*funker ikke*/
+    border-radius: 5px;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 10px;
@@ -18,23 +14,41 @@
 .card-image {
     background-position: center;
     background-size: cover;
-   height: auto;
+    height: auto;
+    grid-row: 1/span 2;
+    grid-column: 1/ span 1;
 }
 
-.card-image img{
+.card-image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
 
 .card-overlay {
-    grid-row: 3/4;
-    background-color: rgba(97, 124, 176, 0.3);
-    backdrop-filter: blur(3px);
+    background: linear-gradient(180deg, rgba(97, 124, 176, 0.0), rgba(97, 124, 176, 0.3));
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
     color: rgb(255, 255, 255);
-    font-family: 'karla';
-    margin: 0px;
-    overflow: hidden;
+    font-family: 'karla', sans-serif;
+    grid-row: 2/ span 2;
+    grid-column: 1/span 1;
+    align-self: end;
+}
+
+.card-overlay_list{
+    margin-left: 15px;
+    padding: 0;
+    list-style: none;
+    font-family: 'karla', sans-serif;
+   
+}
+.card-overlay_list li{
+    margin-bottom: 15px;
+}
+.card-overlay_list li:last-child{
+    margin-bottom: 0;
 }
 
 .card-overlay h1 {
@@ -42,6 +56,8 @@
     justify-content: center;
     text-transform: uppercase;
     font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
 }
 
 .id {
@@ -50,67 +66,57 @@
     text-transform: uppercase;
     font-style: italic;
     font-size: 14px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-}
 
-.card-overlay p {
+}
+.card-overlay-buttons {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'karla';
-    transform: translateY(-10rem);
-    margin-left: 14px;
-
 }
-
-.edit-link {
-    margin-top: 4px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgba(97, 124, 176, 0.6);
-    padding-top: 0px;
-    padding-right: 5px;
-    padding-bottom: 0px;
-    padding-left: 0px;
+.card-overlay-buttons li{
+    display: block;
+    padding:12px;
+}
+.edit-game-link, button#delete-game-btn{
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(34, 55, 68, 0.5);
     border-radius: 5px;
-    box-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.8);
-    width: 100px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+    font-family: 'Lato',sans-serif;
+    font-weight: bold;
+    margin-right: 15px;
+    width: 136px;
+    height: 33px;
 
 }
 
-.fake-delete-button {
-    margin-top: 4px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+.edit-game-link {
     display: flex;
     justify-content: center;
-    background-color: rgba(97, 124, 176, 0.6);
-    padding-top: 0px;
-    padding-right: 5px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    border-radius: 5px;
-    box-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0, 0, 0, 0.8);
-    width: 100px;
+    align-items: center;
+    text-decoration: none;
 }
+.edit-game-link a:link, a:visited, button#delete-game-btn a:link, a:visited {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
     .card-container {
         grid-template-columns: repeat(1, 2fr);
-        background-color: rgba(52, 55, 56, 0.6);
-        padding: 20px;
     }
-
 }
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(1, 3fr);
+        
+    }
 }

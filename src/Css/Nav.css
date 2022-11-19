@@ -97,11 +97,16 @@
   }
  
 
-  a:link, a:visited {
+  .navbar-menu a:link, a:visited {
     color: white;
     text-decoration: none;
+<<<<<<< HEAD
     font-size: 18px;
     padding: 10px;
+=======
+    font-size: 18px; 
+    padding: 8px;
+>>>>>>> 159c5f11a891f1a0975b27c49de872150b55cb9f
     cursor: pointer;
     font-family: 'Karla', sans-serif;
 
