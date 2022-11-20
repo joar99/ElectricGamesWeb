@@ -21,12 +21,14 @@
   rgba(138, 173, 240, 0.1) 60%);
   box-shadow: 0 5px 15px rgba(62, 108, 197, 0.4);
   height: 70px;
+  z-index: 1;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0px, 0px, 5px, 5px;
   
 }
 
