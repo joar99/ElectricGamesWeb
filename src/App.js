@@ -1,6 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Nav from "./Components/Nav";
+import Nav from "./Components/Nav/Nav";
 import Home from "./Components/Home";
 import Error from "./Components/Error";
 import Game from "./Components/Game/Game"
@@ -12,6 +12,7 @@ import AddDev from "./Components/Developer/AddDev";
 import Character from "./Components/Character/Character";
 import Characters from "./Components/Character/Characters";
 import AddCharacter from "./Components/Character/AddCharacter";
+
 
 
 

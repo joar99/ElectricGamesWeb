@@ -1,35 +1,26 @@
-
-
-*{
-  margin: 0; 
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
-
 }
 
-
-
 .navbar {
-  position:sticky;
+  top:0;
+  position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to right,
-  rgba(62, 108, 197, 0.6) 0%,
-  rgba(62, 108, 197, 0.4) 0%,
-  rgba(138, 173, 240, 0.1) 60%);
+      rgba(62, 108, 197, 0.6) 0%,
+      rgba(62, 108, 197, 0.4) 0%,
+      rgba(138, 173, 240, 0.1) 60%);
+
   box-shadow: 0 5px 15px rgba(62, 108, 197, 0.4);
   height: 70px;
   z-index: 1;
 }
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px, 0px, 5px, 5px;
-  
+.nav-links{
+  display: none;
 }
 
 .nav-links li {
@@ -46,10 +37,12 @@
   transition: 0.2s ease-in-out;
 
 }
+
 .nav-links li a:hover {
   color: #FF8300;
 
 }
+
 .nav-links li a:hover::after {
   content: "";
   width: 30%;
@@ -58,24 +51,33 @@
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
 
+.nav-links-mobile{
+  display:none;
 }
 
 .navbar-burger {
-  display: none;
+  display: unset;
 }
 
+.navbar-burger .hamburger-menu {
+  cursor: pointer; /*for computer preview*/
+}
 
-.logo {
-
-  width: 50px;
-  height: 50px;
+.navbar-burger { /*hva er dette?*/
+  display: unset;
 }
 
 .hamburger-menu {
   width: 40px;
-  height: 4 0px;
+  height: 40px;
   padding: 7px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
 }
 
 button {
@@ -85,23 +87,22 @@ button {
 }
 
 
-@media screen and (max-width: 769px) {
-  
-  .nav-links {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    top: 70px;
-    left: 0px;
-    width: 200px;
-    height: 100vh;
-    background: #0B1B29;
-    padding: 40px 0 0 10px;
-    transition: 0.2s ease-in-out;
-  }
+@media screen and (min-width: 768px) {
 
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px, 0px, 5px, 5px;
+
+}
+.navbar-burger{
+  display:none;
+}
+
+
+/*
   .nav-links li {
     margin-bottom: 25px;
   }
@@ -110,13 +111,15 @@ button {
     display: block;
   }
 
-  .navbar-burger .hamburger-menu/*mobile*/ {
+  .navbar-burger .hamburger-menu
+
+mobile
+    {
     cursor: pointer;
 
-  }
+  }*/
 
 
 
-  
-  
+
 }
