@@ -1,4 +1,6 @@
 .side-menu{
+    text-decoration:none;
+    list-style: none;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -9,6 +11,8 @@
     width: 200px;
     height: 100vh;
     background: rgba(11, 27, 41, 0.7);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 5px 15px rgba(62, 108, 197, 0.4);
     padding: 40px 0 0 10px;
     transition: 0.2s ease-in-out;
     z-index: 1;

@@ -7,8 +7,7 @@
     border-radius: 5px;
     margin-top: 0px;
     margin-right: 0px;
-    margin-bottom: 10px;
-    margin-left: 14px;
+    margin-left: 15px;
 }
 
 .card-image {
@@ -17,6 +16,7 @@
     height: auto;
     grid-row: 1/span 2;
     grid-column: 1/ span 1;
+ 
 }
 
 .card-image img {
@@ -108,15 +108,10 @@
 
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
-    .card-container {
-        grid-template-columns: repeat(1, 2fr);
-    }
+  
 }
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
-    .card-container {
-        grid-template-columns: repeat(1, 3fr);
-        
-    }
+  
 }

@@ -14,7 +14,7 @@
       rgba(62, 108, 197, 0.6) 0%,
       rgba(62, 108, 197, 0.4) 0%,
       rgba(138, 173, 240, 0.1) 60%);
-
+  backdrop-filter: blur(10px);
   box-shadow: 0 5px 15px rgba(62, 108, 197, 0.4);
   height: 70px;
   z-index: 1;
@@ -53,7 +53,7 @@
   left: 20px;
 }
 
-.nav-links-mobile{
+.nav-links{
   display:none;
 }
 
@@ -89,7 +89,6 @@ button {
 
 @media screen and (min-width: 768px) {
 
-
 .nav-links {
   display: flex;
   align-items: center;
@@ -100,26 +99,5 @@ button {
 .navbar-burger{
   display:none;
 }
-
-
-/*
-  .nav-links li {
-    margin-bottom: 25px;
-  }
-
-  .navbar-burger {
-    display: block;
-  }
-
-  .navbar-burger .hamburger-menu
-
-mobile
-    {
-    cursor: pointer;
-
-  }*/
-
-
-
 
 }
