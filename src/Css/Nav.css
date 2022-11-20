@@ -1,138 +1,120 @@
-* {
-    box-sizing: border-box;
-  }
+
+
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
   
+
+}
+
+
+
+.navbar {
+  position:sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right,
+  rgba(62, 108, 197, 0.6) 0%,
+  rgba(62, 108, 197, 0.4) 0%,
+  rgba(138, 173, 240, 0.1) 60%);
+  box-shadow: 0 5px 15px rgba(62, 108, 197, 0.4);
+  height: 70px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-  .navbar {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 64px;
-    background: linear-gradient(to right,
-    rgba(62, 108, 197, 0.6) 0%,
-    rgba(62, 108, 197, 0.4) 0%,
-    rgba(138, 173, 240, 0.1) 60%);
-    color: #f9f9f9;
-    box-sizing: border-box;
-  }
+}
+
+.nav-links li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+
+}
+.nav-links li a:hover {
+  color: #FF8300;
+
+}
+.nav-links li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+
+}
+
+.navbar-burger {
+  display: none;
+}
+
+
+.logo {
+
+  width: 50px;
+  height: 50px;
+}
+
+.hamburger-menu {
+  width: 40px;
+  height: 4 0px;
+  padding: 7px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+
+@media screen and (max-width: 769px) {
   
-  @media only screen and (min-width: 600px) {
-    .navbar {
-      justify-content: space-between;
-      padding: 0 0 0 16px;
-    }
-  }
-  
-  .navbar-overlay {
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s;
-  }
-  
-  body.open .navbar-overlay {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .navbar-overlay {
-      display: none;
-    }
-  }
-  
-  .navbar-burger {
+  .nav-links {
     position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    place-items: center;
-    width: 64px;
-    height: 64px;
-    padding: 0;
-    background: none;
-    
-  }
-  
-  .hamburger-menu {
-    width: 40px;
-    height: 40px;
-  }
-  @media only screen and (min-width: 600px) {
-    .navbar-burger {
-      display: none;
-    }
-  }
-  
-  .logo {
-    margin: 0;
-    width: 50px;
-  }
-  
-  .navbar-menu {
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    translate: -100% 0;
-    width: 270px;
-    height: 100%;
-    padding: 20px;
     display: flex;
-    gap: 8px;
     flex-direction: column;
     align-items: flex-start;
-    background: #000000;
-    visibility: hidden;
-    transition: translate 0.3s;
-    font-family: 'Karla', sans-serif;
-   
-  }
-  
-  body.open .navbar-menu {
-    translate: 0 0;
-    visibility: visible;
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .navbar-menu {
-      position: static;
-      translate: 0 0;
-      width: auto;
-      background: transparent;
-      flex-direction: row;
-      visibility: visible;
-    }
-  }
-  
-  .navbar-menu > button {
-    color: rgba(255, 255, 255, 0.5);
-    background: transparent;
-    padding: 0 8px;
-  }
-  
-  .navbar-menu > button.active {
-    color: inherit;
+    justify-content: flex-start;
+    top: 70px;
+    left: 0px;
+    width: 200px;
+    height: 100vh;
+    background: #0B1B29;
+    padding: 40px 0 0 10px;
+    transition: 0.2s ease-in-out;
   }
 
-  .navbar-menu a:link, a:visited {
-    color: white;
-    text-decoration: none;
-    font-size: 18px; 
-    padding: 8px;
+  .nav-links li {
+    margin-bottom: 25px;
+  }
+
+  .navbar-burger {
+    display: block;
+  }
+
+  .navbar-burger .hamburger-menu/*mobile*/ {
     cursor: pointer;
 
   }
 
+
+
   
+  
+}
