@@ -43,6 +43,8 @@
     display: block;
     margin: 5px;
     padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 200px;
     text-align: left;
     border-radius: 50px;
