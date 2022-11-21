@@ -21,9 +21,54 @@
     column-gap: 15px;
 }
 
-.add-game-button{
+.add-new-btn {
+    position: sticky;
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translate(140px);
+    
 }
+
+
+.add-new-btn-open {
+    color: #fff;
+    background: #0B1B29;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    padding: 20px;
+    width: 200px;
+    text-align: left;
+    border-radius: 50px;
+    transition: 0.7s;
+    transition-property: transform;
+    
+}
+
+.add-new-btn-open:hover {
+    transform: translate(-120px,0);
+    color: #FF8300;
+}
+
+.add-new-btn-open:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  bottom: 17px;
+  left: 35px;
+
+}
+
+
+
 
 @media screen and (min-width: 768px) {
 .main-title{
