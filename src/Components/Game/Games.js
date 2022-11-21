@@ -30,16 +30,20 @@ export default function Games() {
             .catch(error => console.log(error))
     }
 
+    const onSearchById = (searchId) => {
+        axios.get(`${gameControllerUrl}/${searchId}`)
+            .then(response => setGames(response.data))
+            .catch(error => console.log(error))
+    }
+
 
 
     return (
 
         <>
 
-
-            <SearchGame onSearchByTitle={onSearchByTitle}></SearchGame>
-
             <h1 className="main-title">Games</h1>
+            <SearchGame onSearchByTitle={onSearchByTitle} onSearchById={onSearchById}></SearchGame>
             <section className="card-container">
                 {games.map(game => {
                     return (

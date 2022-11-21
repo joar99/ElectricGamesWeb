@@ -1,6 +1,6 @@
 .search-container{
 display: grid;
-place-content: end;
+place-content: center;
 }
 
 .magnify-glass{
@@ -12,7 +12,6 @@ place-content: end;
 
 .search-title{
     color: white;
-    margin-top: 20px;
     padding-left: 5px;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
@@ -21,19 +20,19 @@ place-content: end;
 }
 
 .search-pop-up{
-    background-color:rgba(34, 55, 68, 0.5);
     border: none;
     border-radius: 5px;
     padding-right: 5px;
     padding-left:5px;
     font-size: 16px;
     font-weight: 400;
-    transition: 0.2s ease-in-out;
-
+    margin-bottom: 15px;
+  
 }
 .search-game-name{
     border: none;
     border-radius: 5px;
+/*animasjon her*/
 
 }
 .search-game-name-btn{
@@ -49,6 +48,9 @@ place-content: end;
 }
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
+    .search-container{
+        place-content: end;
+        }
 
 }
 
