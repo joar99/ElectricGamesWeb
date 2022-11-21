@@ -3,13 +3,13 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Nav from "./Components/Nav/Nav";
 import Home from "./Components/Home";
 import Error from "./Components/Error";
-import Game from "./Components/Game/Game"
+import Game from "./Components/Game/EditGame"
 import Games from "./Components/Game/Games"
 import AddGame from "./Components/Game/AddGame";
 import Developer from "./Components/Developer/Developer";
 import Developers from "./Components/Developer/Developers";
 import AddDev from "./Components/Developer/AddDev";
-import Character from "./Components/Character/Character";
+import Character from "./Components/Character/EditCharacter";
 import Characters from "./Components/Character/Characters";
 import AddCharacter from "./Components/Character/AddCharacter";
 

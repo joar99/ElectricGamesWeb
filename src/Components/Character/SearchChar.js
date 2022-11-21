@@ -1,21 +1,38 @@
-import {useState} from "react"
+import { useState } from "react"
 
-export default function SearchChar({onSearchByName}) {
-    
-    const [searchName, setSearchName] = useState([]);   
+export default function SearchChar({ onSearchByName, onSearchCharById }) {
+
+    const [searchName, setSearchName] = useState([]);
+    const [searchCharId, setSearchCharId] = useState([]);
 
     const searchCharByName = () => {
         onSearchByName(searchName);
     }
-    
+    const searchCharById = () => {
+        onSearchCharById(searchCharId);
+    }
 
-    return(
+
+    return (
         <>
-            <h3>Search a Character by Name</h3>
-            <div>                
-                <input type="text" id="search-book-name" placeholder="Enter Character Name" onChange={(e)=>setSearchName(e.target.value)}></input>
-             </div>
-            <button id="search-book-name-btn" onClick={searchCharByName}>Search</button>
+            <section className="search-container">
+                <section>
+                    <h3 className="search-name">Search a Character by Name</h3>
+
+                    <div className="search-content">
+                        <input type="text" id="search-character-name" className="search-character-name" placeholder="Enter Character Name" onChange={(e) => setSearchName(e.target.value)}></input>
+                        <button id="search-character-name-btn" onClick={searchCharByName}>Search</button>
+                    </div>
+                </section>
+                <section>
+                    <h3 className="search-name">Search a character by ID</h3>
+                    <div className="search-content">
+                    <input type="text" id="search-character-id" className="search-character-id" placeholder="Enter character ID" onChange={(e) => setSearchCharId(e.target.value)}></input>
+                    <button id="search-character-id" onClick={searchCharById}>Search</button>
+                    </div>
+                </section>
+            </section>
         </>
+
     )
 }
