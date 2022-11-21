@@ -39,6 +39,7 @@ export default function Characters() {
             <SearchChar onSearchByName={onSearchByName}></SearchChar>
         </div>
         <h1 className="main-title">Characters</h1>
+        <section className="card-container">
         {characters.map(char =>{
                 return(
                     <>
@@ -46,6 +47,7 @@ export default function Characters() {
                     </>
                 )
             })}
+        </section>
         </>
 
         
