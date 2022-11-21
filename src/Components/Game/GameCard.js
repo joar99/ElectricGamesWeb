@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../Css/Game/GameCard.css"
 import DeleteGame from "./DeleteGame";
 import axios from "axios";
-import "../../Css/Game/Button.css";
+
 
 
 export default function GameCard({ game, setDeleteGameFlag }) {
