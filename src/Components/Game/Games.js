@@ -57,7 +57,6 @@ export default function Games() {
         <Link className="add-new-btn-open" to={`/games/addgame`}>+ Add New Game</Link>
     </section>
 
-
         </>
     )
 
