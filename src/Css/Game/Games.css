@@ -34,9 +34,8 @@
     
 }
 
-
 .add-new-btn-open {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     background: #0B1B29;
     font-size: 20px;
     text-decoration: none;
@@ -47,6 +46,7 @@
     padding-bottom: 10px;
     width: 200px;
     text-align: left;
+    border: none;
     border-radius: 50px;
     transition: 0.7s;
     transition-property: transform;
@@ -62,7 +62,7 @@
   content: "";
   width: 30%;
   height: 2px;
-  background: #fff;
+  background: rgba(255, 255, 255, 1);
   position: absolute;
   bottom: 17px;
   left: 35px;
