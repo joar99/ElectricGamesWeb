@@ -47,6 +47,7 @@ export default function Game() {
     const handleChange = event => {
         setTitle(event.target.value);
     }
+    //wrapping functions
     const handleClick = event => {
         event.preventDefault();
         setTitle(title);
@@ -112,57 +113,30 @@ export default function Game() {
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label type="text" name="edit-game-title">Enter Game Title</label>
-                            <input
-                                className="edit-game-input"
-                                type="text"
-                                name="title"
-                                onChange={handleChange}
-                                value={title}
-                            />
+                            <label className="edit-game-label" type="text" name="edit-game-label">Enter game title</label>
+                            <input className="edit-game-input" type="text" name="title" onChange={handleChange} value={title}/>
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-release-date">Enter Game Release Date</label>
-                            <input
-                                className="edit-game-input"
-                                type="text" value={releaseDate}
-                                name="releaseDate"
-                                onChange={e => setReleaseDate(e.target.value)}
-                            />
+                            <input className="edit-game-input" type="text" value={releaseDate} name="releaseDate" onChange={e => setReleaseDate(e.target.value)}/>
                         </div>
                         <div>
                         <label className="edit-game-label" type="text" name="edit-platform">Enter Game Platform</label>
-                        <input
-                            className="edit-game-input"
-                            type="text"
-                            value={platform}
-                            name="platform"
-                            onChange={e => setPlatform(e.target.value)}
-                        />
+                        <input className="edit-game-input" type="text" value={platform} name="platform" onChange={e => setPlatform(e.target.value)}/>
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-developer">Enter Game Developer</label>
-                            <input
-                                className="edit-game-input"
-                                type="text" value={developer}
-                                name="developer" onChange={e => setDeveloper(e.target.value)}
+                            <input className="edit-game-input" type="text" value={developer} name="developer" onChange={e => setDeveloper(e.target.value)}
                             />
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-rating">Enter Game Age Rating</label>
-                            <input
-                                className="edit-game-input"
-                                type="text" value={rating}
-                                name="rating" onChange={e => setRating(e.target.value)}
+                            <input className="edit-game-input" type="text" value={rating} name="rating" onChange={e => setRating(e.target.value)}
                             />
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-game-label-select">Select Image</label>
-                            <input
-                                className="edit-file"
-                                type="file" onChange={saveFile}>
-
-                            </input>
+                            <input className="edit-file" type="file" onChange={saveFile}/>
                         </div>
                         <button className="update-game-button" onClick={handleClick}>Edit Game</button>
                     </form>

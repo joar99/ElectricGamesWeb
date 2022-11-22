@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import useFetch from "../../Hooks/useFetch";
 import "../../Css/Game/Games.css";
+import "../../Css/Character/Characters.css";
 import DeleteChar from "./DeleteChar";
 import CharacterCard from "./CharacterCard";
 import SearchChar from "./SearchChar";
@@ -46,8 +47,8 @@ export default function Characters() {
                     )
                 })}
             </section>
-            <section className="add-new-character">
-                <Link to={`/games/addcharacter`}>Add New Character</Link>
+            <section className="add-new-char-btn">
+                <Link className="add-new-char-btn-open" to={`/games/addcharacter`}>Add New Character</Link>
             </section>
 
         </>

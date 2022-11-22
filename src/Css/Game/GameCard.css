@@ -38,6 +38,7 @@
 }
 
 .card-overlay_list{
+    margin-top: 10px;
     margin-left: 15px;
     padding: 0;
     list-style: none;
@@ -87,7 +88,7 @@
     border: none;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
     font-family: 'Lato',sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin-right: 15px;
     width: 136px;
