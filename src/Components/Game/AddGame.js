@@ -41,6 +41,9 @@ export default function AddGame() {
         Developer: developer,
         ESRB: rating
     }
+
+    
+    
  
 
     const postGame = async () => {
