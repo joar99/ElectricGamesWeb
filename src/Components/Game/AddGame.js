@@ -121,7 +121,7 @@ export default function AddGame() {
                         <div>
                             <label className="add-game-label" type="text" name="select-image">Select Image</label>
                             <input className="save-file" type="file" onChange={saveFile}></input>
-                            <button className="add-game-button" onClick={handleClick}>Create Game</button>
+                            <button className="create-game-button" onClick={handleClick}>Create Game</button>
                             
                         </div>
                     </form>

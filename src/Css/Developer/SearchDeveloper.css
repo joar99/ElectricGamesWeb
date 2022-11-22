@@ -19,7 +19,7 @@
 
 
 .search-name {
-    color: white;
+    color: rgba(255, 255, 255, 1);
     border-radius: 5px 5px 0px 0px;
     padding-top: 5px;
     padding-right: 5px;
@@ -50,7 +50,6 @@
     border: none;
     border-radius: 5px;
     padding: 2px;
-    /*animasjon her*/
 
 }
 
@@ -68,11 +67,19 @@
 }
 
 .search-id {
-    border: none;
-    border-radius: 5px;
-    padding: 2px;
     color: rgba(255, 255, 255, 1);
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: rgba(52, 55, 56, 0.6);
+    backdrop-filter: blur(20px);
 }
+
 
 .search-dev-id-btn {
     color: rgba(255, 255, 255, 1);
@@ -84,6 +91,10 @@
     padding: 5px;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
     cursor: pointer;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 1);
 }
 
 /*media queries for ipad*/
