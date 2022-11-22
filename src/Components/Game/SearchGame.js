@@ -27,16 +27,14 @@ export default function SearchGame({ onSearchByTitle, onSearchById }) {
                 </div>
             </section>
             <section>
-                <h3 className="search-title">Search a Game by ID</h3>
+                <h3 className="search-title">Search a game by ID</h3>
 
                 <div className="search-content">
                     <input type="text" id="search-game-id" className="search-game-id" placeholder="Enter Game Id" onChange={(e) => setSearchId(e.target.value)}></input>
-                    <button className="search-game-name-btn" onClick={searchGameById}>Search</button>
+                    <button className="search-game-id-btn" onClick={searchGameById}>Search</button>
                 </div>
             </section>
         </section>
 
-        
-        
     )
 }
