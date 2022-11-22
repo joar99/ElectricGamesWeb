@@ -8,6 +8,15 @@ export default function Developer() {
     //GETTING ID BASED ON URL
     let {id} = useParams()
 
+    //STATE CONTROL FOR POPUP
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
+
     //STATE CONTROL FOR GAME
     const [dev, setDev] = useState({})
     const [devUpdate, setDevUpdate] = useState(false)
@@ -33,6 +42,12 @@ export default function Developer() {
     const saveFile = (e) => {
         setFile(e.target.files[0]);
         setFileName(e.target.files[0].name)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        putDev();
+        handlePopupChange();
     }
     
     //SETTING NEW GAME TO BE PUT
@@ -83,6 +98,7 @@ export default function Developer() {
         <>
         <h1 className="main-title">Developers</h1>
         <section className="container">
+        {popup === true ? <h1>Developer Successfully Updated</h1> : <></>}
             <div className="form">
                 <form className="form-input">
                     <div>
@@ -97,12 +113,32 @@ export default function Developer() {
                     <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer image</label>
                     <input className="edit-file" type="file" onChange={saveFile}/>
                     </div>
-                    <button className="update-dev-btn" onClick={putDev}>Update Developer</button>
+                    <button className="update-dev-btn" onClick={handleClick}>Update Developer</button>
                 </form>
+                <CharacterPreview {...dev}/>
             </div>
         </section>
     
         </>
     )
 
+}
+
+const CharacterPreview = (props) => {
+    return (
+        <>
+            <div className="card">
+                <div className="card-image">
+                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} />
+                </div>
+                <div className="card-overlay">
+                    <ul className="card-overlay_list">
+                        <h1>{props.name}</h1>
+                        <li className="id">{props.id}</li>
+                        <li>{props.location}</li>
+                    </ul>
+                </div>
+            </div>
+        </>
+    )
 }
