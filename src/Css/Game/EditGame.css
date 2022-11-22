@@ -251,6 +251,7 @@
   height: 400px;
   width: 370px;
   border-radius: 5px;
+  
  
 }
 
@@ -260,41 +261,6 @@
 
 
 }
-
-/*media queries for ipad*/
-@media screen and (min-width: 768px) {
-
-   .edit-game-input {
-      width: 460px;
-
-   }
-}
-
-/*media queries for desktop*/
-@media screen and (min-width: 1024px) {
-
-   .edit-game-input {
-      width: 620px;
-   }
-}
-
-/*media queries for ipad*/
-@media screen and (min-width: 768px) {
-
-   .edit-game-input {
-      width: 460px;
-
-   }
-}
-
-/*media queries for desktop*/
-@media screen and (min-width: 1024px) {
-
-   .edit-game-input {
-      width: 620px;
-   }
-}
-
 
  
  /*media queries for ipad*/
