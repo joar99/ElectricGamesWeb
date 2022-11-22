@@ -4,7 +4,7 @@ import axios from "axios";
 import GameCard from "./GameCard";
 import "../../Css/Background.css";
 import "../../Css/Game/AddGame.css";
-import "../../Css/Game/PopupAddGame.css";
+import "../../Css/PopupMessage.css"
 
 
 export default function AddGame() {
