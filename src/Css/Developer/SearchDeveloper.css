@@ -67,10 +67,11 @@
 
 }
 
-.search-dev-id {
+.search-id {
     border: none;
     border-radius: 5px;
     padding: 2px;
+    color: rgba(255, 255, 255, 1);
 }
 
 .search-dev-id-btn {

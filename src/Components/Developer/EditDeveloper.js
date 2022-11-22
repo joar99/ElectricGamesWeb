@@ -1,6 +1,7 @@
 import React, {useState, Component, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "../../Css/Developer/EditDeveloper.css";
 
 export default function Developer() {
     
@@ -76,25 +77,31 @@ export default function Developer() {
     
 
       }
-
-    
     
 
     return (
         <>
-        <h1>{dev.name}</h1>
-        <p>{dev.id}</p>
-        <img src={`https://localhost:7127/images/${encodeURIComponent(dev.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
-        
-        
-
-        <p>Edit Name</p>
-        <input type="text/css" defaultValue={dev.name} onChange={(e)=>setName(e.target.value)}></input> 
-        <p>Edit Location</p>
-        <input type="text/css" defaultValue={dev.location} onChange={(e)=>setLocation(e.target.value)}></input>
-        <p>Edit Image</p>
-        <input type="file" onChange={saveFile}></input>
-        <button onClick={putDev}>Update Developer</button>
+        <h1 className="main-title">Developers</h1>
+        <section className="container">
+            <div className="form">
+                <form className="form-input">
+                    <div>
+                        <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer name</label>
+                        <input className="edit-dev-input" type="text" defaultValue={dev.name} onChange={(e)=>setName(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer location</label>
+                    <input className="edit-dev-input" type="text" defaultValue={dev.location} onChange={(e)=>setLocation(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer image</label>
+                    <input className="edit-file" type="file" onChange={saveFile}/>
+                    </div>
+                    <button className="update-dev-btn" onClick={putDev}>Update Developer</button>
+                </form>
+            </div>
+        </section>
+    
         </>
     )
 

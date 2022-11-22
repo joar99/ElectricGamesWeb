@@ -32,10 +32,9 @@ export default function SearchDev({onSearchByName, onSearchById, onChange}) {
                 </div>
             </section>
             <section>
-                <h3 className="search-dev-id">Search a Developer by ID</h3>
-
+                <h3 className="search-id">Search a Developer by ID</h3>
                 <div className="search-content">
-                    <input type="text" id="search-dev-id" className="search-dev-id" placeholder="Enter Dev Id" onChange={(e) => setId(e.target.value)}></input>
+                    <input type="text" id="search-dev-id" className="search-dev-id" placeholder="Enter Dev Id" onChange={(e) => setId(e.target.value)}/>
                     <button className="search-dev-id-btn" onClick={searchDevById}>Search</button>
                 </div>
             </section>
