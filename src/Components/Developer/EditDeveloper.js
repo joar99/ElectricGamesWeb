@@ -115,7 +115,7 @@ export default function Developer() {
                     </div>
                     <button className="update-dev-btn" onClick={handleClick}>Update Developer</button>
                 </form>
-                <CharacterPreview {...dev}/>
+                <DeveloperPreview {...dev}/>
             </div>
         </section>
     
@@ -124,7 +124,7 @@ export default function Developer() {
 
 }
 
-const CharacterPreview = (props) => {
+const DeveloperPreview = (props) => {
     return (
         <>
             <div className="card">
