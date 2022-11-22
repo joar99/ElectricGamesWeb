@@ -1,10 +1,10 @@
 import { useState } from "react"
 import "../../Css/Character/SearchCharacter.css"
 
-export default function SearchChar({ onSearchByName, onSearchCharById, onChange }) {
+export default function SearchChar({ onSearchByName, onSearchById, onChange }) {
 
     const [searchName, setSearchName] = useState([]);
-    const [searchCharId, setSearchCharId] = useState([]);
+    const [id, setId] = useState([]);
 
     const searchCharByName = () => {
         onSearchByName(searchName);
@@ -28,7 +28,7 @@ export default function SearchChar({ onSearchByName, onSearchCharById, onChange 
                 <section>
                     <h3 className="search-name">Search a character by ID</h3>
                     <div className="search-content">
-                    <input type="text" id="search-character-id" className="search-character-id" placeholder="Enter character ID" onChange={(e) => setSearchCharId(e.target.value)}></input>
+                    <input type="text" id="search-character-id" className="search-character-id" placeholder="Enter character ID" onChange={(e) => setId(e.target.value)}></input>
                     <button id="search-character-id-btn" className="search-character-id-btn" onClick={searchCharById}>Search</button>
                     </div>
                 </section>
