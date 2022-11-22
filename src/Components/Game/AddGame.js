@@ -104,24 +104,3 @@ export default function AddGame() {
         </>
     )
 }
-
-/*const AddedGame = (gameTitle) => {
-
-    const gameControllerUrl = "https://localhost:7127/api/Games"
-
-    const [game, setGame] = useState({})
-
-    const getGame = () => {
-        axios.get(`${gameControllerUrl}/${gameTitle}`)
-        .then(response=>setGame(response.data))
-        .catch(error=>console.log(error))
-    }
-
-    return (
-        <>
-        <h1>Successfully Added Game To Database</h1>
-        <GameCard {...game}/>
-        </>
-    )
-
-}*/
