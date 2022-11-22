@@ -89,7 +89,7 @@ export default function AddGame() {
          <div className="overlay">
             <div className="popup-container">
                 <popup className="popup-message">
-             {popup === true ? <h2>Game successfully updated.</h2> : <></>}
+             {popup === true ? <h2>Game successfully added.</h2> : <></>}
             </popup>    
          </div>
         </div>
