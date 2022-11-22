@@ -18,7 +18,7 @@ export default function SearchGame({ onSearchByTitle, onSearchById, onChange }) 
        
   
         <section className="search-container">
-            <button onClick={onChange}>Show All</button>
+            <button className="show-all-btn" onClick={onChange}>Show All</button>
             <section>
                 <h3 className="search-title">Search a Game by Title</h3>
 
