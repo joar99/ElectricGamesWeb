@@ -32,13 +32,3 @@
     transform: translate(-120px, 0);
     color: #FF8300;
 }
-
-.add-new-char-btn-open:hover::after {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: rgba(255, 255, 255, 1);
-    position: absolute;
-    bottom: 17px;
-    left: 35px;
-}
