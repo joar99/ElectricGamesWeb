@@ -38,16 +38,16 @@
    flex-direction: column;
 }
 
-.add-game-label {
+.add-dev-label {
    margin-bottom: 10px;
 
 }
-.add-game-label-select{
+.add-dev-label-select{
    margin-top: 15px;
    margin-bottom: 15px;
 }
 
-.add-game-input {
+.add-dev-input {
    background-color: rgba(34, 55, 68, 1);
    border: none;
    border-radius: 5px;
@@ -63,7 +63,7 @@
    margin-left: 15px;
 }
 
-.create-game-button {
+.create-dev-btn {
    text-transform: uppercase;
    color: rgba(255, 255, 255, 1);
    background-color: rgba(97, 124, 176, 0.3);
@@ -80,7 +80,7 @@
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
 
-   .add-game-input {
+   .add-dev-input {
       width: 460px;
 
    }
@@ -89,7 +89,7 @@
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
 
-   .add-game-input {
+   .add-dev-input {
       width: 620px;
    }
 }

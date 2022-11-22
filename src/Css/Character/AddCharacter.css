@@ -1,4 +1,3 @@
-
 .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -39,16 +38,16 @@
     flex-direction: column;
  }
  
- .add-dev-label {
+ .character-label {
     margin-bottom: 10px;
  
  }
- .add-dev-label-select{
+ .character-label-select{
     margin-top: 15px;
     margin-bottom: 15px;
  }
  
- .add-dev-input {
+ .character-input {
     background-color: rgba(34, 55, 68, 1);
     border: none;
     border-radius: 5px;
@@ -64,7 +63,7 @@
     margin-left: 15px;
  }
  
- .add-dev-btn {
+ .create-character-btn {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(97, 124, 176, 0.3);
@@ -75,12 +74,13 @@
     font-weight: bold;
     width: 136px;
     height: 33px;
+    cursor: pointer;
  }
  
  /*media queries for ipad*/
  @media screen and (min-width: 768px) {
  
-    .add-dev-input {
+    .add-game-input {
        width: 460px;
  
     }
@@ -89,7 +89,7 @@
  /*media queries for desktop*/
  @media screen and (min-width: 1024px) {
  
-    .add-dev-input {
+    .add-game-input {
        width: 620px;
     }
  }
