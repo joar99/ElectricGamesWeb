@@ -58,18 +58,6 @@
     color: #FF8300;
 }
 
-.add-new-btn-open:hover::after {
-  content: "";
-  width: 30%;
-  height: 2px;
-  background: rgba(255, 255, 255, 1);
-  position: absolute;
-  bottom: 17px;
-  left: 35px;
-
-}
-
-
 
 
 @media screen and (min-width: 768px) {
