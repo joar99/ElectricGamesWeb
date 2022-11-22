@@ -75,6 +75,7 @@
     width: 136px;
     height: 33px;
     margin-bottom: 15px;
+    cursor: pointer;
  }
  
  /*media queries for ipad*/

@@ -63,7 +63,7 @@
    margin-left: 15px;
 }
 
-.create-game-button {
+.add-game-button {
    text-transform: uppercase;
    color: rgba(255, 255, 255, 1);
    background-color: rgba(97, 124, 176, 0.3);
@@ -74,6 +74,7 @@
    font-weight: bold;
    width: 136px;
    height: 33px;
+   cursor: pointer;
 }
 
 /*media queries for ipad*/
