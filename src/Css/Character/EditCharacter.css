@@ -38,16 +38,17 @@
     flex-direction: column;
  }
  
- .edit-game-label {
+ 
+ .edit-char-label {
     margin-bottom: 10px;
  
  }
- .edit-game-label-select{
+ .edit-char-label-select{
     margin-top: 15px;
     margin-bottom: 15px;
  }
  
- .edit-game-input {
+ .edit-char-input {
     background-color: rgba(34, 55, 68, 1);
     border: none;
     border-radius: 5px;
@@ -63,24 +64,25 @@
     margin-left: 15px;
  }
  
- .update-game-button {
+ .update-char-btn {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
+    font-size: 16px;
     background-color: rgba(97, 124, 176, 0.3);
     border-radius: 5px;
     border: none;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    width: 136px;
+    width: 180px;
     height: 33px;
     margin-bottom: 15px;
  }
  
  /*media queries for ipad*/
  @media screen and (min-width: 768px) {
- 
-    .edit-game-input {
+
+    .edit-char-input {
        width: 460px;
  
     }
@@ -89,7 +91,7 @@
  /*media queries for desktop*/
  @media screen and (min-width: 1024px) {
  
-    .edit-game-input {
+    .edit-char-input {
        width: 620px;
     }
  }

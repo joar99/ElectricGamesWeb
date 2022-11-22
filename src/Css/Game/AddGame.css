@@ -42,6 +42,10 @@
    margin-bottom: 10px;
 
 }
+.add-game-label-select{
+   margin-top: 15px;
+   margin-bottom: 15px;
+}
 
 .add-game-input {
    background-color: rgba(34, 55, 68, 1);
@@ -59,7 +63,7 @@
    margin-left: 15px;
 }
 
-.add-game-button {
+.create-game-button {
    text-transform: uppercase;
    color: rgba(255, 255, 255, 1);
    background-color: rgba(97, 124, 176, 0.3);
@@ -83,8 +87,6 @@
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
-
-
 
    .add-game-input {
       width: 620px;

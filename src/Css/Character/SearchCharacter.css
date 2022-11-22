@@ -1,9 +1,9 @@
-.search-container{
-display: grid;
-place-content: center;
+.search-container {
+    display: grid;
+    place-content: center;
 }
 
-.show-all-btn{
+.show-all-btn {
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     font-size: 18px;
@@ -17,7 +17,8 @@ place-content: center;
     margin-bottom: 15px;
 }
 
-.search-title{
+
+.search-name {
     color: white;
     border-radius: 5px 5px 0px 0px;
     padding-top: 5px;
@@ -27,32 +28,33 @@ place-content: center;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    background-color:rgba(52, 55, 56, 0.6);
+    background-color: rgba(52, 55, 56, 0.6);
     backdrop-filter: blur(20px);
 }
 
-.search-content{
- 
+.search-content {
     border: none;
-    border-radius:0px 0px 5px 5px;
+    border-radius: 0px 0px 5px 5px;
     padding-right: 5px;
     padding-bottom: 5px;
-    padding-left:5px;
+    padding-left: 5px;
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 15px;
     background-color: rgba(52, 55, 56, 0.6);
     backdrop-filter: blur(20px);
-  
-}
-.search-game-name{
-    border: none;
-    border-radius: 5px;
-    padding:2px;
-/*animasjon her*/
 
 }
-.search-game-name-btn{
+
+.search-character-name {
+    border: none;
+    border-radius: 5px;
+    padding: 2px;
+    /*animasjon her*/
+
+}
+
+.search-character-name-btn {
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     margin-left: 5px;
@@ -65,13 +67,13 @@ place-content: center;
 
 }
 
-.search-game-id{
+.search-character-id {
     border: none;
     border-radius: 5px;
-    padding:2px;
+    padding: 2px;
 }
 
-.search-game-id-btn{
+.search-character-id-btn {
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     margin-left: 5px;
@@ -82,15 +84,14 @@ place-content: center;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
     cursor: pointer;
 }
+
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
-    .search-container{
+    .search-container {
         place-content: end;
-        }
+    }
 
 }
 
 /*media queries for desktop*/
-@media screen and (min-width: 1024px) {
-  
-}
+@media screen and (min-width: 1024px) {}

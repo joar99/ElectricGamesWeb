@@ -80,7 +80,7 @@
     display: block;
     padding:12px;
 }
-.edit-game-link, button#delete-game-btn{
+.edit-dev-link, button#delete-dev-btn{
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(34, 55, 68, 0.5);
@@ -96,13 +96,13 @@
 
 }
 
-.edit-game-link {
+.edit-dev-link {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 }
-.edit-game-link a:link, a:visited, button#delete-game-btn a:link, a:visited {
+.edit-dev-link a:link, a:visited, button#delete-game-btn a:link, a:visited {
     color: white;
     text-decoration: none;
     cursor: pointer;
