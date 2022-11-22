@@ -111,9 +111,11 @@ export default function Game() {
 
         <>
             <h1 className="main-title">Games</h1>
-            <section className="container">
+            <section className="container"> 
                 {popup === true ? <h1>Game Successfully Updated</h1> : <></>}
                 <div className="form">
+                <GamePreview {...game}/>
+                    
                     <form className="form-input">
                         <div>
                             <label className="edit-game-label" type="text" name="edit-game-label">Enter game title</label>
@@ -143,7 +145,7 @@ export default function Game() {
                         </div>
                         <button className="update-game-button" onClick={handleClick}>Edit Game</button>
                     </form>
-                    <GamePreview {...game}/>
+                    
                 </div>
             </section>
             
@@ -160,7 +162,7 @@ const GamePreview = (props) => {
                     <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
                 </div>
                 <div className="card-overlay">
-                    <ul class="card-overlay_list">
+                    <ul class="card-overlay-list">
                         <h1>{props.title}</h1>
                         <li className="id">{props.id}</li>
                         <li>Release Date: {props.releaseDate}</li>
