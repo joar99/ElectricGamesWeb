@@ -16,7 +16,9 @@ export default function SearchChar({ onSearchByName, onSearchCharById, onChange 
 
     return (
         <>
+
             <section className="search-container">
+             <button className="show-all-btn" onClick={onChange}>Show All</button>
                 <section>
                     <h3 className="search-name">Search a Character by Name</h3>
 

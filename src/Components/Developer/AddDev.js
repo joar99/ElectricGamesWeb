@@ -1,6 +1,8 @@
 import React from "react";
-import {useState} from "react";
+import { useState } from "react";
 import axios from "axios";
+import "../../Css/Developer/Developers.css";
+import "../../Css/Developer/AddDeveloper.css";
 
 export default function AddDev() {
     const [isAdded, setIsAdded] = useState(false);
@@ -21,14 +23,14 @@ export default function AddDev() {
         setFile(e.target.files[0]);
         setFileName(e.target.files[0].name)
     }
-    
+
     const dev = {
         id: null,
         Image: fileName,
         Name: name,
         Location: location
     }
-    
+
     const postDev = async () => {
         await axios.post(devControllerUrl,
             JSON.stringify(dev),
@@ -37,30 +39,45 @@ export default function AddDev() {
                     "Content-Type": "application/json"
                 }
             })
-            .then((response)=>{
+            .then((response) => {
                 console.log(response)
             })
-            .catch(error=>console.log(error));
+            .catch(error => console.log(error));
 
-            const formData = new FormData();
-            formData.append("formFile", file)
-            formData.append("fileName", fileName)
-    
-            try {
+        const formData = new FormData();
+        formData.append("formFile", file)
+        formData.append("fileName", fileName)
+
+        try {
             const res = axios.post("https://localhost:7127/api/file", formData);
-            } catch (ex) {
+        } catch (ex) {
             console.log(ex)
-            }
         }
+    }
 
     return (
         <>
-        <p>Enter Developer Name</p>
-        <input className="game-title-input" type="text" onChange={handleChangeName}></input>
-        <p>Enter Developer Location</p>
-        <input className="game-release-input" type="text" onChange={handleChangeLocation}></input>
-        <input type="file" onChange={saveFile}></input>
-        <button onClick={postDev}>Create Developer</button>
+            <h1 className="main-title">Developers</h1>
+            <section className="container">
+
+                <div className="form">
+                    <form className="form-input">
+                        <div>
+                            <label className="add-dev-label" type="text" name="dev-name">Enter developer name</label>
+                            <input classname="add-dev-input" type="text" onChange={handleChangeName} />
+                        </div>
+                        <div>
+                            <label className="add-dev-label" type="text" name="dev-location">Enter developer location</label>
+                            <input classname="add-dev-input" type="text" onChange={handleChangeLocation} />
+                        </div>
+                        <div>
+                            <input className="save-file" type="file" onChange={saveFile} />
+                            <button className="add-dev-btn" onClick={postDev}>Create Developer</button>
+                        </div>
+                    </form>
+
+                </div>
+            </section>
         </>
     )
 }

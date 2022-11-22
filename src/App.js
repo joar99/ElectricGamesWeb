@@ -6,7 +6,7 @@ import Error from "./Components/Error";
 import Game from "./Components/Game/EditGame"
 import Games from "./Components/Game/Games"
 import AddGame from "./Components/Game/AddGame";
-import Developer from "./Components/Developer/Developer";
+import Developer from "./Components/Developer/EditDeveloper";
 import Developers from "./Components/Developer/Developers";
 import AddDev from "./Components/Developer/AddDev";
 import Character from "./Components/Character/EditCharacter";
