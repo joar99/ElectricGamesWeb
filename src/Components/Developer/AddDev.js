@@ -63,11 +63,11 @@ export default function AddDev() {
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-name">Enter developer name</label>
+                            <label className="add-dev-label" type="text" name="dev-name">Enter Developer Name</label>
                             <input classname="add-dev-input" type="text" onChange={handleChangeName} />
                         </div>
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-location">Enter developer location</label>
+                            <label className="add-dev-label" type="text" name="dev-location">Enter Developer Location</label>
                             <input classname="add-dev-input" type="text" onChange={handleChangeLocation} />
                         </div>
                         <div>

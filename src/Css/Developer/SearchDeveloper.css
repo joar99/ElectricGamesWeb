@@ -65,10 +65,16 @@
     cursor: pointer;
 
 }
+.search-dev-id{
+    border: none;
+    border-radius: 5px;
+    padding:2px;
+}
 
 .search-id {
     color: rgba(255, 255, 255, 1);
     border-radius: 5px 5px 0px 0px;
+    border:none;
     padding-top: 5px;
     padding-right: 5px;
     padding-left: 5px;
