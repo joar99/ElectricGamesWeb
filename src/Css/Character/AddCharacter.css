@@ -77,7 +77,7 @@
     cursor: pointer;
  }
 
- input, select, textarea{
+  select, textarea{
    color: rgba(255, 255, 255, 1);
 }
  

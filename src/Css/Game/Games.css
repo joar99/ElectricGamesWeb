@@ -1,78 +1,90 @@
-.main-title {
+body {
+    height: 100%;
     display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 25px;
+    flex-direction: column;
+}
+
+.main-title {
     color: rgba(255, 255, 255, 1);
+    display: flex;
+    font-size: 25px;
     font-weight: bold;
-    text-shadow: 1px 3px 15px rgba(136, 156, 208, 1);
-    padding-top: 0px;
-    margin-top: 30px;
+    justify-content: center;
     margin-bottom: 40px;
- 
+    margin-top: 30px;
+    padding-top: 0px;
+    text-shadow: 1px 3px 15px rgba(136, 156, 208, 1);
+    text-transform: uppercase;
 }
 
 .card-container {
+    background-color: rgba(52, 55, 56, 0.6);
+    column-gap: 15px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    background-color: rgba(52, 55, 56, 0.6);
     padding: 20px;
     row-gap: 30px;
-    column-gap: 15px;
 }
 
-.add-new-btn {
+.add-new-btn{
     position: sticky;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transform: translate(140px);
-    
+    top: calc(100vh - 2.5rem);
+    left: calc(100vw - 3rem);
+    z-index: 10;
 }
 
-.add-new-btn-open {
+.add-new-btn button {
+    -webkit-transition: width 1s;
+    /*this was suggested by jaunt, thanks */
+    background-color: rgba(62, 108, 197, 0.45);
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
     color: rgba(255, 255, 255, 1);
-    background: #0B1B29;
     font-size: 20px;
-    text-decoration: none;
-    display: block;
-    margin: 5px;
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 200px;
-    text-align: left;
-    border: none;
+
+    overflow: hidden;
+    transition: width .40;
+    white-space: nowrap;
+}
+
+.add-new-btn button::before {
+    content: '+';
+}
+
+.add-new-btn button:hover {
     border-radius: 50px;
-    transition: 0.7s;
-    transition-property: transform;
+    padding:15px;
+    width: 180px;
+    -webkit-transition: width .40;
+    transition: width .40;
+    background-color: rgba(62, 108, 197, 1);
+    cursor: pointer;
+}
+.add-new-btn button:hover::before {
+    content: '';
 }
 
-.add-new-btn-open:hover {
-    transform: translate(-120px,0);
-    color: #FF8300;
+.add-new-btn button:hover::after {
+    content: 'Add new game';
 }
-
-
 
 @media screen and (min-width: 768px) {
-.main-title{
-    justify-content: start;
-    margin-left:15px;
-}
+    .main-title {
+        justify-content: start;
+        margin-left: 15px;
+    }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-@media screen and (min-width: 1024px) {
     .card-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-}
+
+    @media screen and (min-width: 1024px) {
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }

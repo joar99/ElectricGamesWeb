@@ -82,6 +82,12 @@ place-content: center;
     box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
     cursor: pointer;
 }
+
+ select, textarea{
+    color: rgba(52, 55, 56, 1);
+ }
+ 
+
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
     .search-container{
