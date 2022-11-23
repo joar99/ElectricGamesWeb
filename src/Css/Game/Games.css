@@ -58,6 +58,10 @@
 }
 
 
+input, select, textarea{
+    color: rgba(52, 55, 56, 1);
+ }
+ 
 
 @media screen and (min-width: 768px) {
 .main-title{
