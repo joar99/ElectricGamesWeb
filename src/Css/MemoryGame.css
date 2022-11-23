@@ -7,6 +7,8 @@
   background-color: rgba(52, 55, 56, 0.7);
   border-radius: 5px;
   margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7),
+    0 6px 20px 0 rgba(77, 169, 255, 0.7);
 }
 
 .start-information h1,
@@ -34,6 +36,7 @@
 .start-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 20px 0 0 15px;
 }
 .start-btn,
@@ -51,18 +54,13 @@
   cursor: pointer;
 }
 
-.start-btn {
-  display: flex;
-  justify-content: center;
-}
-
 .btn-container {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
 }
 
-.display-information{
+.display-information {
   display: grid;
   grid-template-columns: 2fr 1fr;
   font-size: 11px;
@@ -97,8 +95,6 @@
   color: black;
 }
 
-
-
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
   .memory-game-container {
@@ -110,8 +106,10 @@
 
   .character-img {
     display: flex;
-
+    height: 400px;
+    width: 330px;
   }
+
   .memory-img-container {
     display: flex;
     justify-content: center;
@@ -135,8 +133,36 @@
     padding: 20px 0 0 0;
   }
 
-  .character-memory-btn{
+  .character-memory-btn {
     font-size: 15px;
     padding: 5px 0 5px 0;
+  }
+}
+
+/*media queries for desktop*/
+@media screen and (min-width: 1024px) {
+  .btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0 0 0;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .btn-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    justify-content: flex-start;
+  }
+
+  .display-information {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+  }
+
+  .character-img {
+    height: 400px;
+    width: 330px;
   }
 }

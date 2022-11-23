@@ -30,7 +30,7 @@ const StartMemory = ({onChange}) => {
     return (
         <>
             <section className="start-information">
-                <h1>Start Memory Game</h1>
+                <h1>Play Memory Game!</h1>
                 <h3>Current High Score: {value}</h3>
                 <button className="start-btn" onClick={onChange}>Start Game</button>
             </section>
