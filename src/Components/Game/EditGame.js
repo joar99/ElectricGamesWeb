@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Game/EditGame.css";
 import "../../Css/Background.css";
+import GameCard from "./GameCard";
+import "../../Css/PopupMessage.css";
 
 
 
@@ -10,6 +12,15 @@ export default function Game() {
 
     //GETTING ID BASED ON URL
     let { id } = useParams()
+
+    //STATE CONTROL FOR POPUP
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
 
     //STATE CONTROL FOR GAME
     const [game, setGame] = useState({})
@@ -26,6 +37,7 @@ export default function Game() {
 
     //CONTROL INPUT BOX STATE
 
+    const [title, setTitle] = useState("");
     const [releaseDate, setReleaseDate] = useState("");
     const [platform, setPlatform] = useState("");
     const [developer, setDeveloper] = useState("");
@@ -40,20 +52,12 @@ export default function Game() {
         setFile(e.target.files[0]);
         setFileName(e.target.files[0].name)
     }
-
-    //EVENT HANDLERS
-    const [title, setTitle] = useState("");
-
-    const handleChange = event => {
-        setTitle(event.target.value);
-    }
-    //wrapping functions
+    
     const handleClick = event => {
         event.preventDefault();
-        setTitle(title);
         putGame();
+        handlePopupChange();
     }
-
 
     //SETTING NEW GAME TO BE PUT
     const newGame = {
@@ -108,13 +112,15 @@ export default function Game() {
 
         <>
             <h1 className="main-title">Games</h1>
-            <section className="container">
-
+            <section className="container"> 
+                {popup === true ? <h1>Game Successfully Updated</h1> : <></>}
                 <div className="form">
+                <GamePreview {...game}/>
+                    
                     <form className="form-input">
                         <div>
                             <label className="edit-game-label" type="text" name="edit-game-label">Enter game title</label>
-                            <input className="edit-game-input" type="text" name="title" onChange={handleChange} value={title}/>
+                            <input className="edit-game-input" type="text" name="title" value={title} onChange={e => setTitle(e.target.value)}/>
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-release-date">Enter Game Release Date</label>
@@ -140,9 +146,33 @@ export default function Game() {
                         </div>
                         <button className="update-game-button" onClick={handleClick}>Edit Game</button>
                     </form>
+                    
                 </div>
             </section>
+            
         </>
     )
 
 } 
+
+const GamePreview = (props) => {
+    return (
+        <>
+             <div className="card">
+                <div className="card-image">
+                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
+                </div>
+                <div className="card-overlay">
+                    <ul class="card-overlay-list">
+                        <h1>{props.title}</h1>
+                        <li className="id">{props.id}</li>
+                        <li>Release Date: {props.releaseDate}</li>
+                        <li>Age Limit: {props.esrb}</li>
+                        <li>Platform: {props.platform}</li>
+                        <li>Developer: {props.developer}</li>
+                    </ul>
+                </div>
+            </div>
+        </>
+    )
+}

@@ -4,6 +4,7 @@ import axios from "axios";
 import GameCard from "./GameCard";
 import "../../Css/Background.css";
 import "../../Css/Game/AddGame.css";
+import "../../Css/PopupMessage.css"
 
 
 export default function AddGame() {
@@ -41,6 +42,21 @@ export default function AddGame() {
         Developer: developer,
         ESRB: rating
     }
+
+    
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        postGame();
+        handlePopupChange();
+    }
  
 
     const postGame = async () => {
@@ -70,6 +86,15 @@ export default function AddGame() {
 
     return (
         <>
+         <div className="overlay">
+            <div className="popup-container">
+                <popup className="popup-message">
+             {popup === true ? <h2>Game successfully added.</h2> : <></>}
+            </popup>    
+         </div>
+        </div>
+                    
+
             <h1 className="main-title">Games</h1>
             <section className="container">
 
@@ -96,9 +121,12 @@ export default function AddGame() {
                         <div>
                             <label className="add-game-label" type="text" name="select-image">Select Image</label>
                             <input className="save-file" type="file" onChange={saveFile}></input>
-                            <button className="add-game-button" onClick={postGame}>Create Game</button>
+                            <button className="create-game-button" onClick={handleClick}>Create Game</button>
+                            
                         </div>
                     </form>
+                   
+                        
                 </div>
             </section>
         </>

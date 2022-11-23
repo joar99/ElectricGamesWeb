@@ -74,6 +74,7 @@
    font-weight: bold;
    width: 136px;
    height: 33px;
+   cursor: pointer;
 }
 
 /*media queries for ipad*/

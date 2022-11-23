@@ -2,6 +2,7 @@ import React, { useState, Component, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Character/EditCharacter.css";
+import "../../Css/PopupMessage.css"
 
 
 
@@ -11,6 +12,15 @@ export default function Character() {
 
     //GETTING ID BASED ON URL
     let { id } = useParams()
+
+    //STATE CONTROL FOR POPUP
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
 
     //STATE CONTROL FOR GAME
     const [character, setCharacter] = useState({})
@@ -38,6 +48,12 @@ export default function Character() {
     const saveFile = (e) => {
         setFile(e.target.files[0]);
         setFileName(e.target.files[0].name)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        putChar();
+        handlePopupChange();
     }
 
     //SETTING NEW GAME TO BE PUT
@@ -90,9 +106,15 @@ export default function Character() {
 
     return (
         <>
+        <div className="overlay">
+            <div className="popup-container">
+                <popup className="popup-message">
+             {popup === true ? <h2>Character successfully updated.</h2> : <></>}
+            </popup>    
+         </div>
+        </div>
             <h1 className="main-title">Characters</h1>
             <section className="container">
-
                 <div className="form">
                     <form className="form-input">
                         <div>
@@ -111,12 +133,34 @@ export default function Character() {
                             <label className="edit-char-label" type="text" name="edit-char-label-select">Select Image</label>
                             <input className="edit-file" type="file" onChange={saveFile} />
                         </div>
-                        <button className="update-char-btn" onClick={putChar}>Update Character</button>
+                        <button className="update-char-btn" onClick={handleClick}>Update Character</button>
                     </form>
+                    <CharacterPreview {...character} />
                 </div>
             </section>
 
         </>
     )
 
+}
+
+const CharacterPreview = (props) => {
+    return (
+        <>
+            <div className="card">
+                <div className="card-image">
+                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
+                </div>
+                <div className="card-overlay">
+                    <ul class="card-overlay_list">
+                        <h1>{props.name}</h1>
+                        <li className="id">{props.id}</li>
+                        <li>Game: {props.game}</li>
+                        <li>Weapon: {props.weapon}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </>
+    )
 }

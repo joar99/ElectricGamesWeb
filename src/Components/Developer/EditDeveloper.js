@@ -2,6 +2,7 @@ import React, {useState, Component, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Developer/EditDeveloper.css";
+import "../../Css/PopupMessage.css";
 
 export default function Developer() {
     
@@ -35,6 +36,23 @@ export default function Developer() {
         setFileName(e.target.files[0].name)
     }
     
+    // HANDLING POPUP MESSAGE WHEN SUBMITTING CHANGES 
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        putDev();
+        handlePopupChange();
+    }
+
+
+
     //SETTING NEW GAME TO BE PUT
     const newDev = {
         Name: name,
@@ -81,6 +99,15 @@ export default function Developer() {
 
     return (
         <>
+
+        <div className="overlay">
+            <div className="popup-container">
+                <popup className="popup-message">
+             {popup === true ? <h2>Developer successfully updated.</h2> : <></>}
+            </popup>    
+         </div>
+        </div>
+
         <h1 className="main-title">Developers</h1>
         <section className="container">
             <div className="form">
@@ -97,7 +124,7 @@ export default function Developer() {
                     <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer image</label>
                     <input className="edit-file" type="file" onChange={saveFile}/>
                     </div>
-                    <button className="update-dev-btn" onClick={putDev}>Update Developer</button>
+                    <button className="update-dev-btn" onClick={handleClick}>Update Developer</button>
                 </form>
             </div>
         </section>

@@ -93,6 +93,7 @@
     margin-right: 15px;
     width: 136px;
     height: 33px;
+    cursor: pointer;
 
 }
 
@@ -103,7 +104,7 @@
     text-decoration: none;
 }
 .edit-game-link a:link, a:visited, button#delete-game-btn a:link, a:visited {
-    color: white;
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
     cursor: pointer;
   }

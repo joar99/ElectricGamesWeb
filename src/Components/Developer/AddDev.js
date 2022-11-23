@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import "../../Css/Developer/Developers.css";
-import "../../Css/Developer/AddDeveloper.css";
+import "../../Css/Developer/AddDev.css";
 
 export default function AddDev() {
     const [isAdded, setIsAdded] = useState(false);
@@ -55,24 +54,46 @@ export default function AddDev() {
         }
     }
 
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        postDev();
+        handlePopupChange();
+    }
+
     return (
         <>
+
+        <div className="overlay">
+            <div className="popup-container">
+                <popup className="popup-message">
+             {popup === true ? <h2>Developer successfully added.</h2> : <></>}
+            </popup>    
+         </div>
+        </div>
+
             <h1 className="main-title">Developers</h1>
             <section className="container">
-
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-name">Enter developer name</label>
-                            <input classname="add-dev-input" type="text" onChange={handleChangeName} />
+                            <label className="add-dev-label" type="text" name="dev-name">Enter Developer Name</label>
+                            <input className="add-dev-input" type="text" onChange={handleChangeName}/>
                         </div>
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-location">Enter developer location</label>
-                            <input classname="add-dev-input" type="text" onChange={handleChangeLocation} />
+                            <label className="add-dev-label" type="text" name="dev-location">Enter Developer Location</label>
+                            <input className="add-dev-input" type="text" onChange={handleChangeLocation}/>
                         </div>
                         <div>
                             <input className="save-file" type="file" onChange={saveFile} />
-                            <button className="add-dev-btn" onClick={postDev}>Create Developer</button>
+                            <button className="create-dev-btn" onClick={handleClick}>Create Developer</button>
                         </div>
                     </form>
 
