@@ -5,13 +5,13 @@
     background-color: rgba(52, 55, 56, 0.7);
     border-radius: 5px;
     margin-top: 50px;
-    height: 560px;
     
 }
 
 .memory-img-container {
     display: flex;
     justify-content: center;
+    padding-top: 10px;
     
 }
 
@@ -32,7 +32,6 @@
 
 }
 .start-btn, .submit-btn, .end-btn {
-    display: grid;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(97, 124, 176, 0.3);
     border-radius: 5px;
@@ -46,6 +45,9 @@
 }
 
 .btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    
 
 }
 
@@ -57,11 +59,25 @@
 }
 
 .display-information, .popup {
-    /*display: grid;
-    grid-template-columns: 2r 2fr;*/
-    font-size: 12px;
-    padding-bottom: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 11px;
+    margin: 10px 10px 0 10px;
+    padding: 15px 0 15px 0;
     color: #fff;
+}
+
+.character-choice-container {
+    display: grid;
+    height: 20px;
+    grid-template-rows: 2;
+   
+
+}
+.character-memory-btn{
+    
+    color: #fff;
+
 }
 
 

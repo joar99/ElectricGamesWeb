@@ -124,17 +124,18 @@ const PlayMemory = ({onChange}) => {
                 <div className="characater-choice-container"> 
                     {memory.map(memory =>{
                         return(
-                            <button className="submit-memory-btn" 
+                            <button className="character-memory-btn" 
                             onClick={handleChangeAnswer} 
                             value={memory.name}
                             >{memory.name}</button>
                         )
                     })}
-                </div>
+               
                     </div>
                     <div className="btn-container">  
                     <button className="submit-btn" onClick={submitAnswer}>Submit Answer</button>
                     <button className="end-btn" onClick={onChange}>End Game</button>
+                    </div>
                     </div>
                 </section>
             </>
