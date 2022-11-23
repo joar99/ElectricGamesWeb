@@ -108,17 +108,17 @@
     display: flex;
     height: 400px;
     width: 330px;
+    
   }
 
   .memory-img-container {
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding: 10px 0 0 10px;
   }
 
-  .display-information {
-    padding-right: 5px;
-    font-size: 16px;
+  .display-information {   
+    font-size: 14px;
     color: #fff;
   }
 
