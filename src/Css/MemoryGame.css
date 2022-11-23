@@ -28,7 +28,7 @@
 .start-btn {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px 0 0 15px;
 
 }
 .start-btn, .submit-btn, .end-btn {
@@ -47,13 +47,13 @@
 .btn-container {
     display: flex;
     justify-content: space-evenly;
+    padding: 20px;
     
 
 }
 
 .start-information h1, .start-information h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px 0 0 15px;
     padding-top: 10px;
     color: #fff;
 }
@@ -69,13 +69,18 @@
 
 .character-choice-container {
     display: grid;
+    grid-template-rows: auto;
     height: 20px;
-    grid-template-rows: 2;
+
    
 
 }
 .character-memory-btn{
-    
+    display: grid;
+    grid-template-rows: auto;
+    margin: 0 0 0 15px;
+    padding-bottom: 1px;
+    border-bottom: solid #FF8300;
     color: #fff;
 
 }
