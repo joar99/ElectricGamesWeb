@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import useStorage from "../../Hooks/useStorage"
 import "../../Css/MemoryGame.css"
+import { findByLabelText } from "@testing-library/react";
 
 
 
@@ -31,7 +32,7 @@ const StartMemory = ({onChange}) => {
             <section className="start-information">
                 <h1>Start Memory Game</h1>
                 <h3>Current High Score: {value}</h3>
-                <button className="start-btn" onClick={onChange}>Start Memory Game</button>
+                <button className="start-btn" onClick={onChange}>Start Game</button>
             </section>
         </>
     )
@@ -162,8 +163,8 @@ const CorrectCharacter = (props) => {
 
 const PopUp = ({popup}) => {
 
-    const correct = {color: "green"}
-    const incorrect = {color: "red"}
+    const correct = {color: "green", fontSize: "20px", fontWeight: "bold"}
+    const incorrect = {color: "red", fontSize: "20px", fontWeight: "bold"}
 
     if (popup === 1) {
         return (<h3 style={correct}>Correct!</h3>)
