@@ -21,6 +21,12 @@ export default function Character() {
             setPopup(false)
         }, 3000)
     }
+    //BUTTON FOR POPUP
+    const handleClick = event => {
+        event.preventDefault();
+        putChar();
+        handlePopupChange();
+    }
 
     //STATE CONTROL FOR GAME
     const [character, setCharacter] = useState({})
@@ -50,11 +56,7 @@ export default function Character() {
         setFileName(e.target.files[0].name)
     }
 
-    const handleClick = event => {
-        event.preventDefault();
-        putChar();
-        handlePopupChange();
-    }
+    
 
     //SETTING NEW GAME TO BE PUT
     const newChar = {
