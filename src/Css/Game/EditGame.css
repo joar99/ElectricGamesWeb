@@ -54,18 +54,12 @@
     height: 35px;
     width: 270px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 6px 0 rgba(16, 17, 17, 0.25);
+    color: #fff;
+    padding-left: 1rem;
+    padding-right: 1rem;
  }
- 
- ::placeholder {
-   color: rgba(0, 0, 0, 1);
- }
- 
- .edit-file {
-    margin-top: 5px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
- }
+
+
  
  .update-game-button {
     text-transform: uppercase;

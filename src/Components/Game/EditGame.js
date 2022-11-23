@@ -1,5 +1,5 @@
 import React, { useState, Component, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Game/EditGame.css";
 import "../../Css/Background.css";
@@ -52,7 +52,7 @@ export default function Game() {
         setFile(e.target.files[0]);
         setFileName(e.target.files[0].name)
     }
-    
+
     const handleClick = event => {
         event.preventDefault();
         putGame();
@@ -112,23 +112,23 @@ export default function Game() {
 
         <>
             <h1 className="main-title">Games</h1>
-            <section className="container"> 
+            <section className="container">
                 {popup === true ? <h1>Game Successfully Updated</h1> : <></>}
                 <div className="form">
-                <GamePreview {...game}/>
-                    
+                    <GamePreview {...game} />
+
                     <form className="form-input">
                         <div>
                             <label className="edit-game-label" type="text" name="edit-game-label">Enter game title</label>
-                            <input className="edit-game-input" type="text" name="title" value={title} onChange={e => setTitle(e.target.value)}/>
+                            <input className="edit-game-input" type="text" name="title" value={title} onChange={e => setTitle(e.target.value)} />
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-release-date">Enter Game Release Date</label>
-                            <input className="edit-game-input" type="text" value={releaseDate} name="releaseDate" onChange={e => setReleaseDate(e.target.value)}/>
+                            <input className="edit-game-input" type="text" value={releaseDate} name="releaseDate" onChange={e => setReleaseDate(e.target.value)} />
                         </div>
                         <div>
-                        <label className="edit-game-label" type="text" name="edit-platform">Enter Game Platform</label>
-                        <input className="edit-game-input" type="text" value={platform} name="platform" onChange={e => setPlatform(e.target.value)}/>
+                            <label className="edit-game-label" type="text" name="edit-platform">Enter Game Platform</label>
+                            <input className="edit-game-input" type="text" value={platform} name="platform" onChange={e => setPlatform(e.target.value)} />
                         </div>
                         <div>
                             <label className="edit-game-label" type="text" name="edit-developer">Enter Game Developer</label>
@@ -141,29 +141,37 @@ export default function Game() {
                             />
                         </div>
                         <div>
-                            <label className="edit-game-label" type="text" name="edit-game-label-select">Select Image</label>
-                            <input className="edit-file" type="file" onChange={saveFile}/>
+                            <label htmlFor={'upload-button'}>
+                                <div className="choose-file">
+                                    <SomeIconElement style={{ marginRight: 10 }} /> Upload File
+                                </div>
+                            </label>
+                            {/* <label className="edit-game-label" type="text" name="edit-game-label-select">Select Image</label> */}
+                            <input className="edit-file" type="file" onChange={saveFile} id="upload-button" style={{display: 'none'}}/>
                         </div>
                         <button className="update-game-button" onClick={handleClick}>Edit Game</button>
                     </form>
-                    
+
                 </div>
             </section>
-            
+            <section>
+                <Link to="/games">{goBackString}</Link>
+            </section>
         </>
     )
 
-} 
+}
+const goBackString = "< Go Back"; //legge til image < her 
+
 
 const GamePreview = (props) => {
+    const backgroundLink = `https://localhost:7127/images/${encodeURIComponent(props.image)}`
+
     return (
         <>
-             <div className="card">
-                <div className="card-image">
-                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
-                </div>
+            <div className="card" style={{ backgroundImage: `url(${backgroundLink})` }}>
                 <div className="card-overlay">
-                    <ul class="card-overlay-list">
+                    <ul class="card-overlay_list">
                         <h1>{props.title}</h1>
                         <li className="id">{props.id}</li>
                         <li>Release Date: {props.releaseDate}</li>
