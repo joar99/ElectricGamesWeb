@@ -163,8 +163,8 @@ const CorrectCharacter = (props) => {
 
 const PopUp = ({popup}) => {
 
-    const correct = {color: "green", fontSize: "20px", fontWeight: "bold"}
-    const incorrect = {color: "red", fontSize: "20px", fontWeight: "bold"}
+    const correct = {color: "green", fontSize: "20px", fontWeight: "bold", padding: "10px"}
+    const incorrect = {color: "red", fontSize: "20px", fontWeight: "bold", padding: "10px"}
 
     if (popup === 1) {
         return (<h3 style={correct}>Correct!</h3>)
