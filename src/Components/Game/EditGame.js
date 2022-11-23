@@ -4,6 +4,7 @@ import axios from "axios";
 import "../../Css/Game/EditGame.css";
 import "../../Css/Background.css";
 import GameCard from "./GameCard";
+import "../../Css/PopupMessage.css";
 
 
 
