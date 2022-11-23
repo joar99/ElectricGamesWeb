@@ -27,10 +27,10 @@ const StartMemory = ({onChange}) => {
 
     return (
         <>
-            <section>
+            <section className="start-information">
                 <h1>Start Memory Game</h1>
                 <h3>Current High Score: {value}</h3>
-                <button onClick={onChange}>Start Memory Game</button>
+                <button className="start-btn" onClick={onChange}>Start Memory Game</button>
             </section>
         </>
     )
@@ -109,9 +109,9 @@ const PlayMemory = ({onChange}) => {
         <>
         {memoryIsActive === true ? (
             <>
-                <section className="card-container">
-                <div className="card-image">
-                    <CorrectCharacter className="show-character" {...correctAnswer}/>
+                <section className="memory-game-container">
+                <div className="memory-character-image">
+                    <CorrectCharacter  {...correctAnswer}/>
                 </div>
                 <div className="information-container"> 
                     <div className="display-information">
@@ -139,10 +139,12 @@ const PlayMemory = ({onChange}) => {
             </>
         ) : (
         <>
+        <div className="end-game-container">
         <h1>You Ran Out Of Lives</h1>
         <h1>Your Total Score: {points}</h1>
         <h1>Would You Like To Play Again?</h1>
         <button onClick={onChange}>Yes!</button>
+        </div>
         </>
         )}
         </>
@@ -152,16 +154,19 @@ const PlayMemory = ({onChange}) => {
 
 const CorrectCharacter = (props) => {
     return (
-        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
+        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"character-img"}></img>
     )
 }
 
 const PopUp = ({popup}) => {
 
+    const correctStyle = {color: "green"}
+    const incorrectStyle = {color: "red"}
+
     if (popup === 1) {
-        return (<h1>Correct!</h1>)
+        return (<h3 style={correctStyle}>Correct!</h3>)
     } else if (popup === 2) {
-        return (<h1>Incorrect!</h1>)
+        return (<h3 style={incorrectStyle}>Incorrect!</h3>)
     } else {
         return (<></>)
     }

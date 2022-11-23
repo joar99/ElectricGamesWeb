@@ -1,6 +1,64 @@
-.card-image {
-    box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
-    border-radius: 100px;
+.memory-game-container {
+    /*display: grid;
+    grid-template-columns: repeat(1, 1fr); */
+    background: linear-gradient(180deg, rgba(97, 124, 176, 0.0), rgba(97, 124, 176, 0.3));  
+    background-color: rgba(52, 55, 56, 0.7);
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+    height: 500px;
+}
 
+
+
+.character-img {
+    background-color: rgba(97, 124, 176, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 350px;
+}
+
+.start-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 
 }
+.start-btn, .submit-btn, .end-btn {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(97, 124, 176, 0.3);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    width: 136px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.btn-container {
+
+}
+
+.start-information h1, .start-information h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.display-information, .popup {
+    /*display: grid;
+    grid-template-columns: 2r 2fr;*/
+    font-size: 12px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+
+
