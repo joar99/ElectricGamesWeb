@@ -2,46 +2,48 @@ import React, { useCallback, useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 import useStorage from "../../Hooks/useStorage"
+import "../../Css/MemoryGame.css"
+
 
 export default function MemoryGame() {
 
-    const [quizStatus, setQuizStatus] = useState(false);
-    const handleChangeStatus = useCallback(() => setQuizStatus(prev=>!prev))
+    const [memoryStatus, setMemoryStatus] = useState(false);
+    const handleChangeStatus = useCallback(() => setMemoryStatus(prev=>!prev))
 
     return (
         <>
-        {quizStatus ? (
-        <PlayQuiz onChange={handleChangeStatus}/>
+        {memoryStatus ? (
+        <PlayMemory onChange={handleChangeStatus}/>
         ) : (
-        <StartQuiz onChange={handleChangeStatus}/>)}
+        <StartMemory onChange={handleChangeStatus}/>)}
         </>
     )
         
 }
 
-const StartQuiz = ({onChange}) => {
+const StartMemory = ({onChange}) => {
 
     const [value, setValue] = useStorage("0", "HighScore");
 
     return (
         <>
             <section>
-                <h1>Start Quiz</h1>
+                <h1>Start Memory Game</h1>
                 <h3>Current High Score: {value}</h3>
-                <button onClick={onChange}>Start Quiz</button>
+                <button onClick={onChange}>Start Memory Game</button>
             </section>
         </>
     )
 }
 
-const PlayQuiz = ({onChange}) => {
+const PlayMemory = ({onChange}) => {
 
     const [value, setValue] = useStorage("0", "HighScore");
 
     const [points, setPoints] = useState(0);
     const handleChangePoints = () => setPoints(prev => prev + 1);
 
-    const [quiz, setQuiz] = useState([]);
+    const [memory, setMemory] = useState([]);
 
     const [answer, setAnswer] = useState("");
     const handleChangeAnswer = event => {
@@ -53,14 +55,14 @@ const PlayQuiz = ({onChange}) => {
     const [lives, setLives] = useState(10);
     const handleChangeLives = () => setLives(prev => prev -1)
 
-    const [quizIsActive, setQuizIsActive] = useState(true);
+    const [memoryIsActive, setMemoryIsActive] = useState(true);
  
     const characterRandomUrl = "https://localhost:7127/api/Characters/randomizefour";
 
     useEffect(() => {
         axios.get(characterRandomUrl)
         .then(response=> {
-            setQuiz(response.data)
+            setMemory(response.data)
             const rand = Math.floor(Math.random() * response.data.length)
             const correct = response.data[rand]
             setCorrectAnswer(correct)
@@ -71,7 +73,7 @@ const PlayQuiz = ({onChange}) => {
     useEffect(() => {
         if (lives <= 0) {
             checkHighScore();
-            setQuizIsActive(false);
+            setMemoryIsActive(false);
         }
     },[handleChangeLives])
 
@@ -105,34 +107,33 @@ const PlayQuiz = ({onChange}) => {
 
     return (
         <>
-        {quizIsActive === true ? (
+        {memoryIsActive === true ? (
             <>
                 <section className="card-container">
                 <div className="card-image">
-                    <CorrectCharacter {...correctAnswer}/>
+                    <CorrectCharacter className="show-character" {...correctAnswer}/>
                 </div>
-                <div className="card-cont-stuff">
-                    <div className="answer-buttons-container">
+                <div className="information-container"> 
+                    <div className="display-information">
                     <h1>Current Score: {points}</h1>
                     <h1>{lives} Tries Left</h1>
                     <h1>Pending Answer: {answer}</h1>
+                    <PopUp popup={popup}/>
                     </div>
-                <div className="answer-buttons-container"> 
-                    {quiz.map(quiz =>{
+                <div className="characater-choice-container"> 
+                    {memory.map(memory =>{
                         return(
-                            <button className="submit-quiz-btn" 
+                            <button className="submit-memory-btn" 
                             onClick={handleChangeAnswer} 
-                            value={quiz.name}
-                            >{quiz.name}</button>
+                            value={memory.name}
+                            >{memory.name}</button>
                         )
                     })}
                 </div>
                     </div>
-                    <div className="answer-buttons-containers">  
-                    <button className="jonas-btn-sub" onClick={submitAnswer}>Submit Answer</button>
-                    <button className="jonas-btn-canc" onClick={onChange}>End Quiz</button>
-                
-                    <PopUp popup={popup}/>
+                    <div className="btn-container">  
+                    <button className="submit-btn" onClick={submitAnswer}>Submit Answer</button>
+                    <button className="end-btn" onClick={onChange}>End Game</button>
                     </div>
                 </section>
             </>
