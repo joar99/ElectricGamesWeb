@@ -25,7 +25,7 @@ export default function DevCard({ developer, setDeleteDevFlag }) {
                     <ul className="card-overlay_list">
                         <h1>{developer.name}</h1>
                         <li className="id">{developer.id}</li>
-                        <li>{developer.locatiton}</li>
+                        <li>{developer.location}</li>
                     </ul>
                 </div>
             </div>

@@ -27,7 +27,7 @@ const TopNav = ({HandleClickMobile, Mobile}) => {
         <li><Link to="/games">Games</Link></li>
         <li><Link to="/characters">Characters</Link></li>
         <li><Link to="/developers">Developers</Link></li>
-        <li><Link to="/quiz">Memory Game</Link></li>
+        <li><Link to="/memorygame">Memory Game</Link></li>
       </ul>
 
     </nav>
