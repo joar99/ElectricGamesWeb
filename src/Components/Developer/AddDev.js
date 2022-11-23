@@ -54,8 +54,31 @@ export default function AddDev() {
         }
     }
 
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        postDev();
+        handlePopupChange();
+    }
+
     return (
         <>
+
+        <div className="overlay">
+            <div className="popup-container">
+                <popup className="popup-message">
+             {popup === true ? <h2>Developer successfully added.</h2> : <></>}
+            </popup>    
+         </div>
+        </div>
+
             <h1 className="main-title">Developers</h1>
             <section className="container">
                 <div className="form">
@@ -70,7 +93,7 @@ export default function AddDev() {
                         </div>
                         <div>
                             <input className="save-file" type="file" onChange={saveFile} />
-                            <button className="create-dev-btn" onClick={postDev}>Create Developer</button>
+                            <button className="create-dev-btn" onClick={handleClick}>Create Developer</button>
                         </div>
                     </form>
 

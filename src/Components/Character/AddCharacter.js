@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import "../../Css/Background.css";
 import "../../Css/Character/AddCharacter.css";
+import "../../Css/PopupMessage.css";
 
 
 export default function AddCharacter() {
@@ -35,6 +36,21 @@ export default function AddCharacter() {
         Weapon: weapon
     }
 
+    const [popup, setPopup] = useState(false);
+    const handlePopupChange = () => {
+        setPopup(true)
+        setTimeout(() => {
+            setPopup(false)
+        }, 3000)
+    }
+
+    const handleClick = event => {
+        event.preventDefault();
+        postCharacter();
+        handlePopupChange();
+    }
+ 
+
     const postCharacter = async () => {
         await axios.post(charControllerUrl,
             JSON.stringify(character),
@@ -61,13 +77,13 @@ export default function AddCharacter() {
 
     return (
         <>
-            {/* <div className="overlay">
+            <div className="overlay">
                 <div className="popup-container">
                     <popup className="popup-message">
                         {popup === true ? <h2>Character successfully added.</h2> : <></>}
                     </popup>
                 </div>
-            </div> */}
+            </div> 
 
 
             <h1 className="main-title">Characters</h1>
@@ -91,7 +107,7 @@ export default function AddCharacter() {
                             <label className="character-label-select" type="button" name="select-image">Select image</label>
                             <input className="save-file" type="file" onChange={saveFile}></input>
 
-                            <button className="create-character-btn" onClick={postCharacter}>Create character</button>
+                            <button className="create-character-btn" onClick={handleClick}>Create character</button>
                         </div>
 
                     </form>
