@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import "../../Css/Developer/Developers.css";
-import "../../Css/Developer/AddDeveloper.css";
+import "../../Css/Developer/AddDev.css";
 
 export default function AddDev() {
     const [isAdded, setIsAdded] = useState(false);
@@ -59,20 +58,19 @@ export default function AddDev() {
         <>
             <h1 className="main-title">Developers</h1>
             <section className="container">
-
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-name">Enter developer name</label>
-                            <input classname="add-dev-input" type="text" onChange={handleChangeName} />
+                            <label className="add-dev-label" type="text" name="dev-name">Enter Developer Name</label>
+                            <input className="add-dev-input" type="text" onChange={handleChangeName}/>
                         </div>
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-location">Enter developer location</label>
-                            <input classname="add-dev-input" type="text" onChange={handleChangeLocation} />
+                            <label className="add-dev-label" type="text" name="dev-location">Enter Developer Location</label>
+                            <input className="add-dev-input" type="text" onChange={handleChangeLocation}/>
                         </div>
                         <div>
                             <input className="save-file" type="file" onChange={saveFile} />
-                            <button className="add-dev-btn" onClick={postDev}>Create Developer</button>
+                            <button className="create-dev-btn" onClick={postDev}>Create Developer</button>
                         </div>
                     </form>
 

@@ -2,6 +2,7 @@ import React, { useState, Component, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Character/EditCharacter.css";
+import "../../Css/PopupMessage.css"
 
 
 
@@ -105,9 +106,15 @@ export default function Character() {
 
     return (
         <>
+        <div className="overlay">
+            <div className="popup-container">
+                <popup className="popup-message">
+             {popup === true ? <h2>Character successfully updated.</h2> : <></>}
+            </popup>    
+         </div>
+        </div>
             <h1 className="main-title">Characters</h1>
             <section className="container">
-                {popup === true ? <h1>Character Successfully Updated</h1> : <></>}
                 <div className="form">
                     <form className="form-input">
                         <div>

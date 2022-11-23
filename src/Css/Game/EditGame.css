@@ -1,4 +1,4 @@
-.form-container{
+.container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     background-color: rgba(52, 55, 56, 0.6);
@@ -56,6 +56,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 6px 0 rgba(16, 17, 17, 0.25);
  }
  
+ ::placeholder {
+   color: rgba(0, 0, 0, 1);
+ }
+ 
  .edit-file {
     margin-top: 5px;
     margin-right: 15px;
@@ -75,7 +79,10 @@
     width: 136px;
     height: 33px;
     margin-bottom: 15px;
+    cursor: pointer;
  }
+
+
  
  /*media queries for ipad*/
  @media screen and (min-width: 768px) {
