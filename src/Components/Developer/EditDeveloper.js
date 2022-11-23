@@ -96,7 +96,36 @@ export default function Developer() {
 
     return (
         <>
-        <h1 className="main-title">Developers</h1>
+
+        {popup === true ? (
+            <h1>Developer Sucessfully Updated</h1>
+        ) : (
+            <>
+            <h1 className="main-title">Developers</h1>
+        <section className="container">
+            <div className="form">
+                <form className="form-input">
+                    <div>
+                        <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer name</label>
+                        <input className="edit-dev-input" type="text" defaultValue={dev.name} onChange={(e)=>setName(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer location</label>
+                    <input className="edit-dev-input" type="text" defaultValue={dev.location} onChange={(e)=>setLocation(e.target.value)}/>
+                    </div>
+                    <div>
+                    <label className="edit-dev-label" type="text" name="edit-dev-label">Edit developer image</label>
+                    <input className="edit-file" type="file" onChange={saveFile}/>
+                    </div>
+                    <button className="update-dev-btn" onClick={handleClick}>Update Developer</button>
+                </form>
+                <DeveloperPreview {...dev}/>
+            </div>
+        </section>
+            </>
+        )}
+
+        {/*<h1 className="main-title">Developers</h1>
         <section className="container">
         {popup === true ? <h1>Developer Successfully Updated</h1> : <></>}
             <div className="form">
@@ -117,7 +146,7 @@ export default function Developer() {
                 </form>
                 <DeveloperPreview {...dev}/>
             </div>
-        </section>
+    </section>*/}
     
         </>
     )
