@@ -5,21 +5,24 @@
     background-color: rgba(52, 55, 56, 0.7);
     border-radius: 5px;
     margin-top: 50px;
-    margin-right: 0px;
-    margin-left: 0px;
-    height: 500px;
+    height: 560px;
+    
 }
 
+.memory-img-container {
+    display: flex;
+    justify-content: center;
+    
+}
 
 
 .character-img {
     background-color: rgba(97, 124, 176, 0.3);
     box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    height: 300px;
-    width: 350px;
+    height: 380px;
+    width: 250px;
+   
 }
 
 .start-btn {
@@ -29,6 +32,7 @@
 
 }
 .start-btn, .submit-btn, .end-btn {
+    display: grid;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(97, 124, 176, 0.3);
     border-radius: 5px;

@@ -5,6 +5,7 @@ import useStorage from "../../Hooks/useStorage"
 import "../../Css/MemoryGame.css"
 
 
+
 export default function MemoryGame() {
 
     const [memoryStatus, setMemoryStatus] = useState(false);
@@ -110,7 +111,7 @@ const PlayMemory = ({onChange}) => {
         {memoryIsActive === true ? (
             <>
                 <section className="memory-game-container">
-                <div className="memory-character-image">
+                <div className="memory-img-container">
                     <CorrectCharacter  {...correctAnswer}/>
                 </div>
                 <div className="information-container"> 
@@ -160,13 +161,13 @@ const CorrectCharacter = (props) => {
 
 const PopUp = ({popup}) => {
 
-    const correctStyle = {color: "green"}
-    const incorrectStyle = {color: "red"}
+    const correct = {color: "green"}
+    const incorrect = {color: "red"}
 
     if (popup === 1) {
-        return (<h3 style={correctStyle}>Correct!</h3>)
+        return (<h3 style={correct}>Correct!</h3>)
     } else if (popup === 2) {
-        return (<h3 style={incorrectStyle}>Incorrect!</h3>)
+        return (<h3 style={incorrect}>Incorrect!</h3>)
     } else {
         return (<></>)
     }
