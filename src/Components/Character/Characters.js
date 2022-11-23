@@ -55,7 +55,7 @@ export default function Characters() {
                 })}
             </section>
             <section className="add-new-char-btn">
-                <Link className="add-new-char-btn-open" to={`/games/addcharacter`}>Add New Character</Link>
+                <Link className="add-new-char-btn-open" to={`/characters/addcharacter`}>Add New Character</Link>
             </section>
 
         </>
