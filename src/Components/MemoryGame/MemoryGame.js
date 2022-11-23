@@ -146,7 +146,7 @@ const PlayMemory = ({onChange}) => {
         <h1>You Ran Out Of Lives</h1>
         <h1>Your Total Score: {points}</h1>
         <h1>Would You Like To Play Again?</h1>
-        <button onClick={onChange}>Yes!</button>
+        <button className="end-game-btn" onClick={onChange}>Yes!</button>
         </div>
         </>
         )}

@@ -41,7 +41,8 @@
 }
 .start-btn,
 .submit-btn,
-.end-btn {
+.end-btn,
+.end-game-btn {
   color: rgba(255, 255, 255, 1);
   background-color: rgba(97, 124, 176, 0.3);
   border-radius: 5px;
@@ -87,13 +88,32 @@
   font-size: 15px;
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #ff8300;
-  transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .character-memory-btn:hover {
   box-shadow: inset 300px 0 0 0 #ff8300;
   color: black;
 }
+.character-memory-btn:focus  {
+    background-color: #ff8300;
+    color: black;
+  }
+
+.end-game-container h1 {
+  margin: 20px 0 0 15px;
+  padding-top: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.end-game-container button {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 15px;
+  }
 
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
@@ -139,6 +159,8 @@
   }
 }
 
+
+
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
   .btn-container {
@@ -158,7 +180,7 @@
 
   .display-information {
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 360px 1fr;
   }
 
   .character-img {
