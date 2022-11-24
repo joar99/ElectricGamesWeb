@@ -15,7 +15,7 @@ export default function DeleteGame({onDeleteGame, idToDelete}) {
 
     return(
         <>
-            <button id="delete-game-btn" onClick={deleteItem}>Delete</button>
+            <button className="popup-container-delete-btn" onClick={deleteItem}>Delete</button>
         </>
     )
 }
