@@ -105,10 +105,13 @@ export default function Game() {
 
   return (
     <>
+
       <Link className="go-back-btn" to="/games">
         <button></button>
       </Link>
+
       <h1 className="main-title">Games</h1>
+      
       <section className="container">
         <div className="popup-container">
           <popup className="popup-message">

@@ -100,8 +100,11 @@ export default function Developer() {
 
     return (
         <>
-
-            
+           <Link className="go-back-btn" to="/developers">
+                <button>
+                
+                </button>
+            </Link>
 
             <div className="overlay">
                 <div className="popup-container">
@@ -111,11 +114,6 @@ export default function Developer() {
                 </div>
             </div>
 
-            <Link className="go-back-btn" to="/developers">
-                <button>
-                
-                </button>
-            </Link>
 
             <h1 className="main-title">Developers</h1>
             <section className="container">
