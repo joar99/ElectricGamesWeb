@@ -1,7 +1,7 @@
 import React, {useState}from "react";
 import { Link } from "react-router-dom";
 import "../../Css/Card.css";
-import DeleteChar from "./DeleteChar";
+import DeleteChar from "./DeleteCharacter";
 import axios from "axios";
 
 export default function CharacterCard({ character, setDeleteCharacterFlag }) {
