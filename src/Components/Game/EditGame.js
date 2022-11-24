@@ -190,10 +190,16 @@ export default function Game() {
               />
             </div>
             <div>
-              {/* <label htmlFor={'upload-button'}>
-                                <div className="choose-file">
-                                    {/*<SomeIconElement style={{ marginRight: 10 }} /> Upload File*/
-              /* <label className="edit-game-label" type="text" name="edit-game-label-select">Select Image</label> */}
+              <label
+                className="edit-label"
+                type="text"
+                name="edit-label-select"
+              >
+                Select Image
+              </label>
+              <input className="edit-file" type="file" onChange={saveFile} />
+            </div>
+            <div>
               <input
                 className="edit-file"
                 type="file"
@@ -201,10 +207,10 @@ export default function Game() {
                 id="upload-button"
                 style={{ display: "none" }}
               />
-            </div>
-            <button className="update-button" onClick={handleClick}>
-              Edit Game
-            </button>
+              <button className="update-button" onClick={handleClick}>
+                Edit Game
+              </button>
+              </div>
           </form>
         </div>
       </section>
