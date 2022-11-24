@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState } from "react";
 import useStorage from "../../Hooks/useStorage"
 import "../../Css/MemoryGame.css"
+import { findByLabelText } from "@testing-library/react";
+
 
 
 export default function MemoryGame() {
@@ -27,10 +29,10 @@ const StartMemory = ({onChange}) => {
 
     return (
         <>
-            <section>
-                <h1>Start Memory Game</h1>
+            <section className="start-information">
+                <h1>Play Memory Game!</h1>
                 <h3>Current High Score: {value}</h3>
-                <button onClick={onChange}>Start Memory Game</button>
+                <button className="start-btn" onClick={onChange}>Start Game</button>
             </section>
         </>
     )
@@ -109,9 +111,9 @@ const PlayMemory = ({onChange}) => {
         <>
         {memoryIsActive === true ? (
             <>
-                <section className="card-container">
-                <div className="card-image">
-                    <CorrectCharacter className="show-character" {...correctAnswer}/>
+                <section className="memory-game-container">
+                <div className="memory-img-container">
+                    <CorrectCharacter  {...correctAnswer}/>
                 </div>
                 <div className="information-container"> 
                     <div className="display-information">
@@ -123,26 +125,29 @@ const PlayMemory = ({onChange}) => {
                 <div className="characater-choice-container"> 
                     {memory.map(memory =>{
                         return(
-                            <button className="submit-memory-btn" 
+                            <button className="character-memory-btn" 
                             onClick={handleChangeAnswer} 
                             value={memory.name}
                             >{memory.name}</button>
                         )
                     })}
-                </div>
+               
                     </div>
                     <div className="btn-container">  
                     <button className="submit-btn" onClick={submitAnswer}>Submit Answer</button>
                     <button className="end-btn" onClick={onChange}>End Game</button>
                     </div>
+                    </div>
                 </section>
             </>
         ) : (
         <>
+        <div className="end-game-container">
         <h1>You Ran Out Of Lives</h1>
         <h1>Your Total Score: {points}</h1>
         <h1>Would You Like To Play Again?</h1>
-        <button onClick={onChange}>Yes!</button>
+        <button className="end-game-btn" onClick={onChange}>Yes!</button>
+        </div>
         </>
         )}
         </>
@@ -152,16 +157,19 @@ const PlayMemory = ({onChange}) => {
 
 const CorrectCharacter = (props) => {
     return (
-        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
+        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"character-img"}></img>
     )
 }
 
 const PopUp = ({popup}) => {
 
+    const correct = {color: "green", fontSize: "20px", fontWeight: "bold", padding: "10px"}
+    const incorrect = {color: "red", fontSize: "20px", fontWeight: "bold", padding: "10px"}
+
     if (popup === 1) {
-        return (<h1>Correct!</h1>)
+        return (<h3 style={correct}>Correct!</h3>)
     } else if (popup === 2) {
-        return (<h1>Incorrect!</h1>)
+        return (<h3 style={incorrect}>Incorrect!</h3>)
     } else {
         return (<></>)
     }
