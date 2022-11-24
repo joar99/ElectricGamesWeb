@@ -157,7 +157,7 @@ const PlayMemory = ({onChange}) => {
 
 const CorrectCharacter = (props) => {
     return (
-        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"preview-img"}></img>
+        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"character-img"}></img>
     )
 }
 
