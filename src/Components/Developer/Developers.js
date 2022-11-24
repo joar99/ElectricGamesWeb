@@ -40,6 +40,11 @@ export default function Developers() {
     return (
 
         <>
+           <Link className="add-new-btn" to={`/games/addgame`}>
+                <button>
+                    
+                </button>
+            </Link>
 
             <h1 className="main-title">Developers</h1>
             <SearchDeveloper onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchDeveloper>
@@ -53,9 +58,7 @@ export default function Developers() {
                     )
                 })}
             </section>
-            <section className="add-new-btn">
-                <Link className="add-new-btn-open" to={`/developers/adddeveloper`}>Add New Developer</Link>
-            </section>
+            
 
         </>
 
