@@ -1,12 +1,10 @@
-import React, { useMemo } from "react";
-import { Link } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import SearchGame from "./SearchGame";
-import GameCard from "./GameCard";
-import DeleteGame from "./DeleteGame";
-import "../../Css/Game/Games.css";
+import React, { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../../Css/Background.css";
+import "../../Css/Game/Games.css";
+import GameCard from "./GameCard";
+import SearchGame from "./SearchGame";
 
 
 
@@ -14,7 +12,7 @@ export default function Games() {
 
     const [deleteGameFlag, setDeleteGameFlag] = useState(false);
     const [showAllFlag, setShowAllFlag] = useState(false);
-    const handleChangeShowAll = useCallback(() => setShowAllFlag(prev=>!prev))
+    const handleChangeShowAll = useCallback(() => setShowAllFlag(prev => !prev))
     const [games, setGames] = useState([]);
 
     const gameControllerUrl = "https://localhost:7127/api/Games";
@@ -32,7 +30,7 @@ export default function Games() {
     }
 
     const onSearchById = async (id) => {
-            await axios
+        await axios
             .get(`${gameControllerUrl}/${id}`)
             .then(response => setGames([response.data]))
             .catch(err => console.log(err))
@@ -41,6 +39,12 @@ export default function Games() {
     return (
 
         <>
+
+            <Link className="add-new-btn" to={`/games/addgame`}>
+                <button>
+                    
+                </button>
+            </Link>
 
             <h1 className="main-title">Games</h1>
             <SearchGame onSearchByTitle={onSearchByTitle} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchGame>
@@ -52,9 +56,6 @@ export default function Games() {
                         </>
                     )
                 })}
-            </section>
-            <section className="add-new-btn">
-                <Link className="add-new-btn-open" to={`/games/addgame`}>+ Add New Game</Link>
             </section>
 
         </>

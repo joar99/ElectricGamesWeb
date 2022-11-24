@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 
-export default function DeleteGame({onDeleteGame, idToDelete}) {
+export default function DeleteGame({onDeleteGame, idToDelete, handleChangePopup}) {
     
     const [id, setId] = useState("");
 
@@ -11,11 +11,12 @@ export default function DeleteGame({onDeleteGame, idToDelete}) {
 
     const deleteItem = () => {
         onDeleteGame(id)
+        handleChangePopup();
     }
 
     return(
         <>
-            <button id="delete-game-btn" onClick={deleteItem}>Delete</button>
+            <button className="popup-container-delete-btn" onClick={deleteItem}>Delete</button>
         </>
     )
 }

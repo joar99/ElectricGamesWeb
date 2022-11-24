@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useState}from "react";
 import { Link } from "react-router-dom";
 import "../../Css/Game/GameCard.css"
 import "../../Css/Character/CharacterCard.css"
 import DeleteChar from "./DeleteChar";
 import axios from "axios";
-
 
 export default function CharacterCard({ character, setDeleteCharacterFlag }) {
 
@@ -15,6 +14,9 @@ export default function CharacterCard({ character, setDeleteCharacterFlag }) {
             .then((response => { setDeleteCharacterFlag(prev => !prev) }))
             .catch(error => console.log(error))
     }
+
+    const [popup, setPopup] = useState(false);
+    const handleChangePopup = () => setPopup(prev=>!prev);
 
     return (
         <>
@@ -30,12 +32,28 @@ export default function CharacterCard({ character, setDeleteCharacterFlag }) {
                         <li>Weapon: {character.weapon}</li>
                         <ul class="card-overlay-buttons">
                             <li><Link className="edit-character-link" to={`/characters/${character.id}`}>Edit Character</Link></li>
-                            <li><DeleteChar onDeleteCharacter={onDeleteCharacter} idToDelete={character.id}></DeleteChar></li>
+                            <li><button className="popup-delete-btn" onClick={handleChangePopup}>Delete</button></li>
+                            {popup === true ?
+                            <DeletePopup character={character} handleChangePopup={handleChangePopup} onDeleteCharacter={onDeleteCharacter} idToDelete={character.id}/> : <></>}
                         </ul>
                     </ul>
                 </div>
             </div>
 
+        </>
+    )
+
+}
+
+
+const DeletePopup = ({character, handleChangePopup, onDeleteCharacter, idToDelete}) => {
+
+    return (
+        <>
+        <div className="popup-container-delete">
+            <button className="popup-container-cancel-btn" onClick={handleChangePopup}>Cancel</button>
+            <DeleteChar className="delete-dev-btn" onDeleteCharacter={onDeleteCharacter} idToDelete={character.id} handleChangePopup={handleChangePopup}></DeleteChar>
+        </div>
         </>
     )
 

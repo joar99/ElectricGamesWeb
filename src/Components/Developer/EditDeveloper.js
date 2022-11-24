@@ -35,6 +35,7 @@ export default function Developer() {
         setFile(e.target.files[0]);
         setFileName(e.target.files[0].name)
     }
+
     
     // HANDLING POPUP MESSAGE WHEN SUBMITTING CHANGES 
     const [popup, setPopup] = useState(false);
@@ -126,10 +127,27 @@ export default function Developer() {
                     </div>
                     <button className="update-dev-btn" onClick={handleClick}>Update Developer</button>
                 </form>
+                <DeveloperPreview {...dev}/>
             </div>
         </section>
-    
+            </>
+        )}
+
+const DeveloperPreview = (props) => {
+    return (
+        <>
+            <div className="card">
+                <div className="card-image">
+                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} />
+                </div>
+                <div className="card-overlay">
+                    <ul className="card-overlay_list">
+                        <h1>{props.name}</h1>
+                        <li className="id">{props.id}</li>
+                        <li>{props.location}</li>
+                    </ul>
+                </div>
+            </div>
         </>
     )
-
 }

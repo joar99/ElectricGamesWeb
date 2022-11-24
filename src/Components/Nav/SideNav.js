@@ -12,7 +12,7 @@ const SideNav = () => {
                 <li><Link to="/games">Games</Link></li>
                 <li><Link to="/characters">Characters</Link></li>
                 <li><Link to="/developers">Developers</Link></li>
-                <li><Link to="/quiz">Game Quiz</Link></li>
+                <li><Link to="/memorygame">Memory Game</Link></li>
             </ul>
         </aside>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import DeleteDev from "./DeleteDev";
 import axios from "axios";
@@ -14,6 +14,9 @@ export default function DevCard({ developer, setDeleteDevFlag }) {
             .catch(error => console.log(error))
     }
 
+    const [popup, setPopup] = useState(false);
+    const handleChangePopup = () => setPopup(prev=>!prev);
+
     return (
 
         <>
@@ -25,16 +28,31 @@ export default function DevCard({ developer, setDeleteDevFlag }) {
                     <ul className="card-overlay_list">
                         <h1>{developer.name}</h1>
                         <li className="id">{developer.id}</li>
-                        <li>{developer.locatiton}</li>
+                        <li>{developer.location}</li>
                     </ul>
                 </div>
             </div>
             <ul class="card-overlay-buttons">
                 <Link className="edit-dev-link" to={`/developers/${developer.id}`}>Edit Developer</Link>
-                <DeleteDev className="delete-dev-btn" onDeleteDev={onDeleteDev} idToDelete={developer.id}></DeleteDev>
+                <li><button className="popup-delete-btn" onClick={handleChangePopup}>Delete</button></li>
+                {popup === true ?
+                <DeletePopup developer={developer} handleChangePopup={handleChangePopup} onDeleteDev={onDeleteDev} idToDelete={developer.id}/> : <></>}
             </ul>
         </>
 
+    )
+
+}
+
+const DeletePopup = ({developer, handleChangePopup, onDeleteDev, idToDelete}) => {
+
+    return (
+        <>
+        <div className="popup-container-delete">
+            <button className="popup-container-cancel-btn" onClick={handleChangePopup}>Cancel</button>
+            <DeleteDev className="delete-dev-btn" onDeleteDev={onDeleteDev} idToDelete={developer.id} handleChangePopup={handleChangePopup}></DeleteDev>
+        </div>
+        </>
     )
 
 }

@@ -12,6 +12,7 @@ import AddDev from "./Components/Developer/AddDev";
 import Character from "./Components/Character/EditCharacter";
 import Characters from "./Components/Character/Characters";
 import AddCharacter from "./Components/Character/AddCharacter";
+import MemoryGame from "./Components/MemoryGame/MemoryGame";
 
 
 
@@ -41,6 +42,9 @@ function App() {
         <Route path="/characters" element={<Characters/>}/>
         <Route path="/characters/:id" element={<Character/>}/>
         <Route path="characters/addcharacter" element={<AddCharacter/>}/>
+
+        {/*ROUTES FOR MEMORY GAME*/}
+        <Route path="memorygame" element={<MemoryGame/>}/>
 
         {/*ROUTES FOR ERROR INCASE PATH IS INCORRECT */}
         <Route path="*" element={<Error />}/>

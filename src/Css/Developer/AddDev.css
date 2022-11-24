@@ -77,6 +77,10 @@
    cursor: pointer;
 }
 
+select, textarea{
+   color: rgba(255, 255, 255, 1);
+}
+
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
 

@@ -8,8 +8,8 @@ import "../../Css/PopupMessage.css"
 
 
 export default function AddGame() {
-    const [isAdded, setIsAdded] = useState(false);
-    const [addedGame, setAddedGame] = useState({});
+    // const [isAdded, setIsAdded] = useState(false);
+    // const [addedGame, setAddedGame] = useState({});
 
     const gameControllerUrl = "https://localhost:7127/api/Games"
 
@@ -43,7 +43,7 @@ export default function AddGame() {
         ESRB: rating
     }
 
-    
+
     const [popup, setPopup] = useState(false);
     const handlePopupChange = () => {
         setPopup(true)
@@ -57,7 +57,7 @@ export default function AddGame() {
         postGame();
         handlePopupChange();
     }
- 
+
 
     const postGame = async () => {
         await axios.post(gameControllerUrl,
@@ -86,14 +86,14 @@ export default function AddGame() {
 
     return (
         <>
-         <div className="overlay">
-            <div className="popup-container">
-                <popup className="popup-message">
-             {popup === true ? <h2>Game successfully added.</h2> : <></>}
-            </popup>    
-         </div>
-        </div>
-                    
+            <div className="overlay">
+                <div className="popup-container">
+                    <popup className="popup-message">
+                        {popup === true ? <h2>Game successfully added.</h2> : <></>}
+                    </popup>
+                </div>
+            </div>
+
 
             <h1 className="main-title">Games</h1>
             <section className="container">
@@ -116,17 +116,16 @@ export default function AddGame() {
                             <label className="add-game-label" type="text" name="game-developer">Enter developer</label>
                             <input className="add-game-input" type="text" onChange={handleChangeDeveloper}></input>
                         </div>
-                        <label className="add-game-label" type="text" name="game-rating">Enter age rating</label>
-                        <input className="add-game-input" type="text" onChange={handleChangeRating}></input>
+                             <label className="add-game-label" type="text" name="game-rating">Enter age rating</label>
+                            <input className="add-game-input" type="text" onChange={handleChangeRating}></input>
                         <div>
                             <label className="add-game-label" type="text" name="select-image">Select Image</label>
                             <input className="save-file" type="file" onChange={saveFile}></input>
                             <button className="create-game-button" onClick={handleClick}>Create Game</button>
-                            
                         </div>
                     </form>
-                   
-                        
+
+
                 </div>
             </section>
         </>
