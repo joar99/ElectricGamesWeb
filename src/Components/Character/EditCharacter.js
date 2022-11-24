@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../../Css/Character/EditCharacter.css";
 import "../../Css/PopupMessage.css"
+import "../../Css/EditForm.css";
 
 
 
@@ -136,8 +137,9 @@ export default function Character() {
                             <input className="edit-file" type="file" onChange={saveFile} />
                         </div>
                         <button className="update-char-btn" onClick={handleClick}>Update Character</button>
+                        <CharacterPreview {...character} />
                     </form>
-                    <CharacterPreview {...character} />
+                   
                 </div>
             </section>
 
@@ -149,10 +151,8 @@ export default function Character() {
 const CharacterPreview = (props) => {
     return (
         <>
-            <div className="card">
-                <div className="card-image">
-                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} ></img>
-                </div>
+            <div className="preview-container">
+                    <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"preview-img"}></img>
                 <div className="card-overlay">
                     <ul class="card-overlay_list">
                         <h1>{props.name}</h1>
