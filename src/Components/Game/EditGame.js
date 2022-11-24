@@ -143,7 +143,7 @@ export default function Game() {
                         <div>
                             <label htmlFor={'upload-button'}>
                                 <div className="choose-file">
-                                    <SomeIconElement style={{ marginRight: 10 }} /> Upload File
+                                    {/*<SomeIconElement style={{ marginRight: 10 }} /> Upload File*/}
                                 </div>
                             </label>
                             {/* <label className="edit-game-label" type="text" name="edit-game-label-select">Select Image</label> */}

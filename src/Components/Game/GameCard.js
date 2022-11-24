@@ -23,7 +23,8 @@ export default function GameCard({ game, setDeleteGameFlag }) {
     }
 
     const backgroundLink = `https://localhost:7127/images/${encodeURIComponent(game.image)}`
-
+    const [popup, setPopup] = useState(false);
+    const handleChangePopup = () => setPopup(prev=>!prev);
     return (
         <>
             <div className="card" style={{ backgroundImage: `url(${backgroundLink})` }}>
@@ -37,7 +38,9 @@ export default function GameCard({ game, setDeleteGameFlag }) {
                             <li>Developer: {game.developer}</li>
                             <ul class="card-overlay-buttons">
                                 <li><Link className="edit-game-link" to={`/games/${game.id}`}>Edit Game</Link></li>
-                                <li><DeleteGame onDeleteGame={onDeleteGame} idToDelete={game.id}></DeleteGame></li>
+                                <li><button className="popup-delete-btn" onClick={handleChangePopup}>Delete</button></li>
+                                {popup === true ?
+                                <DeletePopup game={game} handleChangePopup={handleChangePopup} onDeleteGame={onDeleteGame} idToDelete={game.id}/> : <></>}
                             </ul>
                         </ul>
                     </div>
@@ -45,6 +48,20 @@ export default function GameCard({ game, setDeleteGameFlag }) {
             
 
 
+        </>
+    )
+
+}
+
+const DeletePopup = ({game, handleChangePopup, onDeleteGame, idToDelete}) => {
+
+    return (
+        <>
+        <div className="popup-container-delete">
+            <button className="popup-container-cancel-btn" onClick={handleChangePopup}>Cancel</button>
+            <DeleteGame className="delete-dev-btn" onDeleteGame={onDeleteGame} idToDelete={game.id}></DeleteGame>
+            <h3 className="popup-warning">Are You Sure?</h3>
+        </div>
         </>
     )
 
