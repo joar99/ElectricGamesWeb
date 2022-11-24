@@ -52,7 +52,7 @@ const DeletePopup = ({character, handleChangePopup, onDeleteCharacter, idToDelet
         <>
         <div className="popup-container-delete">
             <button className="popup-container-cancel-btn" onClick={handleChangePopup}>Cancel</button>
-            <DeleteChar className="delete-dev-btn" onDeleteCharacter={onDeleteCharacter} idToDelete={character.id}></DeleteChar>
+            <DeleteChar className="delete-dev-btn" onDeleteCharacter={onDeleteCharacter} idToDelete={character.id} handleChangePopup={handleChangePopup}></DeleteChar>
         </div>
         </>
     )
