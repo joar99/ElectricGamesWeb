@@ -30,7 +30,7 @@ const StartMemory = ({onChange}) => {
     return (
         <>
             <section className="start-information">
-                <h1>Play Memory Game!</h1>
+                <h1>Let's play: Remember the Characters</h1>
                 <h3>Current High Score: {value}</h3>
                 <button className="start-btn" onClick={onChange}>Start Game</button>
             </section>
@@ -157,7 +157,7 @@ const PlayMemory = ({onChange}) => {
 
 const CorrectCharacter = (props) => {
     return (
-        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"character-img"}></img>
+        <img src={`https://localhost:7127/images/${encodeURIComponent(props.image)}`} alt={`https://localhost:7127/images/placeholder.png`} className={"preview-img"}></img>
     )
 }
 

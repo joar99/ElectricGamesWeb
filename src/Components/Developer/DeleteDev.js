@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 
-export default function DeleteDev({onDeleteDev, idToDelete}) {
+export default function DeleteDev({onDeleteDev, idToDelete, handleChangePopup}) {
     
     const [id, setId] = useState("");
 
@@ -11,6 +11,7 @@ export default function DeleteDev({onDeleteDev, idToDelete}) {
 
     const deleteItem = () => {
         onDeleteDev(id)
+        handleChangePopup();
     }
 
     return(

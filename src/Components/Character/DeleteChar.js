@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react"
 
-export default function DeleteChar({onDeleteCharacter, idToDelete}) {
+export default function DeleteChar({onDeleteCharacter, idToDelete, handleChangePopup}) {
     
     const [id, setId] = useState("");
 
@@ -10,6 +10,7 @@ export default function DeleteChar({onDeleteCharacter, idToDelete}) {
     
     const deleteItem = () => {
         onDeleteCharacter(id)
+        handleChangePopup();
     }
 
     return(
