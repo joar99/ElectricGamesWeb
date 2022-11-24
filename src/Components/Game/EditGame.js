@@ -121,7 +121,7 @@ export default function Game() {
 
           <form className="form-input">
             <div>
-              <label className="edit-label" type="text" name="edit-label">
+              <label className="edit-label" type="text" name="edit  -label">
                 Enter game title
               </label>
               <input
