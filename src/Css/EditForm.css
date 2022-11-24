@@ -122,13 +122,8 @@
  
  .go-back-btn{
    position: sticky;
-<<<<<<< HEAD
    top: calc(500vh 40px);
    left: calc(100vw  48px);
-=======
-   top: calc(300vh 2.5rem);
-   left: calc(100vw  3rem);
->>>>>>> 6558978884d1d7851a81279154b7985ae13f821d
    z-index: 10;
 }
 
