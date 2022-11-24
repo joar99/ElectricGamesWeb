@@ -122,9 +122,8 @@
  
  .go-back-btn{
    position: sticky;
-   top: 670px;
-   left: 5px;
-   z-index: 10;
+   top: calc(96% - 2rem);
+   
 }
 
 .go-back-btn button {

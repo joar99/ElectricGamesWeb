@@ -103,6 +103,8 @@ export default function Game() {
     }
   };
 
+  /* kan noen legge inn dette const goBackIcon = ".png";*/
+
   return (
     <>
 
@@ -111,7 +113,7 @@ export default function Game() {
       </Link>
 
       <h1 className="main-title">Games</h1>
-      
+
       <section className="container">
         <div className="popup-container">
           <popup className="popup-message">

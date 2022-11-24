@@ -39,7 +39,6 @@ export default function Games() {
     return (
 
         <>
-
             <Link className="add-new-btn" to={`/games/addgame`}>
                 <button>
                     
