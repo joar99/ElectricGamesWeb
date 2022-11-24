@@ -95,7 +95,9 @@ export default function Character() {
   return (
     <>
       <Link className="go-back-btn" to="/games">
-        <button></button>
+        <button>
+
+        </button>
       </Link>
 
       <h1 className="main-title">Characters</h1>

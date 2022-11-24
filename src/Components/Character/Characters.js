@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import useFetch from "../../Hooks/useFetch";
-import "../../Css/Game/Games.css";
-import "../../Css/Character/Characters.css";
-import DeleteChar from "./DeleteChar";
+import "../../Css/Component.css";
+import "../../Css/Card.css";
+import DeleteCharacter from "./DeleteCharacter";
 import CharacterCard from "./CharacterCard";
-import SearchChar from "./SearchChar";
+import SearchCharacter from "./SearchCharacter";
 
 
 
@@ -42,9 +42,14 @@ export default function Characters() {
     return (
 
         <>
+           <Link className="add-new-btn" to={`/games/addgame`}>
+                <button>
+                    
+                </button>
+            </Link>
 
             <h1 className="main-title">Characters</h1>
-            <SearchChar onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchChar>
+            <SearchCharacter onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchCharacter>
             <section className="card-container">
                 {characters.map(char => {
                     return (
@@ -53,9 +58,6 @@ export default function Characters() {
                         </>
                     )
                 })}
-            </section>
-            <section className="add-new-char-btn">
-                <Link className="add-new-char-btn-open" to={`/characters/addcharacter`}>Add New Character</Link>
             </section>
 
         </>

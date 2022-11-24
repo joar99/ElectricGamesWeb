@@ -2,10 +2,11 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import SearchDev from "./SearchDev";
-import DevCard from "./DevCard"
-import DeleteDev from "./DeleteDev";
-import "../../Css/Developer/Developers.css";
+import SearchDeveloper from "./SearchDeveloper";
+import DeveloperCard from "./DeveloperCard"
+import DeleteDev from "./DeleteDeveloper";
+import "../../Css/Component.css";
+import "../../Css/Card.css";
 
 
 export default function Developers() {
@@ -36,27 +37,28 @@ export default function Developers() {
             .catch(err => console.log(err))
     }
 
-
-
     return (
 
         <>
+           <Link className="add-new-btn" to={`/games/addgame`}>
+                <button>
+                    
+                </button>
+            </Link>
 
             <h1 className="main-title">Developers</h1>
-            <SearchDev onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchDev>
+            <SearchDeveloper onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchDeveloper>
             <section className="card-container">
 
                 {developers.map(dev => {
                     return (
                         <>
-                            <DevCard developer={dev} setDeleteDevFlag={setDeleteDevFlag} />
+                            <DeveloperCard developer={dev} setDeleteDevFlag={setDeleteDevFlag} />
                         </>
                     )
                 })}
             </section>
-            <section className="add-new-btn">
-                <Link className="add-new-btn-open" to={`/developers/adddeveloper`}>Add New Developer</Link>
-            </section>
+            
 
         </>
 

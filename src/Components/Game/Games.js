@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../Css/Background.css";
-import "../../Css/Game/Games.css";
+import "../../Css/Component.css";
 import GameCard from "./GameCard";
 import SearchGame from "./SearchGame";
 
@@ -39,7 +39,6 @@ export default function Games() {
     return (
 
         <>
-
             <Link className="add-new-btn" to={`/games/addgame`}>
                 <button>
                     

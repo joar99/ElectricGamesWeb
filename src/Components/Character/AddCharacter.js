@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import "../../Css/Background.css";
-import "../../Css/Character/AddCharacter.css";
+import "../../Css/AddForm.css";
 import "../../Css/PopupMessage.css";
 
 
@@ -92,22 +92,22 @@ export default function AddCharacter() {
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label className="character-label" type="text" name="character-name">Enter character name</label>
-                            <input className="character-input" type="text" onChange={handleChangeName}></input>
+                            <label className="add-label" type="text" name="character-name">Enter character name</label>
+                            <input className="add-input" type="text" onChange={handleChangeName}></input>
                         </div>
                         <div>
-                            <label className="character-label" type="text" name="character-game">Enter game character appears in</label>
-                            <input className="character-input" type="text" onChange={handleChangeGame}></input>
+                            <label className="add-label" type="text" name="character-game">Enter game character appears in</label>
+                            <input className="add-input" type="text" onChange={handleChangeGame}></input>
                         </div>
                         <div>
-                            <label className="character-label" type="text" name="weapon">Enter weapon of character</label>
-                            <input className="character-input" type="text" onChange={handleChangeWeapon}></input>
+                            <label className="add-label" type="text" name="weapon">Enter weapon of character</label>
+                            <input className="add-input" type="text" onChange={handleChangeWeapon}></input>
                         </div>
                         <div>
-                            <label className="character-label-select" type="button" name="select-image">Select image</label>
+                            <label className="add-label-select" type="button" name="select-image">Select image</label>
                             <input className="save-file" type="file" onChange={saveFile}></input>
 
-                            <button className="create-character-btn" onClick={handleClick}>Create character</button>
+                            <button className="create-button" onClick={handleClick}>Create character</button>
                         </div>
 
                     </form>

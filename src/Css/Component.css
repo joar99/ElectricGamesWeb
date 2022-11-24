@@ -28,8 +28,8 @@ body {
 
 .add-new-btn{
     position: sticky;
-    top: calc(100vh - 2.5rem);
-    left: calc(100vw - 3rem);
+    top: calc(100vh - 40px);
+    left: calc(100vw - 48px);
     z-index: 10;
 }
 

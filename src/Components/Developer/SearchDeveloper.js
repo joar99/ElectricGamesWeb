@@ -1,7 +1,5 @@
 import {useState} from "react";
-import "../../Css/Developer/SearchDeveloper.css";
-import "../../Css/Developer/Developers.css";
-import "../../Css/Developer/SearchDeveloper.css";
+import "../../Css/SearchItem.css";
 
 
 
@@ -27,15 +25,15 @@ export default function SearchDev({onSearchByName, onSearchById, onChange}) {
             <section>
                 <h3 className="search-name">Search A Developer By Name</h3>
                 <div className="search-content">
-                    <input type="text" id="search-dev-name" className="search-dev-name" placeholder="Enter developer name" onChange={(e) => setSearchName(e.target.value)}></input>
-                    <button className="search-dev-name-btn" onClick={searchDevByName}>Search</button>
+                    <input type="text" id="search-name" className="search-name" placeholder="Enter developer name" onChange={(e) => setSearchName(e.target.value)}></input>
+                    <button className="search-name-btn" onClick={searchDevByName}>Search</button>
                 </div>
             </section>
             <section>
                 <h3 className="search-id">Search a Developer by ID</h3>
                 <div className="search-content">
-                    <input type="text" id="search-dev-id" className="search-dev-id" placeholder="Enter developer ID" onChange={(e) => setId(e.target.value)}/>
-                    <button className="search-dev-id-btn" onClick={searchDevById}>Search</button>
+                    <input type="text" id="search-id" className="search-id" placeholder="Enter developer ID" onChange={(e) => setId(e.target.value)}/>
+                    <button className="search-id-btn" onClick={searchDevById}>Search</button>
                 </div>
             </section>
         </section>
