@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import DeleteDev from "./DeleteDev";
+import DeleteDev from "./DeleteDeveloper";
 import axios from "axios";
 import "../../Css/Card.css";
 

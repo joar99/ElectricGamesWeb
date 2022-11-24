@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../../Css/Character/SearchCharacter.css"
+import "../../Css/SearchItem.css";
 
 export default function SearchChar({ onSearchByName, onSearchCharById, onChange }) {
 
@@ -23,15 +23,15 @@ export default function SearchChar({ onSearchByName, onSearchCharById, onChange 
                     <h3 className="search-name">Search a Character by Name</h3>
 
                     <div className="search-content">
-                        <input type="text" id="search-character-name" className="search-character-name" placeholder="Enter Character Name" onChange={(e) => setSearchName(e.target.value)}></input>
-                        <button id="search-character-name-btn" className="search-character-name-btn" onClick={searchCharByName}>Search</button>
+                        <input type="text" id="search-name" className="search-name" placeholder="Enter Character Name" onChange={(e) => setSearchName(e.target.value)}></input>
+                        <button id="search-name-btn" className="search-name-btn" onClick={searchCharByName}>Search</button>
                     </div>
                 </section>
                 <section>
                     <h3 className="search-name">Search a character by ID</h3>
                     <div className="search-content">
-                    <input type="text" id="search-character-id" className="search-character-id" placeholder="Enter character ID" onChange={(e) => setSearchCharId(e.target.value)}></input>
-                    <button id="search-character-id-btn" className="search-character-id-btn" onClick={searchCharById}>Search</button>
+                    <input type="text" id="search-id" className="search-id" placeholder="Enter character ID" onChange={(e) => setSearchCharId(e.target.value)}></input>
+                    <button id="search-id-btn" className="search-id-btn" onClick={searchCharById}>Search</button>
                     </div>
                 </section>
             </section>

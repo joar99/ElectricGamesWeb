@@ -5,9 +5,9 @@ import axios from "axios";
 import useFetch from "../../Hooks/useFetch";
 import "../../Css/Component.css";
 import "../../Css/Card.css";
-import DeleteChar from "./DeleteChar";
+import DeleteCharacter from "./DeleteCharacter";
 import CharacterCard from "./CharacterCard";
-import SearchChar from "./SearchChar";
+import SearchCharacter from "./SearchCharacter";
 
 
 
@@ -49,7 +49,7 @@ export default function Characters() {
             </Link>
 
             <h1 className="main-title">Characters</h1>
-            <SearchChar onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchChar>
+            <SearchCharacter onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchCharacter>
             <section className="card-container">
                 {characters.map(char => {
                     return (
