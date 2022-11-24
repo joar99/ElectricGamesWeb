@@ -2,10 +2,11 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import SearchDev from "./SearchDev";
-import DevCard from "./DevCard"
+import SearchDeveloper from "./SearchDeveloper";
+import DeveloperCard from "./DeveloperCard"
 import DeleteDev from "./DeleteDev";
 import "../../Css/Developer/Developers.css";
+import "../../Css/Card.css";
 
 
 export default function Developers() {
@@ -36,20 +37,18 @@ export default function Developers() {
             .catch(err => console.log(err))
     }
 
-
-
     return (
 
         <>
 
             <h1 className="main-title">Developers</h1>
-            <SearchDev onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchDev>
+            <SearchDeveloper onSearchByName={onSearchByName} onSearchById={onSearchById} onChange={handleChangeShowAll}></SearchDeveloper>
             <section className="card-container">
 
                 {developers.map(dev => {
                     return (
                         <>
-                            <DevCard developer={dev} setDeleteDevFlag={setDeleteDevFlag} />
+                            <DeveloperCard developer={dev} setDeleteDevFlag={setDeleteDevFlag} />
                         </>
                     )
                 })}

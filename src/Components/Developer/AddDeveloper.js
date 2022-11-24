@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import "../../Css/Developer/AddDev.css";
+import "../../Css/AddForm.css";
 
 export default function AddDev() {
     const [isAdded, setIsAdded] = useState(false);
@@ -84,16 +84,16 @@ export default function AddDev() {
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-name">Enter Developer Name</label>
-                            <input className="add-dev-input" type="text" onChange={handleChangeName}/>
+                            <label className="add-label" type="text" name="dev-name">Enter Developer Name</label>
+                            <input className="add-input" type="text" onChange={handleChangeName}/>
                         </div>
                         <div>
-                            <label className="add-dev-label" type="text" name="dev-location">Enter Developer Location</label>
-                            <input className="add-dev-input" type="text" onChange={handleChangeLocation}/>
+                            <label className="add-label" type="text" name="dev-location">Enter Developer Location</label>
+                            <input className="add-input" type="text" onChange={handleChangeLocation}/>
                         </div>
                         <div>
                             <input className="save-file" type="file" onChange={saveFile} />
-                            <button className="create-dev-btn" onClick={handleClick}>Create Developer</button>
+                            <button className="create-button" onClick={handleClick}>Create Developer</button>
                         </div>
                     </form>
 

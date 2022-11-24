@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import GameCard from "./GameCard";
 import "../../Css/Background.css";
-import "../../Css/Game/AddGame.css";
-import "../../Css/PopupMessage.css"
+import "../../Css/AddForm.css";
+import "../../Css/Card.css";
+import "../../Css/PopupMessage.css";
 
 
 export default function AddGame() {
@@ -101,27 +101,27 @@ export default function AddGame() {
                 <div className="form">
                     <form className="form-input">
                         <div>
-                            <label className="add-game-label" type="text" name="game-title">Enter title</label>
-                            <input className="add-game-input" type="text" onChange={handleChangeTitle}></input>
+                            <label className="add-label" type="text" name="game-title">Enter title</label>
+                            <input className="add-input" type="text" onChange={handleChangeTitle}></input>
                         </div>
                         <div>
-                            <label className="add-game-label" type="text" name="release-date">Enter release date</label>
-                            <input className="add-game-input" type="text" onChange={handleChangeReleaseDate}></input>
+                            <label className="add-label" type="text" name="release-date">Enter release date</label>
+                            <input className="add-input" type="text" onChange={handleChangeReleaseDate}></input>
                         </div>
                         <div>
-                            <label className="add-game-label" type="text" name="game-platform">Enter platform</label>
-                            <input className="add-game-input" type="text" onChange={handleChangePlatform}></input>
+                            <label className="add-label" type="text" name="game-platform">Enter platform</label>
+                            <input className="add-input" type="text" onChange={handleChangePlatform}></input>
                         </div>
                         <div>
-                            <label className="add-game-label" type="text" name="game-developer">Enter developer</label>
-                            <input className="add-game-input" type="text" onChange={handleChangeDeveloper}></input>
+                            <label className="add-label" type="text" name="game-developer">Enter developer</label>
+                            <input className="add-input" type="text" onChange={handleChangeDeveloper}></input>
                         </div>
-                             <label className="add-game-label" type="text" name="game-rating">Enter age rating</label>
-                            <input className="add-game-input" type="text" onChange={handleChangeRating}></input>
+                             <label className="add-label" type="text" name="game-rating">Enter age rating</label>
+                            <input className="add-input" type="text" onChange={handleChangeRating}></input>
                         <div>
-                            <label className="add-game-label" type="text" name="select-image">Select Image</label>
+                            <label className="add-label" type="text" name="select-image">Select Image</label>
                             <input className="save-file" type="file" onChange={saveFile}></input>
-                            <button className="create-game-button" onClick={handleClick}>Create Game</button>
+                            <button className="create-button" onClick={handleClick}>Create Game</button>
                         </div>
                     </form>
 

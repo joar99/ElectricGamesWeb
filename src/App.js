@@ -8,7 +8,7 @@ import Games from "./Components/Game/Games"
 import AddGame from "./Components/Game/AddGame";
 import Developer from "./Components/Developer/EditDeveloper";
 import Developers from "./Components/Developer/Developers";
-import AddDev from "./Components/Developer/AddDev";
+import AddDeveloper from "./Components/Developer/AddDeveloper";
 import Character from "./Components/Character/EditCharacter";
 import Characters from "./Components/Character/Characters";
 import AddCharacter from "./Components/Character/AddCharacter";
@@ -36,7 +36,7 @@ function App() {
         {/*ROUTES FOR DEVELOPERS*/}
         <Route path="/developers" element={<Developers/>}/>
         <Route path="developers/:id" element={<Developer/>}/>
-        <Route path="developers/adddeveloper" element={<AddDev/>}/>
+        <Route path="developers/adddeveloper" element={<AddDeveloper/>}/>
 
         {/*ROUTES FOR CHARACTERS*/}
         <Route path="/characters" element={<Characters/>}/>

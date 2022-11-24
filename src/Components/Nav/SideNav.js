@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link } from 'react-router-dom';
-import "../../Css/SideNav.css";
+import "../../Css/Nav/SideNav.css";
 
 const SideNav = () => {
 
