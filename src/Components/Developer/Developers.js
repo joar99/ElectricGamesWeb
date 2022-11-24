@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import SearchDeveloper from "./SearchDeveloper";
 import DeveloperCard from "./DeveloperCard"
-import DeleteDev from "./DeleteDeveloper";
 import "../../Css/Component.css";
 import "../../Css/Card.css";
 

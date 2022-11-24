@@ -27,7 +27,7 @@ export default function DevCard({ developer, setDeleteDevFlag }) {
                     <ul class="card-overlay_list">
                         <h1>{developer.name}</h1>
                         <li className="id">{developer.id}</li>
-                        <li>{developer.location}</li>
+                        <li>Location: {developer.location}</li>
                         <ul class="card-overlay-buttons">
                             <Link className="edit-link" to={`/developers/${developer.id}`}>Edit Developer</Link>
                             <li><button className="popup-delete-btn" onClick={handleChangePopup}>Delete</button></li>
