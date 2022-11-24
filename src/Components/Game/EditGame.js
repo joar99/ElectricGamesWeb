@@ -1,7 +1,6 @@
 import React, { useState, Component, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import "../../Css/Game/EditGame.css";
 import "../../Css/Background.css";
 import "../../Css/PopupMessage.css";
 
