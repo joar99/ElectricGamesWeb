@@ -33,7 +33,9 @@ const StartMemory = ({onChange}) => {
                 <h1>Let's play: Remember the Characters</h1>
                 <h3>Current High Score: {value}</h3>
             </section>
-            <button className="start-btn" onClick={onChange}>Start Game</button>
+            <section className="start-btn-container">
+            <button className="start-btn" onClick={onChange}>Start Game</button></section>
+            
         </>
     )
 }
@@ -142,12 +144,13 @@ const PlayMemory = ({onChange}) => {
             </>
         ) : (
         <>
-        <div className="end-game-container">
+        <section className="end-game-container">
         <h1>You Ran Out Of Lives</h1>
         <h1>Your Total Score: {points}</h1>
         <h1>Would You Like To Play Again?</h1>
-        <button className="end-game-btn" onClick={onChange}>Yes!</button>
-        </div>
+        </section>
+        <section className="end-btn-container">
+        <button className="end-game-btn" onClick={onChange}>Yes!</button></section>
         </>
         )}
         </>
