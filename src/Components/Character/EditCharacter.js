@@ -99,15 +99,15 @@ export default function Character() {
       </Link>
 
       <h1 className="main-title">Characters</h1>
-      <section className="container">
+      <section className="edit-container">
         <div className="popup-container">
           <popup className="popup-message">
             {popup === true ? <h2>Character successfully updated.</h2> : <></>}
           </popup>
         </div>
-        <div className="form">
+        <div className="edit-form">
           <CharacterPreview {...character} />
-          <form className="form-input">
+          <form className="edit-form-input">
             <div>
               <label className="edit-label" type="text" name="edit-label">
                 Edit character name

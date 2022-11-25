@@ -113,14 +113,14 @@ export default function Game() {
 
       <h1 className="main-title">Games</h1>
 
-      <section className="container">
+      <section className="edit-container">
         <div className="popup-container">
           <popup className="popup-message">
             {popup === true ? <h2>Game successfully updated.</h2> : <></>}
           </popup>
         </div>
 
-        <div className="form">
+        <div className="edit-form">
           <GamePreview {...game} />
 
           <form className="form-input">
