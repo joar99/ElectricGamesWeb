@@ -8,8 +8,6 @@ import "../../Css/PopupMessage.css";
 import { Link } from "react-router-dom";
 
 export default function AddGame() {
-  // const [isAdded, setIsAdded] = useState(false);
-  // const [addedGame, setAddedGame] = useState({});
 
   const gameControllerUrl = "https://localhost:7127/api/Games";
 
@@ -22,7 +20,7 @@ export default function AddGame() {
   const [file, setFile] = useState();
   const [fileName, setFileName] = useState();
 
-  const goBack = "goback.png";
+
 
   const handleChangeTitle = (event) => setTitle(event.target.value);
   const handleChangeReleaseDate = (event) => setReleaseDate(event.target.value);
@@ -86,10 +84,6 @@ export default function AddGame() {
     <>
       <Link className="go-back-btn" to="/games">
         <button>
-          <img
-            src={`https://localhost:7127/images/${encodeURIComponent(goBack)}`}
-            alt="goback icon"
-          ></img>
         </button>
       </Link>
       <div className="overlay">

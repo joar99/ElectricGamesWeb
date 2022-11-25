@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function AddDev() {
     const [isAdded, setIsAdded] = useState(false);
     const [addedDev, setAddedDev] = useState({});
-    const goBack ="goback.png";
+
 
     const devControllerUrl = "https://localhost:7127/api/Developers"
 
@@ -74,7 +74,6 @@ export default function AddDev() {
         <>
         <Link className="go-back-btn" to="/developer">
                 <button>
-                <img src={`https://localhost:7127/images/${encodeURIComponent(goBack)}`} alt="goback icon"></img>
                 </button>
             </Link>
 

@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export default function AddCharacter() {
     const [isAdded, setIsAdded] = useState(false);
     const [addedChar, setAddedChar] = useState({});
-    const goBack ="goback.png";
+ 
 
     const charControllerUrl = "https://localhost:7127/api/Characters"
 
@@ -81,7 +81,6 @@ export default function AddCharacter() {
         <>
         <Link className="go-back-btn" to="/character">
                 <button>
-                <img src={`https://localhost:7127/images/${encodeURIComponent(goBack)}`} alt="goback icon"></img>
                 </button>
             </Link>
 
