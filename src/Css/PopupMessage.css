@@ -1,147 +1,140 @@
-
 .popup-container {
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    padding: 12px 24px;
-
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 12px 24px;
 }
 .popup-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
- 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h2 {
-    border-radius: 20px;
-    color: #000;
-    background-color: #fff;
-    box-shadow: 0px 0px 18px 0px rgba(10,0,0,0.75);
-    height: 200px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 20px;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0px 0px 18px 0px rgba(10, 0, 0, 0.75);
+  height: 200px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup-delete-btn {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(34, 55, 68, 0.5);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 136px;
-    height: 33px;
-    cursor: pointer;
-
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(34, 55, 68, 0.5);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  width: 136px;
+  height: 33px;
+  cursor: pointer;
 }
 
 .popup-delete-btn-confirm {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 0, 0, 0.5);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 136px;
-    height: 33px;
-    cursor: pointer;
-
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  width: 136px;
+  height: 33px;
+  cursor: pointer;
 }
 
 .popup-delete-btn-cancel {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(60, 179, 113, 0.5);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 136px;
-    height: 33px;
-    cursor: pointer;
-
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(60, 179, 113, 0.5);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  width: 136px;
+  height: 33px;
+  cursor: pointer;
 }
 
 .popup-container-delete {
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 18px 0px rgba(10,0,0,0.75);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    padding: 24px 24px;
-    padding-left: 50px;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 18px 0px rgba(10, 0, 0, 0.75);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  padding: 24px 24px;
+  padding-left: 50px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 h3 {
-    text-transform: uppercase;
-    color: #fff;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .popup-container-cancel-btn {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(60, 179, 113, 0.7);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 136px;
-    height: 20px;
-    cursor: pointer;
-    overflow: hidden;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(60, 179, 113, 0.7);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  width: 136px;
+  height: 20px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .popup-container-delete-btn {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 0, 0, 0.7);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 136px;
-    height: 20px;
-    cursor: pointer;
-    overflow: hidden;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  width: 136px;
+  height: 20px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .popup-warning {
-    border-radius: 20px;
-    color: #fff;
-    height: 200px;
-    width: 285px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 20px;
+  color: #fff;
+  height: 200px;
+  width: 285px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

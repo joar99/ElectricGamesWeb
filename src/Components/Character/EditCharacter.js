@@ -95,9 +95,7 @@ export default function Character() {
   return (
     <>
       <Link className="go-back-btn" to="/games">
-        <button>
-
-        </button>
+        <button></button>
       </Link>
 
       <h1 className="main-title">Characters</h1>
@@ -111,11 +109,7 @@ export default function Character() {
           <CharacterPreview {...character} />
           <form className="form-input">
             <div>
-              <label
-                className="edit-label"
-                type="text"
-                name="edit-label"
-              >
+              <label className="edit-label" type="text" name="edit-label">
                 Edit character name
               </label>
               <input
@@ -126,11 +120,7 @@ export default function Character() {
               />
             </div>
             <div>
-              <label
-                className="edit-label"
-                type="text"
-                name="edit-label"
-              >
+              <label className="edit-label" type="text" name="edit-label">
                 Edit character game
               </label>
               <input
@@ -141,11 +131,7 @@ export default function Character() {
               />
             </div>
             <div>
-              <label
-                className="edit-label"
-                type="text"
-                name="edit-label"
-              >
+              <label className="edit-label" type="text" name="edit-label">
                 Edit character weapon
               </label>
               <input

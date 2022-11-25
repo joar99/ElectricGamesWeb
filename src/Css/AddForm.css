@@ -1,99 +1,98 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    background-color: rgba(52, 55, 56, 0.6);
-    padding: 20px;
-    row-gap: 30px;
-    column-gap: 15px;
- }
- 
- .form {
-    display: block;
-    background-color: rgba(97, 124, 176, 0.3);
-    box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
-    border-radius: 5px;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 10px;
-    margin-left: 14px;
- }
- 
- .form-input {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 15px;
-    color: rgb(255, 255, 255);
-    font-family: 'Karla', sans-serif;
-    font-weight: 300;
-    grid-row: 2/ span 2;
-    grid-column: 1/span 1;
-    align-self: end;
- }
- 
- .form-input div {
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
- }
- 
- .add-label {
-    margin-bottom: 10px;
- 
- }
- .add-label-select{
-    margin-top: 15px;
-    margin-bottom: 15px;
- }
- 
- .add-input {
-    background-color:  rgba(23, 30, 35, 1);
-    border: none;
-    border-radius: 5px;
-    height: 35px;
-    width: 270px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 6px 0 rgba(16, 17, 17, 0.25);
- }
- 
- .save-file {
-    margin-top: 5px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px;
- }
- 
- .create-button {
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(97, 124, 176, 0.3);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    width: 136px;
-    height: 33px;
-    cursor: pointer;
- }
- 
-  select, textarea{
-    color: rgba(255, 255, 255, 1);
- }
- 
- /*media queries for ipad*/
- @media screen and (min-width: 768px) {
- 
-    .add-input {
-       width: 460px;
- 
-    }
- }
- 
- /*media queries for desktop*/
- @media screen and (min-width: 1024px) {
- 
-    .add-input {
-       width: 620px;
-    }
- }
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: rgba(52, 55, 56, 0.6);
+  padding: 20px;
+  row-gap: 30px;
+  column-gap: 15px;
+}
+
+.form {
+  display: block;
+  background-color: rgba(97, 124, 176, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7),
+    0 6px 20px 0 rgba(77, 169, 255, 0.7);
+  border-radius: 5px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  margin-left: 14px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 15px;
+  color: rgb(255, 255, 255);
+  font-family: "Karla", sans-serif;
+  font-weight: 300;
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 1;
+  align-self: end;
+}
+
+.form-input div {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-label {
+  margin-bottom: 10px;
+}
+.add-label-select {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.add-input {
+  background-color: rgba(23, 30, 35, 1);
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 270px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25),
+    0 6px 6px 0 rgba(16, 17, 17, 0.25);
+}
+
+.save-file {
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.create-button {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(97, 124, 176, 0.3);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.737);
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  width: 136px;
+  height: 33px;
+  cursor: pointer;
+}
+
+select,
+textarea {
+  color: rgba(255, 255, 255, 1);
+}
+
+/*media queries for ipad*/
+@media screen and (min-width: 768px) {
+  .add-input {
+    width: 460px;
+  }
+}
+
+/*media queries for desktop*/
+@media screen and (min-width: 1024px) {
+  .add-input {
+    width: 620px;
+  }
+}

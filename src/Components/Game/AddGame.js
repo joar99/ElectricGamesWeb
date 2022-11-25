@@ -8,7 +8,6 @@ import "../../Css/PopupMessage.css";
 import { Link } from "react-router-dom";
 
 export default function AddGame() {
-
   const gameControllerUrl = "https://localhost:7127/api/Games";
 
   const [title, setTitle] = useState("");
@@ -19,8 +18,6 @@ export default function AddGame() {
 
   const [file, setFile] = useState();
   const [fileName, setFileName] = useState();
-
-
 
   const handleChangeTitle = (event) => setTitle(event.target.value);
   const handleChangeReleaseDate = (event) => setReleaseDate(event.target.value);
@@ -83,8 +80,7 @@ export default function AddGame() {
   return (
     <>
       <Link className="go-back-btn" to="/games">
-        <button>
-        </button>
+        <button></button>
       </Link>
       <div className="overlay">
         <div className="popup-container">
