@@ -42,7 +42,7 @@ export default function Characters() {
     return (
 
         <>
-           <Link className="add-new-btn" to={`/games/addgame`}>
+           <Link className="add-new-btn" to={`/characters/addcharacter`}>
                 <button>
                     
                 </button>
