@@ -1,107 +1,111 @@
 .card {
-    display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    background-color: rgba(97, 124, 176, 0.3);
-    box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7), 0 6px 20px 0 rgba(77, 169, 255, 0.7);
-    border-radius: 5px;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-left: 15px;
-    padding-top: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  background-color: rgba(97, 124, 176, 0.3);
+  box-shadow: 0 4px 8px 0 rgba(77, 169, 255, 0.7),
+    0 6px 20px 0 rgba(77, 169, 255, 0.7);
+  border-radius: 5px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 15px;
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .card-overlay {
-    background: linear-gradient(180deg, rgba(97, 124, 176, 0.0), rgba(97, 124, 176, 0.3));
-    backdrop-filter: blur(10px);
-    color: rgb(255, 255, 255);
-    font-family: 'karla', sans-serif;
-    grid-row: 2/ span 2;
-    grid-column: 1/span 1;
-    align-self: end;
-    overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(97, 124, 176, 0),
+    rgba(97, 124, 176, 0.3)
+  );
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  font-family: "karla", sans-serif;
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 1;
+  align-self: end;
+  overflow: hidden;
 }
 
-.card-overlay_list{
-    margin-top: 10px;
-    margin-left: 15px;
-    padding: 5px;
-    list-style: none;
-    font-family: 'karla', sans-serif;
-   
+.card-overlay_list {
+  margin-top: 10px;
+  margin-left: 15px;
+  padding: 5px;
+  list-style: none;
+  font-family: "karla", sans-serif;
 }
-.card-overlay_list li{
-    margin-bottom: 15px;
+.card-overlay_list li {
+  margin-bottom: 15px;
 }
-.card-overlay_list li:last-child{
-    margin-bottom: 0;
+.card-overlay_list li:last-child {
+  margin-bottom: 0;
 }
 
 .card-overlay h1 {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .id {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-style: italic;
-    font-size: 14px;
-
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 14px;
 }
 .card-overlay-buttons {
-    display: flex;
-    padding: 0;
-    list-style: none;
-    justify-content: center;
-    text-transform: uppercase;
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  text-transform: uppercase;
 }
-.card-overlay-buttons li{
-    display: block;
-    padding:12px;
+.card-overlay-buttons li {
+  display: block;
+  padding: 12px;
 }
-.edit-link, button#delete-btn{
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(34, 55, 68, 0.5);
-    border-radius: 5px;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-    font-family: 'Lato',sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
-    width: 136px;
-    height: 33px;
-    cursor: pointer;
-
+.edit-link,
+button#delete-btn {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(34, 55, 68, 0.5);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  width: 136px;
+  height: 33px;
+  cursor: pointer;
 }
 
 .edit-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
-.edit-link a:link, a:visited, button#delete-game-btn a:link, a:visited {
-    color: rgba(255, 255, 255, 1);
-    text-decoration: none;
-    cursor: pointer;
-  }
+.edit-link a:link,
+a:visited,
+button#delete-game-btn a:link,
+a:visited {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
 
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
-  
 }
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {
-  
 }

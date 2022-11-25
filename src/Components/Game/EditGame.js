@@ -107,7 +107,6 @@ export default function Game() {
 
   return (
     <>
-
       <Link className="go-back-btn" to="/games">
         <button></button>
       </Link>
@@ -210,7 +209,7 @@ export default function Game() {
               <button className="update-button" onClick={handleClick}>
                 Edit Game
               </button>
-              </div>
+            </div>
           </form>
         </div>
       </section>

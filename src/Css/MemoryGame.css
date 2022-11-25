@@ -24,7 +24,7 @@
   text-transform: uppercase;
   border-radius: 5px;
   border: none;
-  box-shadow:  1px 3px 15px rgba(136, 156, 208, 1);
+  box-shadow: 1px 3px 15px rgba(136, 156, 208, 1);
   font-family: "Lato", sans-serif;
   font-size: 15px;
   font-weight: bold;
@@ -39,7 +39,7 @@
   display: flex;
   font-size: 20px;
   font-weight: bold;
-  justify-content: center;  
+  justify-content: center;
   margin-bottom: 30px;
   margin-top: 30px;
   padding-top: 0px;
@@ -61,7 +61,6 @@
   height: 380px;
   width: 250px;
 }
-
 
 .submit-btn,
 .end-btn,
@@ -113,9 +112,7 @@
   cursor: pointer;
   box-shadow: inset 0 0 0 0 rgba(255, 131, 0, 1);
   transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-
 }
-
 
 .character-memory-btn:hover {
   box-shadow: inset 300px 0 0 0 rgba(255, 131, 0, 1);
@@ -123,10 +120,10 @@
   padding-right: 15px;
   color: black;
 }
-.character-memory-btn:focus  {
-    background-color: rgba(255, 131, 0, 1);
-    color: black;
-  }
+.character-memory-btn:focus {
+  background-color: rgba(255, 131, 0, 1);
+  color: black;
+}
 
 .end-game-container h1 {
   margin: 20px 0 0 15px;
@@ -141,13 +138,11 @@
   padding-top: 0px;
   text-shadow: 1px 3px 15px rgba(136, 156, 208, 1);
   text-transform: uppercase;
-  
 }
 
 .end-btn-container {
   display: flex;
   justify-content: center;
-
 }
 
 .end-game-btn {
@@ -158,12 +153,12 @@
   text-transform: uppercase;
   border-radius: 5px;
   border: none;
-  box-shadow:  1px 3px 15px rgba(136, 156, 208, 1);
+  box-shadow: 1px 3px 15px rgba(136, 156, 208, 1);
   font-family: "Lato", sans-serif;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  }
+}
 
 /*media queries for ipad*/
 @media screen and (min-width: 768px) {
@@ -178,7 +173,6 @@
     display: flex;
     height: 400px;
     width: 330px;
-    
   }
 
   .memory-img-container {
@@ -187,7 +181,7 @@
     padding: 10px 0 0 10px;
   }
 
-  .display-information {   
+  .display-information {
     font-size: 14px;
     color: rgba(255, 255, 255, 1);
   }
@@ -208,8 +202,6 @@
     padding: 5px 0 5px 0;
   }
 }
-
-
 
 /*media queries for desktop*/
 @media screen and (min-width: 1024px) {

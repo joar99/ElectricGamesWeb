@@ -5,21 +5,23 @@
 }
 
 .navbar {
-  top:0;
+  top: 0;
   position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right,
-      rgba(62, 108, 197, 0.6) 0%,
-      rgba(62, 108, 197, 0.4) 0%,
-      rgba(138, 173, 240, 0.1) 60%);
+  background: linear-gradient(
+    to right,
+    rgba(62, 108, 197, 0.6) 0%,
+    rgba(62, 108, 197, 0.4) 0%,
+    rgba(138, 173, 240, 0.1) 60%
+  );
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 15px rgba(62, 108, 197, 0.4);
   height: 70px;
   z-index: 1;
 }
-.nav-content{
+.nav-content {
   display: none;
 }
 
@@ -27,35 +29,32 @@
   list-style: none;
   padding: 0 20px;
   position: relative;
-  
 }
 
 .nav-content li a {
   text-decoration: none;
   font-size: 18px;
-  font-family: 'Karla', sans-serif;
-  color: rgba(255,255,255,1);
+  font-family: "Karla", sans-serif;
+  color: rgba(255, 255, 255, 1);
   transition: 0.2s ease-in-out;
-
 }
 
 .nav-content li a:hover {
   color: rgba(255, 131, 0, 1);
-
 }
 
 .nav-content li a:hover::after {
   content: "";
   width: 30%;
   height: 2px;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   position: absolute;
   bottom: -4px;
   left: 20px;
 }
 
-.nav-content{
-  display:none;
+.nav-content {
+  display: none;
 }
 
 .navbar-burger {
@@ -66,7 +65,8 @@
   cursor: pointer; /*for computer preview*/
 }
 
-.navbar-burger { /*hva er dette?*/
+.navbar-burger {
+  /*hva er dette?*/
   display: unset;
 }
 
@@ -90,22 +90,18 @@ button {
   outline: none;
 }
 
-
 @media screen and (min-width: 768px) {
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px, 0px, 5px, 5px;
+  }
+  .navbar-burger {
+    display: none;
+  }
 
-.nav-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px, 0px, 5px, 5px;
-
-}
-.navbar-burger{
-  display:none;
-}
-
-.logo {
-  margin-left: 15px;
-}
-
+  .logo {
+    margin-left: 15px;
+  }
 }

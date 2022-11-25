@@ -1,103 +1,96 @@
-.search-container{
-    display: grid;
-    place-content: center;
-    }
-    
-    .show-all-btn{
-        color: rgba(255, 255, 255, 1);
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        margin-left: 5px;
-        background-color: rgba(34, 55, 68, 0.5);
-        border-radius: 5px;
-        border: none;
-        padding: 5px;
-        box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-        margin-bottom: 15px;
-    }
-    
-    .search-title{
-        color: white;
-        border-radius: 5px 5px 0px 0px;
-        padding-top: 5px;
-        padding-right: 5px;
-        padding-left: 5px;
-        text-transform: uppercase;
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        background-color:rgba(52, 55, 56, 0.6);
-        backdrop-filter: blur(20px);
-    }
-    
-    .search-content{
-     
-        border: none;
-        border-radius:0px 0px 5px 5px;
-        padding-right: 5px;
-        padding-bottom: 5px;
-        padding-left:5px;
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 15px;
-        background-color: rgba(52, 55, 56, 0.6);
-        backdrop-filter: blur(20px);
-      
-    }
-    .search-name{
-        border: none;
-        border-radius: 5px;
-        padding:2px;
-    /*animasjon her*/
-    
-    }
-    .search-name-btn{
-        color: rgba(255, 255, 255, 1);
-        text-transform: uppercase;
-        margin-left: 5px;
-        background-color: rgba(34, 55, 68, 0.5);
-        border-radius: 5px;
-        border: none;
-        padding: 5px;
-        box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-        cursor: pointer;
-    
-    }
-    
-    .search-id{
-        border: none;
-        border-radius: 5px;
-        padding:2px;
-    }
-    
-    .search-id-btn{
-        color: rgba(255, 255, 255, 1);
-        text-transform: uppercase;
-        margin-left: 5px;
-        background-color: rgba(34, 55, 68, 0.5);
-        border-radius: 5px;
-        border: none;
-        padding: 5px;
-        box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
-        cursor: pointer;
-    }
-    
-     select, textarea{
-        color: rgb(0, 0, 0);
-     }
-     
-    
-    /*media queries for ipad*/
-    @media screen and (min-width: 768px) {
-        .search-container{
-            place-content: end;
-            }
-    
-    }
-    
-    /*media queries for desktop*/
-    @media screen and (min-width: 1024px) {
-      
-    }
-    
+.search-container {
+  display: grid;
+  place-content: center;
+}
+
+.show-all-btn {
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 5px;
+  background-color: rgba(34, 55, 68, 0.5);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  margin-bottom: 15px;
+}
+
+.search-title {
+  color: white;
+  border-radius: 5px 5px 0px 0px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: rgba(52, 55, 56, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.search-content {
+  border: none;
+  border-radius: 0px 0px 5px 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  background-color: rgba(52, 55, 56, 0.6);
+  backdrop-filter: blur(20px);
+}
+.search-name {
+  border: none;
+  border-radius: 5px;
+  padding: 2px;
+  /*animasjon her*/
+}
+.search-name-btn {
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-left: 5px;
+  background-color: rgba(34, 55, 68, 0.5);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  cursor: pointer;
+}
+
+.search-id {
+  border: none;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.search-id-btn {
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  margin-left: 5px;
+  background-color: rgba(34, 55, 68, 0.5);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(9, 17, 52, 0.5);
+  cursor: pointer;
+}
+
+select,
+textarea {
+  color: rgb(0, 0, 0);
+}
+
+/*media queries for ipad*/
+@media screen and (min-width: 768px) {
+  .search-container {
+    place-content: end;
+  }
+}
+
+/*media queries for desktop*/
+@media screen and (min-width: 1024px) {
+}

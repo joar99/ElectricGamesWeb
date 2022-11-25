@@ -6,122 +6,142 @@ import "../../Css/AddForm.css";
 import "../../Css/PopupMessage.css";
 import { Link } from "react-router-dom";
 
-
 export default function AddCharacter() {
-    const [isAdded, setIsAdded] = useState(false);
-    const [addedChar, setAddedChar] = useState({});
-    const goBack ="goback.png";
+  const [isAdded, setIsAdded] = useState(false);
+  const [addedChar, setAddedChar] = useState({});
 
-    const charControllerUrl = "https://localhost:7127/api/Characters"
+  const charControllerUrl = "https://localhost:7127/api/Characters";
 
-    const [name, setName] = useState("")
-    const [game, setGame] = useState("")
-    const [weapon, setWeapon] = useState("")
+  const [name, setName] = useState("");
+  const [game, setGame] = useState("");
+  const [weapon, setWeapon] = useState("");
 
-    const [file, setFile] = useState();
-    const [fileName, setFileName] = useState();
+  const [file, setFile] = useState();
+  const [fileName, setFileName] = useState();
 
-    const handleChangeName = event => setName(event.target.value);
-    const handleChangeGame = event => setGame(event.target.value)
-    const handleChangeWeapon = event => setWeapon(event.target.value)
+  const handleChangeName = (event) => setName(event.target.value);
+  const handleChangeGame = (event) => setGame(event.target.value);
+  const handleChangeWeapon = (event) => setWeapon(event.target.value);
 
-    const saveFile = (e) => {
-        setFile(e.target.files[0]);
-        setFileName(e.target.files[0].name)
+  const saveFile = (e) => {
+    setFile(e.target.files[0]);
+    setFileName(e.target.files[0].name);
+  };
+
+  const character = {
+    id: null,
+    Name: name,
+    Game: game,
+    Image: fileName,
+    Weapon: weapon,
+  };
+
+  const [popup, setPopup] = useState(false);
+  const handlePopupChange = () => {
+    setPopup(true);
+    setTimeout(() => {
+      setPopup(false);
+    }, 3000);
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    postCharacter();
+    handlePopupChange();
+  };
+
+  const postCharacter = async () => {
+    await axios
+      .post(charControllerUrl, JSON.stringify(character), {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => console.log(error));
+
+    const formData = new FormData();
+    formData.append("formFile", file);
+    formData.append("fileName", fileName);
+
+    try {
+      const res = axios.post("https://localhost:7127/api/file", formData);
+    } catch (ex) {
+      console.log(ex);
     }
+  };
 
-    const character = {
-        id: null,
-        Name: name,
-        Game: game,
-        Image: fileName,
-        Weapon: weapon
-    }
+  return (
+    <>
+      <Link className="go-back-btn" to="/character">
+        <button></button>
+      </Link>
 
-    const [popup, setPopup] = useState(false);
-    const handlePopupChange = () => {
-        setPopup(true)
-        setTimeout(() => {
-            setPopup(false)
-        }, 3000)
-    }
+      <div className="overlay">
+        <div className="popup-container">
+          <popup className="popup-message">
+            {popup === true ? <h2>Character successfully added.</h2> : <></>}
+          </popup>
+        </div>
+      </div>
 
-    const handleClick = event => {
-        event.preventDefault();
-        postCharacter();
-        handlePopupChange();
-    }
- 
+      <h1 className="main-title">Characters</h1>
+      <section className="container">
+        <div className="form">
+          <form className="form-input">
+            <div>
+              <label className="add-label" type="text" name="character-name">
+                Enter character name
+              </label>
+              <input
+                className="add-input"
+                type="text"
+                onChange={handleChangeName}
+              ></input>
+            </div>
+            <div>
+              <label className="add-label" type="text" name="character-game">
+                Enter game character appears in
+              </label>
+              <input
+                className="add-input"
+                type="text"
+                onChange={handleChangeGame}
+              ></input>
+            </div>
+            <div>
+              <label className="add-label" type="text" name="weapon">
+                Enter weapon of character
+              </label>
+              <input
+                className="add-input"
+                type="text"
+                onChange={handleChangeWeapon}
+              ></input>
+            </div>
+            <div>
+              <label
+                className="add-label-select"
+                type="button"
+                name="select-image"
+              >
+                Select image
+              </label>
+              <input
+                className="save-file"
+                type="file"
+                onChange={saveFile}
+              ></input>
 
-    const postCharacter = async () => {
-        await axios.post(charControllerUrl,
-            JSON.stringify(character),
-            {
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            .then((response) => {
-                console.log(response)
-            })
-            .catch(error => console.log(error));
-
-        const formData = new FormData();
-        formData.append("formFile", file)
-        formData.append("fileName", fileName)
-
-        try {
-            const res = axios.post("https://localhost:7127/api/file", formData);
-        } catch (ex) {
-            console.log(ex)
-        }
-    }
-
-    return (
-        <>
-        <Link className="go-back-btn" to="/character">
-                <button>
-                <img src={`https://localhost:7127/images/${encodeURIComponent(goBack)}`} alt="goback icon"></img>
-                </button>
-            </Link>
-
-            <div className="overlay">
-                <div className="popup-container">
-                    <popup className="popup-message">
-                        {popup === true ? <h2>Character successfully added.</h2> : <></>}
-                    </popup>
-                </div>
-            </div> 
-
-
-            <h1 className="main-title">Characters</h1>
-            <section className="container">
-
-                <div className="form">
-                    <form className="form-input">
-                        <div>
-                            <label className="add-label" type="text" name="character-name">Enter character name</label>
-                            <input className="add-input" type="text" onChange={handleChangeName}></input>
-                        </div>
-                        <div>
-                            <label className="add-label" type="text" name="character-game">Enter game character appears in</label>
-                            <input className="add-input" type="text" onChange={handleChangeGame}></input>
-                        </div>
-                        <div>
-                            <label className="add-label" type="text" name="weapon">Enter weapon of character</label>
-                            <input className="add-input" type="text" onChange={handleChangeWeapon}></input>
-                        </div>
-                        <div>
-                            <label className="add-label-select" type="button" name="select-image">Select image</label>
-                            <input className="save-file" type="file" onChange={saveFile}></input>
-
-                            <button className="create-button" onClick={handleClick}>Create character</button>
-                        </div>
-
-                    </form>
-                </div>
-            </section>
-
-        </>
-    )
+              <button className="create-button" onClick={handleClick}>
+                Create character
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
+  );
 }
