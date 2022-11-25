@@ -48,7 +48,7 @@
  }
  
  .edit-input {
-    background-color: rgba(34, 55, 68, 1);
+    background-color: rgb(23, 30, 35);
     border: none;
     border-radius: 5px;
     height: 35px;
@@ -100,6 +100,7 @@
 .small-card-overlay_list{
    margin-top: 10px;
    margin-left: 15px;
+   margin-bottom: 10px;
    padding: 0;
    list-style: none;
   
@@ -107,11 +108,11 @@
 .small-card-overlay_list li{
    margin-bottom: 15px;
 }
-.card-overlay_list li:last-child{
+.small-card-overlay_list li:last-child{
    margin-bottom: 0;
 }
 
-.card-overlay h1 {
+.small-card-overlay h1 {
    display: flex;
    justify-content: center;
    text-transform: uppercase;
