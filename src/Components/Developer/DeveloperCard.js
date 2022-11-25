@@ -29,7 +29,7 @@ export default function DevCard({ developer, setDeleteDevFlag }) {
                         <li className="id">{developer.id}</li>
                         <li>Location: {developer.location}</li>
                         <ul class="card-overlay-buttons">
-                            <Link className="edit-link" to={`/developers/${developer.id}`}>Edit Developer</Link>
+                            <li><Link className="edit-link" to={`/developers/${developer.id}`}>Edit Developer</Link></li>
                             <li><button className="popup-delete-btn" onClick={handleChangePopup}>Delete</button></li>
                             {popup === true ?
                                 <DeletePopup developer={developer} handleChangePopup={handleChangePopup} onDeleteDev={onDeleteDev} idToDelete={developer.id} /> : <></>}
