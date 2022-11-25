@@ -23,7 +23,7 @@ const TopNav = ({HandleClickMobile, Mobile}) => {
 
       <img src={`https://localhost:7127/images/${encodeURIComponent(logoIcon)}`} className="logo" alt="Logo icon"></img>
 
-      <ul className="nav-content" onClick={() => HandleClickMobile(false)}>
+      <ul className="nav-content" onClick={() => HandleClickMobile(true)}>
         <li><Link to="/games">Games</Link></li>
         <li><Link to="/characters">Characters</Link></li>
         <li><Link to="/developers">Developers</Link></li>
