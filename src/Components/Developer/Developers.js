@@ -39,7 +39,7 @@ export default function Developers() {
     return (
 
         <>
-           <Link className="add-new-btn" to={`/games/addgame`}>
+           <Link className="add-new-btn" to={`/developers/adddeveloper`}>
                 <button>
                     
                 </button>

@@ -65,7 +65,7 @@ body {
 }
 
 .add-new-btn button:hover::after {
-    content: 'Add new game';
+    content: 'Add new';
 }
 
 @media screen and (min-width: 768px) {
