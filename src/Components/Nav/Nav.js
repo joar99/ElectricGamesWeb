@@ -7,10 +7,10 @@ import SideNav from "./SideNav";
 
 const Nav = () => {
 
-    const [Mobile, setMobile] = useState(true)
+    const [Mobile, setMobile] = useState(false)
 
-    const HandleClickMobile = (setMobileToFalse = true) => {
-        setMobile(setMobileToFalse ? !Mobile : setMobileToFalse)
+    const HandleClickMobile = (setMobileToTrue = false) => {
+        setMobile(setMobileToTrue ? !Mobile : setMobileToTrue)
     }
 
     return (
