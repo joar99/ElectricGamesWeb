@@ -104,8 +104,8 @@ export default function Developer() {
       </div>
 
       <h1 className="main-title">Developers</h1>
-      <section className="container">
-        <div className="form">
+      <section className="edit-container">
+        <div className="edit-form">
           <form className="form-input">
             <div>
               <label className="edit-label" type="text" name="edit-dev-label">
