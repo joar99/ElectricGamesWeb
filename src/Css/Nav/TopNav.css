@@ -34,13 +34,13 @@
   text-decoration: none;
   font-size: 18px;
   font-family: 'Karla', sans-serif;
-  color: #fff;
+  color: rgba(255,255,255,1);
   transition: 0.2s ease-in-out;
 
 }
 
 .nav-content li a:hover {
-  color: #FF8300;
+  color: rgba(255, 131, 0, 1);
 
 }
 
@@ -48,7 +48,7 @@
   content: "";
   width: 30%;
   height: 2px;
-  background: #fff;
+  background: rgba(255,255,255,1);
   position: absolute;
   bottom: -4px;
   left: 20px;

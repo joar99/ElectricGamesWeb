@@ -122,9 +122,10 @@
  
  .go-back-btn{
    position: sticky;
-   top: calc(500vh 40px);
-   left: calc(100vw  48px);
-   z-index: 10;
+   top: calc(96% - 32px);
+   left: 10px;
+   z-index: 1;
+   
 }
 
 .go-back-btn button {
@@ -135,7 +136,6 @@
    width: 50px;
    color: rgba(255, 255, 255, 1);
    font-size: 20px;
-
    overflow: hidden;
    transition: width .40;
    white-space: nowrap;
@@ -148,7 +148,7 @@
 .go-back-btn button:hover {
    border-radius: 50px;
    padding:15px;
-   width: 180px;
+   width: 120px;
    -webkit-transition: width .40;
    transition: width .40;
    background-color: rgba(62, 108, 197, 1);
