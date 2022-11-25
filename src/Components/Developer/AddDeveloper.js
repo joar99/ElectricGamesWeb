@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import "../../Css/AddForm.css";
+import { Link } from "react-router-dom";
 
 export default function AddDev() {
     const [isAdded, setIsAdded] = useState(false);
     const [addedDev, setAddedDev] = useState({});
+    const goBack ="goback.png";
 
     const devControllerUrl = "https://localhost:7127/api/Developers"
 
@@ -70,6 +72,11 @@ export default function AddDev() {
 
     return (
         <>
+        <Link className="go-back-btn" to="/developer">
+                <button>
+                <img src={`https://localhost:7127/images/${encodeURIComponent(goBack)}`} alt="goback icon"></img>
+                </button>
+            </Link>
 
         <div className="overlay">
             <div className="popup-container">
