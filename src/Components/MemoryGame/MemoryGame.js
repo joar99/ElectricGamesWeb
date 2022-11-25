@@ -32,8 +32,8 @@ const StartMemory = ({onChange}) => {
             <section className="start-information">
                 <h1>Let's play: Remember the Characters</h1>
                 <h3>Current High Score: {value}</h3>
-                <button className="start-btn" onClick={onChange}>Start Game</button>
             </section>
+            <button className="start-btn" onClick={onChange}>Start Game</button>
         </>
     )
 }
